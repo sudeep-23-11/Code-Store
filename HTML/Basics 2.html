@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics 2</title>
+</head>
+<body>
+    <!--Images-->
+    <img src="../images/workplace.png" alt="workplace loading" usemap="#workplace">
+    <map name="workplace">
+        <area shape="default" coords="" href="https://en.wikipedia.org/wiki/Workplace" alt="workplace loading">
+        <area shape="rect" coords="34, 44, 270, 350" href="https://en.wikipedia.org/wiki/Laptop" alt="laptop loading">
+        <area shape="circle" coords="337, 300, 44" href="https://en.wikipedia.org/wiki/Coffee" alt="coffee loading">
+    </map>
+    <picture>
+        <source media="(min-width: 1600px)" srcset="../images/github1.png">
+        <source media="(min-width: 800px)" srcset="../images/github2.png">
+        <img src="../images/github1.png" alt="github loading">
+    </picture>
+    <hr>
+
+    <!--Tables-->
+    <table>
+        <caption>Development</caption>
+        <colgroup>
+            <col span="2" style="background-color: #FF0000;">
+            <col span="1" style="background-color: #00FF00;">
+            <col span="1" style="background-color: #0000FF;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th colspan="2">Frontend Web</th>
+                <th>Backend Web</th>
+                <th>Mobile App</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>HTML</td>
+                <td rowspan="2">Bootstrap</td>
+                <td>NodeJS</td>
+                <td>Native Android</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>ExpressJS</td>
+                <td>Flutter</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>JavaScript</td>
+                <td>ReactJS</td>
+                <td>MongoDB</td>
+                <td>React Native</td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr>
+
+    <!--Lists-->
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <ol type="1" start="1">                                     <!--A, a, I, i-->
+        <li>NodeJS</li>
+        <li>ExpressJS</li>
+        <li>MongoDB</li>
+    </ol>
+    <dl>
+        <dt>Native Android</dt>
+        <dd>Java or Kotlin</dd>
+        <dt>Flutter</dt>
+        <dd>Dart</dd>
+        <dt>React Native</dt>
+        <dd>JavaScript</dd>
+    </dl>
+    <hr>
+
+    <!--Media-->
+    <audio controls autoplay muted>
+        <source src="../audios/Github.mp3" type="audio/mpeg">
+        <source src="../audios/Github.ogg" type="audio/ogg">
+        Unsupported Audio Format
+    </audio>
+    <video controls autoplay muted>
+        <source src="../videos/Github.mp4" type="video/mp4">
+        <source src="../videos/Github.webm" type="video/webm">
+        Unsupported Video Format
+    </video>
+</body>
+</html>

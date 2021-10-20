@@ -1,0 +1,84 @@
+#D table {
+    border-style: solid;
+    border-collapse: separate;                              /*collapse*/
+    border-spacing: 5px;
+    caption-side: top;                                      /*bottom*/
+    empty-cells: show;                                      /*hide*/
+}
+#D th, td {
+    border-style: solid;
+    vertical-align: middle;                                 /*top, bottom*/
+}
+#D tr:hover {
+    background-color: #FF0000;
+}
+#D tr:nth-child(even) {                                     /*odd*/
+    background-color: #00FF00;
+}
+
+#E {
+    height: 100px;
+    width: 75px;
+    border-style: solid;
+    
+    overflow-x: scroll;                                     /*visible, hidden, auto*/
+    overflow-y: scroll;                                     /*visible, hidden, auto*/
+    resize: both;                                           /*horizontal, vertical, none*/
+}
+
+#F {
+    height: 200px;
+    width: 225px;
+    border-style: solid;
+}
+#F img {
+    float: left;                                            /*right, none*/
+}
+#F p {
+    clear: left;                                            /*right, both, none*/
+}
+
+#G {
+    height: 200px;
+    width: 200px;
+    border-style: solid;
+
+    position: relative;                                     /*static, fixed, sticky*/
+
+    border-image-source: url(../images/border.png);
+    border-image-slice: 30;
+    border-image-width: 10px;
+    border-image-outset: 10px;
+    border-image-repeat: round;                             /*repeat, stretch*/
+}
+#G img {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+#H {
+    margin: 25px;
+    height: 500px;
+    width: 500px;
+    background-color: #FF0000;
+
+    display: flex;
+    flex-direction: row;                                    /*row-reverse, column, column-reverse*/
+    flex-wrap: wrap;                                        /*nowrap, wrap-reverse*/
+    justify-content: flex-start;                            /*flex-end, center, space-between, space-around, space-evenly*/
+    align-items: flex-start;                                /*flex-end, center, stretch, baseline*/
+    align-content: flex-start;                              /*flex-end, center, stretch, space-between, space-around, space-evenly*/
+}
+#H div {
+    margin: 10px;
+    height: 50px;
+    width: 50px;
+    background-color: #FFFFFF;
+
+    order: 0;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 50px;
+    align-self: flex-start;                                 /*flex-end, center, stretch, baseline, auto*/
+}

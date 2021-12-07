@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics</title>
+    <link rel="stylesheet" href="./Basics.css">
+</head>
+<body onload="window.alert('Hello DOM')" onunload="window.print()">
+    <div>
+        <h5 id="Aa">Hello HTML</h5>
+        <img id="Ab" src="../images/html.png">
+        <form onsubmit="form_button_1()">
+            <input id="Ac" type="text"
+                onfocus="this.style.backgroundColor='#FFFF00'"
+                onchange="form_button_2()">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div>
+        <p class="Ba"
+            onmouseover="this.style.backgroundColor='#00FF00'"
+            onmouseout="this.style.backgroundColor='#FF0000'">
+            Hello C</p>
+        <p class="Ba"
+            onmousedown="this.style.backgroundColor='#0000FF'"
+            onmouseup="this.style.backgroundColor='#FF0000'">
+            Hello C++</p>
+        <p class="Ba">Hello Python</p>
+        <p class="Ba">Hello Java</p>
+    </div>
+    
+    <button type="button" onclick="click_button_1()">Click Me 1</button>
+    <button id="btn" type="button">Click Me 2</button>
+
+    <script src="./Basics.js"></script>
+</body>
+</html>

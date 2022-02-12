@@ -1,7 +1,7 @@
 //CountingSort
 #include<stdio.h>
 #include<string.h>
-void countsort(int A[], int n);
+void countingsort(int A[], int n);
 int main()
 {
     int i, N;
@@ -9,12 +9,12 @@ int main()
     int arr[N];
     for(i=0;i<N;i++)
     scanf("%d", &arr[i]);
-    countsort(arr, N);
+    countingsort(arr, N);
     for(i=0;i<N;i++)
     printf("%d ", arr[i]);
     return 0;
 }
-void countsort(int A[], int n)
+void countingsort(int A[], int n)
 {
     int i, max, min, range;
     max=A[0];

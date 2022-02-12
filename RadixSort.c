@@ -1,8 +1,8 @@
 //RadixSort
 #include<stdio.h>
 #include<string.h>
-void countsort(int A[], int n, int exp);
 void radixsort(int A[], int n);
+void countingsort(int A[], int n, int exp);
 int main()
 {
     int i, N;
@@ -25,9 +25,9 @@ void radixsort(int A[], int n)
         max=A[i];
     }
     for(exp=1;(max/exp)>0;exp*=10)
-    countsort(A, n, exp);
+    countingsort(A, n, exp);
 }
-void countsort(int A[], int n, int exp)
+void countingsort(int A[], int n, int exp)
 {
     int i;
     int count[10], arr[n];

@@ -16,12 +16,12 @@ int main()
 }
 int partition(int A[], int l, int r)
 {
-    int i, j, pivot, t;
-    pivot=A[r];
+    int i, j, pi, t;
+    pi=A[r];
     i=(l-1);
     for(j=l;j<=r-1;j++)
     {
-        if(A[j]<pivot)
+        if(A[j]<pi)
         {
             i++;
             t=A[i];
@@ -40,7 +40,7 @@ void quicksort(int A[], int l, int r)
     if(l<r)
     {
         pi=partition(A, l, r);
-        quicksort(A, l, pi - 1);
-        quicksort(A, pi + 1, r);
+        quicksort(A, l, pi-1);
+        quicksort(A, pi+1, r);
     }
 }

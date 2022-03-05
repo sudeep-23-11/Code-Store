@@ -9,9 +9,9 @@ int fibon(int n);
 int knapsack(int wt[], int val[], int i, int w, int n);
 int main()
 {
-    int x, fb;                      
+    int x, fb;
     cin>>x;
-    memset(fibo, -1, sizeof(fibo));                 
+    memset(fibo, -1, sizeof(fibo));
     fb=fibon(x);
     cout<<fb<<endl;
     int i, w, n, ans;

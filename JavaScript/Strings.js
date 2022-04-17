@@ -1,5 +1,5 @@
 //Strings
-let x, y, S;
+let x, y, S, str;
 x='Hello';
 y="World";
 console.log(x, y);
@@ -19,3 +19,6 @@ console.log(S.padStart(2, ' '), S.padEnd(2, ' '));
 S="Sudeep Kumar Srivastava";
 for(let i of S.split(' '))
 console.log(i);
+str=`${x}
+${y==="World" ? y : null}`;
+console.log(str);

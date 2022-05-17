@@ -27,7 +27,7 @@ void merge(int A[], int l, int m, int r)
     i=0; 
     j=0; 
     k=l;
-    while((i<nl)&&(j<nr)) 
+    while((i<nl)&&(j<nr))
     {
         if(larr[i]<=rarr[j]) 
         {
@@ -57,11 +57,10 @@ void merge(int A[], int l, int m, int r)
 void mergesort(int A[], int l, int r)
 {
     int m;
-    if(l<r) 
-    {
-        m=l+(r-l)/2;
-        mergesort(A, l, m);
-        mergesort(A, m+1, r);
-        merge(A, l, m, r);
-    }
+    if(l==r)
+    return;
+    m=(l+r)/2;
+    mergesort(A, l, m);
+    mergesort(A, m+1, r);
+    merge(A, l, m, r);
 }

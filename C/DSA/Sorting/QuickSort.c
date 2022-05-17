@@ -36,11 +36,10 @@ int partition(int A[], int l, int r)
 }
 void quicksort(int A[], int l, int r)
 {
-    int pi;
-    if(l<r)
-    {
-        pi=partition(A, l, r);
-        quicksort(A, l, pi-1);
-        quicksort(A, pi+1, r);
-    }
+    int pa;
+    if(l>=r)
+    return;
+    pa=partition(A, l, r);
+    quicksort(A, l, pa-1);
+    quicksort(A, pa+1, r);
 }

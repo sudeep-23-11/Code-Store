@@ -1,12 +1,11 @@
-//GraphBFS
+//DepthFirstSearch
 #include<iostream>
 #include<vector>
 #include<cstring>
-#include<queue>
 using namespace std;
 bool vis[100001];
 vector<int>adj[100001];
-void BFS(int n);
+void DFS(int n);
 int main()
 {
     int i, n, m, x, y;
@@ -21,27 +20,17 @@ int main()
     for(i=1;i<=n;i++)
     {
         if(vis[i]==false)
-        BFS(i);
+        DFS(i);
     }
     return 0;
 }
-void BFS(int n)
+void DFS(int n)
 {
     vis[n]=true;
-    queue<int>q;
-    q.push(n);
-    while(q.empty()==0)
+    cout<<"Visited Node "<<n<<endl;
+    for(auto i:adj[n])
     {
-        n=q.front();
-        cout<<"Visited Node "<<n<<endl;
-        q.pop();
-        for(auto i:adj[n])
-        {
-            if(vis[i]==false)
-            {
-                vis[i]=true;
-                q.push(i);
-            }
-        }
+        if(vis[i]==false)
+        DFS(i);
     }
 }

@@ -1,4 +1,4 @@
-//UndirectedGraphCycle
+//CycleInUndirected
 #include<iostream>
 #include<vector>
 #include<cstring>
@@ -24,9 +24,9 @@ int main()
         DFS(i, -1);
     }
     if(c==true)
-    cout<<"Undirected Cyclic graph"<<endl;
+    cout<<"Cyclic present"<<endl;
     else
-    cout<<"Undirected Acyclic graph"<<endl;
+    cout<<"Cyclic not present"<<endl;
     return 0;
 }
 void DFS(int n, int p)

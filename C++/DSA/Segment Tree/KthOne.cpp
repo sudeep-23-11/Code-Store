@@ -1,4 +1,4 @@
-//KthOneProblem
+//KthOne
 #include<iostream>
 #include<vector>
 #include<cstring>

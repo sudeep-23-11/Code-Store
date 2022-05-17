@@ -1,4 +1,4 @@
-//LowestCommonAncestor
+//LowestCommonAncestors
 #include<iostream>
 #include<vector>
 #include<cstring>

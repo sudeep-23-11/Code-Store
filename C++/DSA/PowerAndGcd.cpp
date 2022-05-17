@@ -1,5 +1,6 @@
-//DivideAndConquerAlgorithm
-#include<stdio.h>
+//PowerAndGcd
+#include<iostream>
+using namespace std;
 int pow1(int x, int y);
 int pow2(int x, int y);
 int gcd1(int x, int y);
@@ -7,12 +8,12 @@ int gcd2(int x, int y);
 int main()
 {
     int a, b, p1, p2, g1, g2;
-    scanf("%d %d", &a, &b);
+    cin>>a>>b;
     p1=pow1(a, b);
     p2=pow2(a, b);
     g1=gcd1(a, b);
     g2=gcd2(a, b);
-    printf("%d %d %d %d\n", p1, p2, g1, g2);
+    cout<<p1<<" "<<p2<<" "<<g1<<" "<<g2<<endl;
     return 0;
 }
 int pow1(int x, int y)

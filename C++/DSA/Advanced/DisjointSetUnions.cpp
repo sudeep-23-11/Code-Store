@@ -1,4 +1,4 @@
-//DisjointSetUnion
+//DisjointSetUnions
 #include<iostream>
 #include<vector>
 #include<algorithm>

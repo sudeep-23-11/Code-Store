@@ -1,4 +1,4 @@
-//Graphs
+//DistanceFromNode
 #include<iostream>
 #include<vector>
 #include<cstring>

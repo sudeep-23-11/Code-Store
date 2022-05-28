@@ -3,7 +3,7 @@
 using namespace std;
 int main()
 {
-    int i, j, N, t;
+    int i, j, N;
     cin>>N;
     int A[N];
     for(i=0;i<N;i++)
@@ -13,11 +13,7 @@ int main()
         for(j=0;j<(N-1);j++)
         {
             if(A[j]>A[j+1])
-            {
-                t=A[j];
-                A[j]=A[j+1];
-                A[j+1]=t;
-            }
+            swap(A[j], A[j+1]);
         }
     }
     for(i=0;i<N;i++)

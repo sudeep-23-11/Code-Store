@@ -31,7 +31,7 @@ void radixsort(int A[], int n)
 void countingsort(int A[], int n, int exp)
 {
     int i;
-    int count[10], A[n];
+    int count[10], B[n];
     memset(count, 0, sizeof(count));
     for(i=0;i<n;i++)
     count[(A[i]/exp)%10]++;
@@ -39,9 +39,9 @@ void countingsort(int A[], int n, int exp)
     count[i]+=count[i-1];
     for(i=(n-1);i>=0;i--)
     {
-        A[count[(A[i]/exp)%10]-1]=A[i];
+        B[count[(A[i]/exp)%10]-1]=A[i];
         count[(A[i]/exp)%10]--;
     }
     for(i=0;i<n;i++)
-    A[i]=A[i];
+    A[i]=B[i];
 }

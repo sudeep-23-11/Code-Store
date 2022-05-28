@@ -28,7 +28,7 @@ void countingsort(int A[], int n)
         min=A[i];
     }
     range=max-min+1;
-    int count[range], A[n];
+    int count[range], B[n];
     memset(count, 0, sizeof(count));
     for(i=0;i<n;i++)
     count[A[i]-min]++;
@@ -36,9 +36,9 @@ void countingsort(int A[], int n)
     count[i]+=count[i-1];
     for(i=(n-1);i>=0;i--)
     {
-        A[count[A[i]-min]-1]=A[i];
+        B[count[A[i]-min]-1]=A[i];
         count[A[i]-min]--;
     }
     for(i=0;i<n;i++)
-    A[i]=A[i];
+    A[i]=B[i];
 }

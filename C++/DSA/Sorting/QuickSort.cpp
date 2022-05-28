@@ -17,7 +17,7 @@ int main()
 }
 int partition(int A[], int l, int r)
 {
-    int i, j, pi, t;
+    int i, j, pi;
     pi=A[r];
     i=(l-1);
     for(j=l;j<=r-1;j++)
@@ -25,14 +25,10 @@ int partition(int A[], int l, int r)
         if(A[j]<pi)
         {
             i++;
-            t=A[i];
-            A[i]=A[j];
-            A[j]=t;
+            swap(A[i], A[j]);
         }
     }
-    t=A[i+1];
-    A[i+1]=A[r];
-    A[r]=t;
+    swap(A[i+1], A[r]);
     return (i+1);
 }
 void quicksort(int A[], int l, int r)

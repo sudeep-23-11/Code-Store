@@ -9,14 +9,14 @@ vector<int>adj[100001];
 void BFS(int n);
 int main()
 {
-    int i, n, m, x, y;
+    int i, n, m, u, v;
     cin>>n>>m;
     memset(vis, false, sizeof(vis));
     for(i=1;i<=m;i++)
     {
-        cin>>x>>y;
-        adj[x].push_back(y);
-        adj[y].push_back(x);
+        cin>>u>>v;
+        adj[u].push_back(v);
+        adj[v].push_back(u);
     }
     for(i=1;i<=n;i++)
     {
@@ -27,20 +27,20 @@ int main()
 }
 void BFS(int n)
 {
-    vis[n]=true;
     queue<int>q;
     q.push(n);
+    vis[n]=true;
     while(q.empty()==0)
     {
         n=q.front();
-        cout<<"Visited Node "<<n<<endl;
+        cout<<n<<" ";
         q.pop();
         for(auto i:adj[n])
         {
             if(vis[i]==false)
             {
-                vis[i]=true;
                 q.push(i);
+                vis[i]=true;
             }
         }
     }

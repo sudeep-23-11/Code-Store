@@ -4,54 +4,43 @@
 #include<cstring>
 using namespace std;
 vector<int>adj[100001];
-int size[100001];
-int dist[100001];
-int itime[100001];
-int otime[100001];
-int t=0;
+int intime[100001];
+int outtime[100001];
+int t;
 void DFS(int n);
 int main()
 {
-    int i, n, m, x, y, no, mv;
+    int i, n, m, u, v;
     cin>>n>>m;
-    memset(size, -1, sizeof(size));
-    memset(dist, -1, sizeof(dist));
-    memset(itime, -1, sizeof(itime));
-    memset(otime, -1, sizeof(otime));
+    memset(intime, -1, sizeof(intime));
+    memset(outtime, -1, sizeof(outtime));
     for(i=1;i<=m;i++)
     {
-        cin>>x>>y;
-        adj[x].push_back(y);
+        cin>>u>>v;
+        adj[u].push_back(v);
     }
-    dist[1]=0;
-    t++;
-    itime[1]=t;
+    t=1;
+    intime[1]=t;
     DFS(1);
     t++;
-    otime[1]=t;
-    cin>>no;
-    mv=size[no]*dist[no];
-    cout<<size[no]<<" "<<dist[no]<<" "<<mv<<endl;
-    cin>>x>>y;
-    if((itime[x]<itime[y])&&(otime[x]>otime[y]))
-    cout<<y<<" is in the subgraph of "<<x<<endl;
-    else if((itime[y]<itime[x])&&(otime[y]>otime[x]))
-    cout<<x<<" is in the subgraph of "<<y<<endl;
+    outtime[1]=t;
+    cin>>u>>v;
+    if((intime[u]<intime[v])&&(outtime[u]>outtime[v]))
+    cout<<v<<" is in subgraph of "<<u<<endl;
+    else if((intime[v]<intime[u])&&(outtime[v]>outtime[u]))
+    cout<<u<<" is in subgraph of "<<v<<endl;
     else
-    cout<<x<<" and "<<y<<" are in different subgraphs"<<endl;
+    cout<<u<<" and "<<v<<" are not in subgraphs of each other"<<endl;
     return 0;
 }
 void DFS(int n)
 {
-    size[n]=1;
     for(auto i:adj[n])
     {
-        dist[i]=dist[n]+1;
         t++;
-        itime[i]=t;
+        intime[i]=t;
         DFS(i);
         t++;
-        otime[i]=t;
-        size[n]+=size[i];
+        outtime[i]=t;
     }
 }

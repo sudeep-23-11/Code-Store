@@ -21,11 +21,6 @@ int main()
 {
     int i, n, m, u, v, wt;;
     cin>>n>>m;
-    for(i=1;i<=n;i++)
-    {
-        parent[i]=i;
-        _rank[i]=0;
-    }
     for(i=1;i<=m;i++)
     {
         cin>>u>>v>>wt;
@@ -34,6 +29,11 @@ int main()
         e[i].wt=wt;
     }
     sort(e+1, e+m+1, cmp);
+    for(i=1;i<=n;i++)
+    {
+        parent[i]=i;
+        _rank[i]=0;
+    }
     for(i=1;i<=m;i++)
     {
         if(findparent(e[i].u)!=findparent(e[i].v))

@@ -18,8 +18,7 @@ int main()
         cin>>u>>v;
         adj[u].push_back(v);
     }
-    cin>>u;
-    dist[u]=0;
+    dist[1]=0;
     DFS(1);
     for(i=1;i<=n;i++)
     cout<<i<<" "<<dist[i]<<" "<<size[i]<<endl;

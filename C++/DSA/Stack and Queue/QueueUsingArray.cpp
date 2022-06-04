@@ -1,0 +1,35 @@
+//QueueUsingArray
+#include<iostream>
+using namespace std;
+int main()
+{
+    int front, rear, ch, data, i;
+    cout<<"0 for display"<<endl;
+    cout<<"1 for insert"<<endl;
+    cout<<"2 for delete"<<endl;
+    int queue[100001];
+    front=0;
+    rear=0;
+    while(1)
+    {   
+        cout<<"Choice"<<endl;
+        cin>>ch;
+        if(ch==0)
+        {
+            for(i=front;i<rear;i++)
+            cout<<queue[i]<<" ";
+            cout<<endl;
+        }
+        else if(ch==1)
+        {
+            cin>>data;
+            queue[rear]=data;
+            rear++;
+        }
+        else if(ch==2)
+        front++;
+        else
+        break;
+    }
+    return 0;
+}

@@ -1,146 +1,132 @@
 //CircularLinkedLists
 #include<iostream>
-#include<cstdlib>
 using namespace std;
-struct Node
+struct node
 {
-	int key;
-	struct Node *next;
+    int data;
+    struct node *next;
 };
-struct Node *insertNodeEmpty(struct Node *last, int key)
-{
-	if(last!=NULL)
-	return last;
-	struct Node *tempNode=(struct Node *)malloc(sizeof(struct Node));
-	tempNode->key=key;
-	last=tempNode;
-	last->next=last;
-	return last;
-}
-struct Node *insertNodeBegin(struct Node *last, int key)
-{
-	if(last==NULL)
-	return insertNodeEmpty(last, key);
-	struct Node *tempNode=(struct Node *)malloc(sizeof(struct Node));
-	tempNode->key=key;
-	tempNode->next=last->next;
-	last->next=tempNode;
-	return last;
-}
-struct Node *insertNodeAfter(struct Node *last, int key1, int key2)
-{
-	if(last==NULL)
-	return NULL;
-	struct Node *tempNode1;
-	struct Node *tempNode2;
-	tempNode2=last->next;
-	do
-	{
-		if(tempNode2->key==key2)
-		{
-			tempNode1=(struct Node *)malloc(sizeof(struct Node));
-			tempNode1->key=key1;
-			tempNode1->next=tempNode2->next;
-			tempNode2->next=tempNode1;
-			if(tempNode2==last)
-			last=tempNode1;
-			return last;
-		}
-		tempNode2=tempNode2->next;
-	}
-	while(tempNode2!=last->next);
-}
-struct Node *insertNodeEnd(struct Node *last, int key)
-{
-	if(last==NULL)
-	return insertNodeEmpty(last, key);
-	struct Node *tempNode=(struct Node *)malloc(sizeof(struct Node));
-	tempNode->key=key;
-	tempNode->next=last->next;
-	last->next=tempNode;
-	last=tempNode;
-	return last;
-}
-struct Node *deleteNode(struct Node *last, int key)
-{
-    int i, count;
-    i=0;
-    count=0;
-	struct Node *curNode=last;
-    struct Node *prevNode=curNode;
-    while(prevNode->next!=last) 
-    {
-        prevNode=prevNode->next;
-        count++;
-    }
-    while(i<=count)
-    {
-        if(curNode->key==key)
-        {
-            if(curNode->next!=curNode)
-            prevNode->next=curNode->next;
-            else
-            prevNode->next=NULL;
-            if(curNode==last)
-            last=prevNode->next;
-            free(curNode);
-            if(prevNode!=NULL) 
-            curNode=prevNode->next;
-            else
-            curNode=NULL;
-        }
-        else 
-        {
-            prevNode=curNode;
-            curNode=curNode->next;
-        }
-        i++;
-    }
-	return last;
-}
-void displayList(struct Node *node)
-{
-	struct Node *tempNode;
-	tempNode=node->next;
-	do
-	{
-		cout<<(tempNode->key)<<" ";
-		tempNode=tempNode->next;
-	}
-	while(tempNode!=node->next);
-}
+struct node *head, *_new, *temp, *temp2;
+void display();
+void insert(int data);
+void insertat(int pos, int data);
+void _delete(int data);
 int main()
 {
-	int x, y;
-	struct Node *last=NULL;
-	cout<<"Press 1 to insert element at the beginning in the list"<<endl;
-    cout<<"Press 2 to insert element at a position in the list"<<endl;
-	cout<<"Press 3 to insert element at the end in the list"<<endl;
-    cout<<"Press 4 to delete element from the list"<<endl;
-    cout<<"Press 0 to display elements of the list"<<endl;
-    cout<<"Press -1 to exit"<<endl;
+    int ch, pos, data;
+    cout<<"0 for display"<<endl;
+    cout<<"1 for insert"<<endl;
+    cout<<"2 for insert at"<<endl;
+    cout<<"3 for delete"<<endl;
+    head=NULL;
     while(1)
     {
-        cin>>x;
-        if(x==-1)
-        break;
-        switch(x)
+        cout<<"Choice"<<endl;
+        cin>>ch;
+        if(ch==0)
+        display();
+        else if(ch==1)
         {
-            case 1: cin>>y;
-					last=insertNodeBegin(last, y);
-                    break;
-            case 2: cin>>y;
-					last=insertNodeAfter(last, y, 5);
-                    break;
-			case 3: cin>>y;
-					last=insertNodeEnd(last, y);
-					break;
-			case 4: cin>>y;
-					last=deleteNode(last, y);
-					break;
-			case 0: displayList(last);
-                    cout<<endl;
-		}
-	}
-	return 0;
+            cin>>data;
+            insert(data);
+        }
+        else if(ch==2)
+        {
+            cin>>pos>>data;
+            insertat(pos, data);
+        }
+        else if(ch==3)
+        {
+            cin>>data;
+            _delete(data);
+        }
+        else
+        break;
+    }
+    return 0;
+}
+void display()
+{
+    temp=head;
+    while(temp->next!=head)
+    {
+        cout<<temp->data<<" ";
+        temp=temp->next;
+    }
+    cout<<temp->data<<" ";
+    cout<<endl;
+}
+void insert(int data)
+{
+    _new=new node;
+    _new->data=data;
+    if(head==NULL)
+    head=_new;
+    else
+    {
+        temp=head;
+        while(temp->next!=head)
+        temp=temp->next;
+        temp->next=_new;
+    }
+    _new->next=head;
+}
+void insertat(int pos, int data)
+{
+    _new=new node;
+    _new->data=data;
+    if(pos==1)
+    {
+        temp2=head;
+        while(temp2->next!=head)
+        temp2=temp2->next;
+        _new->next=head;
+        head=_new;
+        temp2->next=head;
+    }
+    else
+    {
+        int c=0;
+        temp=head;
+        while(temp->next!=head)
+        {
+            c++;
+            if((c+1)==pos)
+            {
+                temp2=temp->next;
+                temp->next=_new;
+                _new->next=temp2;
+                break;
+            }
+            temp=temp->next;
+        }
+    }
+}
+void _delete(int data)
+{
+    if(head->data==data)
+    {
+        temp2=head;
+        while(temp2->next!=head)
+        temp2=temp2->next;
+        temp=head->next;
+        delete(head);
+        head=temp;
+        temp2->next=head;
+    }
+    else
+    {
+        temp=head;
+        while(temp->next!=head)
+        {
+            if(temp->next->data==data)
+            {
+                temp2=temp->next;
+                temp->next=temp->next->next;
+                delete(temp2);
+                break;
+            }
+            temp=temp->next;
+        }
+    }
 }

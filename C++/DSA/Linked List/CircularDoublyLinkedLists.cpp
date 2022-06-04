@@ -1,10 +1,11 @@
-//SinglyLinkedLists
+//CircularDoublyLinkedLists
 #include<iostream>
 using namespace std;
 struct node
 {
     int data;
     struct node *next;
+    struct node *prev;
 };
 struct node *head, *_new, *temp, *temp2;
 void display();
@@ -48,27 +49,30 @@ int main()
 void display()
 {
     temp=head;
-    while(temp!=NULL)
+    while(temp->next!=head)
     {
         cout<<temp->data<<" ";
         temp=temp->next;
     }
+    cout<<temp->data<<" ";
     cout<<endl;
 }
 void insert(int data)
 {
     _new=new node;
     _new->data=data;
-    _new->next=NULL;
     if(head==NULL)
     head=_new;
     else
     {
         temp=head;
-        while(temp->next!=NULL)
+        while(temp->next!=head)
         temp=temp->next;
         temp->next=_new;
+        _new->prev=temp;
     }
+    _new->next=head;
+    head->prev=_new;
 }
 void insertat(int pos, int data)
 {
@@ -76,24 +80,37 @@ void insertat(int pos, int data)
     _new->data=data;
     if(pos==1)
     {
+        temp2=head->prev;
         _new->next=head;
+        head->prev=_new;
         head=_new;
+        temp2->next=head;
+        head->prev=temp2;
     }
     else
     {
         int c=0;
         temp=head;
-        while(temp!=NULL)
+        while(temp->next!=head)
         {
             c++;
-            if((c+1)==pos)
+            if(c==pos)
             {
-                temp2=temp->next;
-                temp->next=_new;
-                _new->next=temp2;
+                temp->prev->next=_new;
+                _new->prev=temp->prev;
+                _new->next=temp;
+                temp->prev=_new;
                 break;
             }
             temp=temp->next;
+        }
+        c++;
+        if((temp->next==head)&&(c==pos))
+        {
+            temp->prev->next=_new;
+            _new->prev=temp->prev;
+            _new->next=temp;
+            temp->prev=_new;
         }
     }
 }
@@ -101,23 +118,32 @@ void _delete(int data)
 {
     if(head->data==data)
     {
+        temp2=head->prev;
         temp=head->next;
         delete(head);
         head=temp;
+        temp2->next=head;
+        head->prev=temp2;
     }
     else
     {
         temp=head;
-        while(temp!=NULL)
+        while(temp->next!=head)
         {
-            if(temp->next->data==data)
+            if(temp->data==data)
             {
-                temp2=temp->next;
-                temp->next=temp->next->next;
-                delete(temp2);
+                temp->prev->next=temp->next;
+                temp->next->prev=temp->prev;
+                delete(temp);
                 break;
             }
             temp=temp->next;
+        }
+        if((temp->next==head)&&(temp->data==data))
+        {
+            temp->prev->next=temp->next;
+            temp->next->prev=temp->prev;
+            delete(temp);
         }
     }
 }

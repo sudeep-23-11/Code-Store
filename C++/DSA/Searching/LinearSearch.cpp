@@ -18,8 +18,8 @@ int main()
         }
     }
     if(flag==1)
-    cout<<"The element "<<ele<<" is present at "<<(i+1)<<" position"<<endl;
+    cout<<"Index of "<<ele<<" is "<<i<<endl;
     else
-    cout<<"The element "<<ele<<" is not present in the array"<<endl;
+    cout<<"Not present"<<endl;
     return 0;
 }

@@ -4,34 +4,30 @@
 using namespace std;
 int main()
 {
-    deque<int>deq;
-    deque<int>der;
+    deque<int>q, q2;
     deque<int>::iterator it;
-    int i, x;
-    for(i=0;;i++)
+    int x;
+    while(x!=0)
     {
         cin>>x;
-        if(x==0)
-        break;
-        else if(i%2==0)
-        deq.push_front(x);
-        else
-        deq.push_back(x);
+        q.push_front(x);
+        q.push_back(x);
     }
-    cout<<deq.front()<<" ";
-    for(i=1;i<(deq.size()-1);i++)
-    cout<<deq.at(i)<<" ";
-    cout<<deq.back()<<endl;
-    deq.pop_front();
-    deq.pop_back();
-    it=deq.end();
-    deq.erase(it-3, it);
-    deq.insert(it-3, 3, 0);
-    der.resize(deq.size());
-    deq.swap(der);
-    for(it=der.begin();it!=der.end();it++)
+    q.swap(q2);
+    q2.pop_front();
+    cout<<q2.size()<<" "<<q2.front()<<" "<<q2.at(2)<<endl;
+    while(q2.empty()==0)
+    {
+        cout<<q2.back()<<" ";
+        q2.pop_back();
+    }
+    cout<<endl;
+    q.resize(5, 1);
+    it=q.end();
+    q.erase(it-2, it);
+    q.insert(it-2, 2, -1);
+    for(it=q.begin();it!=q.end();it++)
     cout<<*it<<" ";
-    der.clear();
-    cout<<endl<<der.empty()<<endl;
+    q.clear();
     return 0;
 }

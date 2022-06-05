@@ -4,24 +4,19 @@
 using namespace std;
 int main()
 {
-    queue<int>que;
-    queue<int>quf;
-    int i, x, l;
-    for(i=0;;i++)
+    queue<int>q, q2;
+    int x;
+    while(x!=0)
     {
         cin>>x;
-        if(x==0)
-        break;
-        else
-        que.push(x);
+        q.push(x);
     }
-    l=que.size();
-    for(i=0;i<l;i++)
+    q.swap(q2);
+    cout<<q2.size()<<" "<<q2.back()<<endl;
+    while(q2.empty()==0)
     {
-        cout<<que.front()<<" ";
-        que.pop();
+        cout<<q2.front()<<" ";
+        q2.pop();
     }
-    que.swap(quf);
-    cout<<endl<<que.empty()<<endl;
     return 0;
 }

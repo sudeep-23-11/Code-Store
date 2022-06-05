@@ -4,31 +4,28 @@
 using namespace std;
 int main()
 {
-    vector<int>v;
-    vector<int>w;
+    vector<int>v, v2;
     vector<int>::iterator it;
-    int i, x;
-    for(i=0;;i++)
+    int x;
+    while(x!=0)
     {
         cin>>x;
-        if(x==0)
-        break;
-        else
         v.push_back(x);
     }
-    cout<<v.front()<<" ";
-    for(i=1;i<(v.size()-1);i++)
-    cout<<v.at(i)<<" ";
-    cout<<v.back()<<endl;
-    v.pop_back();
+    v.swap(v2);
+    cout<<v2.size()<<" "<<v2.front()<<" "<<v2.at(2)<<endl;
+    while(v2.empty()==0)
+    {
+        cout<<v2.back()<<" ";
+        v2.pop_back();
+    }
+    cout<<endl;
+    v.resize(5, 1);
     it=v.end();
-    v.erase(it-3, it);
-    v.insert(it-3, 3, 0);
-    w.resize(v.size());
-    v.swap(w);
-    for(it=w.begin();it!=w.end();it++)
+    v.erase(it-2, it);
+    v.insert(it-2, 2, -1);
+    for(it=v.begin();it!=v.end();it++)
     cout<<*it<<" ";
-    w.clear();
-    cout<<endl<<w.empty()<<endl;
+    v.clear();
     return 0;
 }

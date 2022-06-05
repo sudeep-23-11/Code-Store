@@ -4,24 +4,19 @@
 using namespace std;
 int main()
 {
-    stack<int>stk;
-    stack<int>stl;
-    int i, x, l;
-    for(i=0;;i++)
+    stack<int>st, st2;
+    int x;
+    while(x!=0)
     {
         cin>>x;
-        if(x==0)
-        break;
-        else
-        stk.push(x);
+        st.push(x);
     }
-    l=stk.size();
-    for(i=0;i<l;i++)
+    st.swap(st2);
+    cout<<st2.size()<<endl;
+    while(st2.empty()==0)
     {
-        cout<<stk.top()<<" ";
-        stk.pop();
+        cout<<st2.top()<<" ";
+        st2.pop();
     }
-    stk.swap(stl);
-    cout<<endl<<stk.empty()<<endl;
     return 0;
 }

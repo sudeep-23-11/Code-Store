@@ -4,24 +4,20 @@
 using namespace std;
 int main()
 {
-    priority_queue<int>pque;
-    priority_queue<int>pquf;
-    int i, x, l;
-    for(i=0;;i++)
+    priority_queue<int>q, q2;
+    priority_queue<int, vector<int>, greater<int>>a;
+    int x;
+    while(x!=0)
     {
         cin>>x;
-        if(x==0)
-        break;
-        else
-        pque.push(x);
+        q.push(x);
     }
-    l=pque.size();
-    for(i=0;i<l;i++)
+    q.swap(q2);
+    cout<<q2.size()<<endl;
+    while(q2.empty()==0)
     {
-        cout<<pque.top()<<" ";
-        pque.pop();
+        cout<<q2.top()<<" ";
+        q2.pop();
     }
-    pque.swap(pquf);
-    cout<<endl<<pque.empty()<<endl;
     return 0;
 }

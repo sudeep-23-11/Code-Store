@@ -1,4 +1,4 @@
-//MergeTwoSortedLists
+//MergeSortedLists
 #include"LL.h"
 int main()
 {

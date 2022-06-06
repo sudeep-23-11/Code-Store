@@ -16,13 +16,8 @@ void middle(struct node *head)
     struct node *f, *s;
     f=head;
     s=head;
-    while(f->next!=NULL)
+    while((f!=NULL)&&(f->next!=NULL))
     {
-        if(f->next->next==NULL)
-        {
-            s=s->next;
-            break;
-        }
         s=s->next;
         f=f->next->next;
     }

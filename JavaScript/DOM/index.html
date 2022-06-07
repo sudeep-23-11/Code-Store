@@ -4,82 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basics</title>
+    <title>JavaScript DOM</title>
 
-    <link rel="stylesheet" href="./style1.css">
-    <link rel="stylesheet" href="./style2.css">
-    <link rel="stylesheet" href="./style3.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-    <div id="A" class="xyz"></div>
+<body onload="window.alert('Hello HTML')" onunload="window.print()">
+    <div>
+        <h5 id="Aa">Hello HTML</h5>
+        <img id="Ab" src="../../Media/images/html.png">
+        <form onsubmit="form_button_1()">
+            <input id="Ac" type="text"
+                onfocus="this.style.backgroundColor='#FFFF00'"
+                onchange="form_button_2()">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div>
+        <p class="Ba"
+            onmouseover="this.style.backgroundColor='#00FF00'"
+            onmouseout="this.style.backgroundColor='#FF0000'">
+            Hello C</p>
+        <p class="Ba"
+            onmousedown="this.style.backgroundColor='#0000FF'"
+            onmouseup="this.style.backgroundColor='#FF0000'">
+            Hello C++</p>
+        <p class="Ba">Hello Python</p>
+        <p class="Ba">Hello Java</p>
+    </div>
     
-    <div id="B" class="xyz">
-        html css javascript bootstrap reactjs nodejs expressjs mongodb
-        <img src="../Media/images/github3.png">
-    </div>
+    <button type="button" onclick="click_button_1()">Click Me 1</button>
+    <button id="btn" type="button" disabled>Click Me 2</button>
 
-    <div id="C" class="xyz">
-        <p id="Ca">html <span>css</span> javascript<br>bootstrap   reactjs nodejs   expressjs<br>mongodb</p>
-        <p id="Cb">htmlcssjavascript bootstrapreactjs nodejsexpressjsmongodb</p>
-        <p id="Cc">htmlcssjavascriptbootstrapreactjsnodejsexpressjsmongodb</p>
-    </div>
-
-    <div id="D" class="xyz">
-        HTML CSS JavaScript Bootstrap ReactJS NodeJS ExpressJS MongoDB
-    </div>
-
-    <div id="E" class="xyz">
-        <a href="https://www.youtube.com/" target="_self">YouTube Link</a>
-        <ul id="Ea"><li>HTML</li></ul>
-        <ol id="Eb"><li>CSS</li></ol>
-        <ul id="Ec"><li>JavaScript</li></ul>
-    </div>
-
-    <div id="F" class="xyz">
-        <table>
-            <caption>Dev</caption>
-            <tr>
-                <th>App</th>
-                <th>Web</th>
-            </tr>
-            <tr>
-                <td>Kotlin</td>
-                <td>JavaScript</td>
-            </tr>
-        </table>
-    </div>
-
-    <div id="G" class="xyz">
-        <img src="../Media/images/github2.png">
-        <p>HTML CSS JavaScript Bootstrap ReactJS NodeJS ExpressJS MongoDB</p>
-    </div>
-
-    <div id="H" class="xyz">
-        <img id="Ha" src="../Media/images/workplace.png">
-        <img id="Hb" src="../Media/images/html.png">
-        <img id="Hc" src="../Media/images/css.png">
-    </div>
-
-    <div id="I" class="xyz"></div>
-
-    <div id="J" class="xyz">
-        <div id="Ja">C</div>
-        <div id="Jb">C++</div>
-        <div id="Jc">Python</div>
-        <div id="Jd">Java</div>
-    </div>
-
-    <div id="K" class="xyz">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
-    </div>
+    <script src="./script.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-//StringPermutaion
+//Permutation
 #include<iostream>
 #include<algorithm>
 #include<set>
@@ -9,7 +9,7 @@ int main()
 {
     string S;
     cin>>S;
-    permute(S, 0, S.size()-1);
+    permute(S, 0, (S.size()-1));
     for(auto i:st)
     cout<<i<<endl;
     cout<<st.size()<<endl;

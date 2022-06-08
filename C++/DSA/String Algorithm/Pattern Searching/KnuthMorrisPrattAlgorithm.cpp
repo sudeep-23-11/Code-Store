@@ -9,7 +9,7 @@ int main()
     int lps[p.size()];
     i=1;
     j=0;
-    lps[j]=0;
+    lps[0]=0;
     while(i!=p.size())
     {
         if(p.at(i)==p.at(j))
@@ -28,7 +28,7 @@ int main()
     }
     i=0;
     j=0;
-    while((j!=p.size())&&(i!=s.size()))
+    while(i!=s.size())
     {
         if(s.at(i)==p.at(j))
         {
@@ -39,10 +39,11 @@ int main()
         j=lps[j-1];
         else
         i++;
+        if(j==p.size())
+        {
+            cout<<"Pattern present at "<<(i-j)<<endl;
+            j=lps[j-1];
+        }
     }
-    if(j==p.size())
-    cout<<"Pattern present at "<<(i-j)<<endl;
-    else
-    cout<<"Pattern not present"<<endl;
     return 0;
 }

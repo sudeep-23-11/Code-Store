@@ -1,5 +1,5 @@
-//CycleDetection
-#include"LL.h"
+//CycleCheck
+#include"../LL.h"
 int main()
 {
     struct node *f, *s;

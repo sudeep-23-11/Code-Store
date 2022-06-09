@@ -1,5 +1,5 @@
 //MergeSortedLists
-#include"LL.h"
+#include"../LL.h"
 int main()
 {
     struct node *h1, *h2;

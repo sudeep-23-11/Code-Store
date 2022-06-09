@@ -1,5 +1,5 @@
-//IntersectionDetection
-#include"LL.h"
+//IntersectionCheck
+#include"../LL.h"
 int main()
 {
     struct node *h1, *h2, *t1, *t2;

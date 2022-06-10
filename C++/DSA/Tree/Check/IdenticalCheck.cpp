@@ -17,5 +17,5 @@ bool preorder(struct node *n1, struct node *n2)
 {
     if((n1==NULL)||(n2==NULL))
     return n1==n2;
-    return preorder(n1->left, n2->left)&&preorder(n1->right, n2->right)&&(n1->data==n2->data);
+    return (n1->data==n2->data)&&preorder(n1->left, n2->left)&&preorder(n1->right, n2->right);
 }

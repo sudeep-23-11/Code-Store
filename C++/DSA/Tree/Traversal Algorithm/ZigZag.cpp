@@ -2,6 +2,8 @@
 #include"../T.h"
 #include<queue>
 #include<vector>
+queue<struct node *>q;
+vector<struct node *>v;
 int main()
 {
     bool flag;
@@ -9,8 +11,6 @@ int main()
     struct node *root, *n;
     root=construct();
     flag=false;
-    queue<struct node *>q;
-    vector<struct node *>v;
     q.push(root);
     while(q.empty()==0)
     {

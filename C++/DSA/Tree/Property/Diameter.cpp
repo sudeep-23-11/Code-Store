@@ -18,6 +18,6 @@ int height(struct node *n)
     return 0;
     lh=height(n->left);
     rh=height(n->right);
-    m=max(m, (lh+rh));
+    m=max(m, (lh+rh+1));
     return max(lh, rh)+1;
 }

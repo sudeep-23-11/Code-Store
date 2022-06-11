@@ -1,11 +1,11 @@
 //LevelOrder
 #include"../T.h"
 #include<queue>
+queue<struct node *>q;
 int main()
 {
     struct node *root, *n;
     root=construct();
-    queue<struct node *>q;
     q.push(root);
     while(q.empty()==0)
     {

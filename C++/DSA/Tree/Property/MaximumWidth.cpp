@@ -7,7 +7,7 @@ vector<int>v;
 int main()
 {
     int i, l, id, mid, m;
-    struct node *root, *n;
+    struct node *n;
     root=construct();
     m=0;
     q.push(make_pair(root, 1));

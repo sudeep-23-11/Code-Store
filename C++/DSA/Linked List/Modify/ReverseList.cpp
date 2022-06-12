@@ -7,7 +7,7 @@ int main()
     head=convert(A, 5);
     temp=head;
     t1=head->next;
-    while(t2!=NULL)
+    while(t1!=NULL)
     {
         t2=t1->next;
         t1->next=temp;

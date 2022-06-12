@@ -1,4 +1,4 @@
-//RightAndLeft
+//RightAndLeftView
 #include"../T.h"
 #include<map>
 map<int, struct node *>_right, _left;
@@ -6,7 +6,7 @@ void preorder1(struct node *n, int l);
 void preorder2(struct node *n, int l);
 int main()
 {
-    struct node *root, *n;
+    struct node *n;
     root=construct();
     preorder1(root, 1);
     cout<<"Right View"<<endl;

@@ -3,7 +3,7 @@
 bool preorder(struct node *n1, struct node *n2);
 int main()
 {
-    struct node *root, *r;
+    struct node *r;
     root=construct();
     r=construct();
     r->right->left->right->left=NULL;

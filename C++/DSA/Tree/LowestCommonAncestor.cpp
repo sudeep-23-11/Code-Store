@@ -4,7 +4,6 @@ struct node *preorder(struct node *n, int N, int M);
 int main()
 {
     int N, M;
-    struct node *root;
     root=construct();
     cin>>N>>M;
     cout<<preorder(root, N, M)->data<<endl;

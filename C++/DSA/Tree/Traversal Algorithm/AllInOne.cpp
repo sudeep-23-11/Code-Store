@@ -6,7 +6,6 @@ vector<struct node *>pre, in, post;
 stack<pair<struct node *, int>>st;
 int main()
 {
-    struct node *root;
     root=construct();
     st.push(make_pair(root, 1));
     while(st.empty()==0)

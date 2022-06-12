@@ -5,7 +5,6 @@ void inorder(struct node *n);
 void postorder(struct node *n);
 int main()
 {
-    struct node *root;
     root=construct();
     cout<<"Preorder traversal"<<endl;
     preorder(root);

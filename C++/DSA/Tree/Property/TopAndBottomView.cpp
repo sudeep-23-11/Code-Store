@@ -1,4 +1,4 @@
-//TopAndBottom
+//TopAndBottomView
 #include"../T.h"
 #include<queue>
 #include<map>
@@ -7,7 +7,7 @@ map<int, struct node *>top, bottom;
 int main()
 {
     int v;
-    struct node *root, *n;
+    struct node *n;
     root=construct();
     q.push(make_pair(root, 0));
     while(q.empty()==0)

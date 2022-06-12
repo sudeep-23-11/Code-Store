@@ -4,7 +4,7 @@
 queue<struct node *>q;
 int main()
 {
-    struct node *root, *n;
+    struct node *n;
     root=construct();
     q.push(root);
     while(q.empty()==0)

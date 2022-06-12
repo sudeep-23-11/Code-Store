@@ -6,7 +6,6 @@ bool preorder(struct node *n, int N);
 int main()
 {
     int N;
-    struct node *root;
     root=construct();
     cin>>N;
     preorder(root, N);

@@ -9,7 +9,6 @@ vector<struct node *>v;
 stack<struct node *>st;
 int main()
 {
-    struct node *root;
     root=construct();
     v.push_back(root);
     left(root->left);

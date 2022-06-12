@@ -3,7 +3,6 @@
 int height(struct node *n);
 int main()
 {
-    struct node *root;
     root=construct();
     if(height(root)!=-1)
     cout<<"Balance present"<<endl;

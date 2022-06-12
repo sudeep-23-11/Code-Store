@@ -2,7 +2,7 @@
 #include"../LL.h"
 int main()
 {
-    struct node *head, *t1;
+    struct node *t1;
     int A[]={10, 10, 20, 30, 30};
     head=convert(A, 5);
     temp=head;

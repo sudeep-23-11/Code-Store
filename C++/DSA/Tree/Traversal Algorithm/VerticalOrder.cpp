@@ -6,7 +6,6 @@ map<int, map<int, multiset<int>>>m;
 void preorder(struct node *n, int v, int l);
 int main()
 {
-    struct node *root;
     root=construct();
     preorder(root, 0, 1);
     for(auto i:m)

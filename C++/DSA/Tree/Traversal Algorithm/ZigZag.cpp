@@ -8,7 +8,7 @@ int main()
 {
     bool flag;
     int i, l;
-    struct node *root, *n;
+    struct node *n;
     root=construct();
     flag=false;
     q.push(root);

@@ -3,7 +3,6 @@
 bool preorder(struct node *n1, struct node *n2);
 int main()
 {
-    struct node *root;
     root=construct();
     if(preorder(root->left, root->right)==true)
     cout<<"Symmetry present"<<endl;

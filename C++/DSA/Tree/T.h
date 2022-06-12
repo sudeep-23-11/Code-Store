@@ -27,3 +27,11 @@ struct node *construct()
     root->right->left->right->left=new node(10);
     return root;
 }
+void display(struct node *n)
+{
+    if(n==NULL)
+    return;
+    cout<<n->data<<" ";
+    display(n->left);
+    display(n->right);
+}

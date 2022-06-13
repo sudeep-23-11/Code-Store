@@ -14,7 +14,7 @@ int main()
     cin>>A[i];
     cout<<"Next Greater Array"<<endl;
     _greater(A, N);
-    cout<<endl<<"Next Smaller Array"<<endl;
+    cout<<"Next Smaller Array"<<endl;
     smaller(A, N);
     return 0;
 }
@@ -34,6 +34,7 @@ void _greater(int A[], int N)
     }
     for(i=0;i<N;i++)
     cout<<nge[i]<<" ";
+    cout<<endl;
 }
 void smaller(int A[], int N)
 {
@@ -51,4 +52,5 @@ void smaller(int A[], int N)
     }
     for(i=0;i<N;i++)
     cout<<nse[i]<<" ";
+    cout<<endl;
 }

@@ -1,4 +1,4 @@
-//PosixThread2
+//Posix2
 #include<stdio.h>
 #include<unistd.h>
 #include<pthread.h>

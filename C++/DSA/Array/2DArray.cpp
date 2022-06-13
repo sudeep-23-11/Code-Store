@@ -1,7 +1,7 @@
 //2DArray
 #include<iostream>
 using namespace std;
-void printarray(int A[][2], int x, int y);
+void display(int A[][2], int N, int M);
 int main()
 {
     int i;
@@ -11,15 +11,15 @@ int main()
         A[i][0]=(i+1);
         A[i][1]=(i+1)*10;
     }
-    printarray(A, 10, 2);
+    display(A, 10, 2);
     return 0;
 }
-void printarray(int A[][2], int x, int y)
+void display(int A[][2], int N, int M)
 {
     int i, j;
-    for(i=0;i<x;i++)
+    for(i=0;i<N;i++)
     {
-        for(j=0;j<y;j++)
+        for(j=0;j<M;j++)
         cout<<*(*(A+i)+j);
         cout<<endl;
     }

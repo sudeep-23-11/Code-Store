@@ -15,6 +15,7 @@ struct node
 struct node *root;
 struct node *construct()
 {
+    // Binary Tree
     root=new node(1);
     root->left=new node(2);
     root->right=new node(3);
@@ -25,6 +26,18 @@ struct node *construct()
     root->left->right->left=new node(8);
     root->right->left->right=new node(9);
     root->right->left->right->left=new node(10);
+
+    //Binary Search Tree
+    // root=new node(5);
+    // root->left=new node(2);
+    // root->right=new node(9);
+    // root->left->left=new node(1);
+    // root->left->right=new node(4);
+    // root->right->left=new node(7);
+    // root->right->right=new node(10);
+    // root->left->right->left=new node(3);
+    // root->right->left->left=new node(6);
+    // root->right->left->right=new node(8);
     return root;
 }
 void display(struct node *n)

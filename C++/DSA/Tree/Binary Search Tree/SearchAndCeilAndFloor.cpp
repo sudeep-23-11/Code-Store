@@ -2,7 +2,7 @@
 #include"../T.h"
 int c, f;
 struct node *preorder(struct node *n, int data);
-void cf(struct node *root, int data);
+void ceilfloor(struct node *root, int data);
 int main()
 {
     int data;
@@ -13,7 +13,7 @@ int main()
     else
     cout<<"Element not present"<<endl;
     cin>>data;
-    cf(root, data);
+    ceilfloor(root, data);
     cout<<"Ceil of "<<data<<" is "<<c<<endl;
     cout<<"Floor of "<<data<<" is "<<f<<endl;
     return 0;
@@ -26,8 +26,10 @@ struct node *preorder(struct node *n, int data)
     return preorder(n->left, data);
     return preorder(n->right, data);
 }
-void cf(struct node *root, int data)
+void ceilfloor(struct node *root, int data)
 {
+    c=-1;
+    f=-1;
     struct node *n;
     n=root;
     while(n!=NULL)
@@ -36,7 +38,7 @@ void cf(struct node *root, int data)
         {
             c=n->data;
             f=n->data;
-            break;
+            return;
         }
         if(n->data>data)
         {

@@ -22,17 +22,20 @@ both subtrees are BST, inorder traversal is sorted
 * TotalNodesInCompleteTree - go to every node, count it
 * FlattenTree - 
     * make new list according to preorder traversal
-    * prev=NULL, right->left->node, node->right=prev, node->left=NULL, prev=node
+    * p=NULL, right->left->node, node->right=p, node->left=NULL, p=node
 
 # Other Approaches in Binary Search Tree
 * InorderSuccessorAndPredecessor, CeilAndFloor -
-    * sort preorder traversal
-    * inorder traversal
-* KthLargestAndSmallestElement - sort preorder traversal
+    * sort preorder traversal array
+    * do inorder traversal
+* Iterator - inorder traversal array
+* KthLargestAndSmallestElement - sort preorder traversal array
 * LowestCommonAncestor -
     * pick first same node in root to node path of nodes
     * LCA in Binary Tree
 * TreeFromPreorder -
     * place every element to its desired place in tree after left and right
     movement according to its value
-    * sort preorder traversal to get inorder traversal
+    * sort preorder traversal array to get inorder traversal array
+* RecoverBST - sort inorder traversal array, do inorder traversal correcting
+nodes according to sorted array

@@ -14,9 +14,9 @@ int main()
 }
 struct node *bulid(int pre[], int r)
 {
+    struct node *root;
     if((i==N)||(pre[i]>r))
     return NULL;
-    struct node *root;
     root=new node(pre[i]);
     i++;
     root->left=bulid(pre, root->data);

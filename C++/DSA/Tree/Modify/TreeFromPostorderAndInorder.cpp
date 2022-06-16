@@ -20,10 +20,10 @@ int main()
 }
 struct node *bulid(int post[], int ps, int pe, int in[], int is, int ie)
 {
-    int x, y;;
+    int x, y;
+    struct node *root;
     if((ps>pe)||(is>ie))
     return NULL;
-    struct node *root;
     root=new node(post[pe]);
     x=m[post[pe]];
     y=x-is;

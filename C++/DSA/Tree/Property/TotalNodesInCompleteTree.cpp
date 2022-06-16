@@ -1,5 +1,5 @@
 //TotalNodesInCompleteTree
-#include"T.h"
+#include"../T.h"
 #include<cmath>
 int height(struct node *n);
 int main()

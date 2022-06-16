@@ -1,6 +1,4 @@
-# Other Approaches
-* MiddleNode - find length of list
-* NthNodeFromLast - find length of list
+# Approaches
 * CycleCheck - hash nodes of list
 * IntersectionCheck -
     * compare every node of list 1 with every node of list 2
@@ -9,4 +7,6 @@
     difference from head of list 1, move pointers together
 * MergeTwoSortedLists - place pointers at head of lists, put smaller node in new
 list, move corresponding pointer
+* MiddleNode - find length of list
+* NthNodeFromLast - find length of list
 * RotateList - pick last node, place it at front

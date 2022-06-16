@@ -1,5 +1,5 @@
 //RootToNodePath
-#include"T.h"
+#include"../T.h"
 #include<vector>
 vector<int>v;
 bool preorder(struct node *n, int N);

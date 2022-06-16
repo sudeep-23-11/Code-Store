@@ -1,5 +1,5 @@
 //LowestCommonAncestor
-#include"T.h"
+#include"../T.h"
 struct node *preorder(struct node *n, int N, int M);
 int main()
 {

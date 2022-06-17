@@ -5,8 +5,8 @@ int main()
 {
     int top, ch, data, i;
     cout<<"0 for display"<<endl;
-    cout<<"1 for insert"<<endl;
-    cout<<"2 for delete"<<endl;
+    cout<<"1 for push"<<endl;
+    cout<<"2 for pop"<<endl;
     int stack[100001];
     top=0;
     while(1)

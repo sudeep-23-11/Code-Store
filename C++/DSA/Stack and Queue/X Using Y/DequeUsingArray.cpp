@@ -5,10 +5,10 @@ int main()
 {
     int front, rear, ch, data, i;
     cout<<"0 for display"<<endl;
-    cout<<"1 for insert rear"<<endl;
-    cout<<"2 for insert front"<<endl;
-    cout<<"3 for delete rear"<<endl;
-    cout<<"4 for delete front"<<endl;
+    cout<<"1 for push rear"<<endl;
+    cout<<"2 for push front"<<endl;
+    cout<<"3 for pop rear"<<endl;
+    cout<<"4 for pop front"<<endl;
     int deque[100001];
     front=50000;
     rear=50000;

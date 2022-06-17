@@ -6,8 +6,8 @@ int main()
 {
     int ch, data;
     cout<<"0 for display"<<endl;
-    cout<<"1 for insert"<<endl;
-    cout<<"2 for delete"<<endl;
+    cout<<"1 for push"<<endl;
+    cout<<"2 for pop"<<endl;
     stack<int>st, st2, t;
     while(1)
     {

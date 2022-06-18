@@ -3,24 +3,19 @@
 using namespace std;
 int main()
 {
-    bool flag;
-    int i, N, ele;
+    int i, N, e;
     cin>>N;
     int A[N];
     for(i=0;i<N;i++)
     cin>>A[i];
-    flag=false;
-    cin>>ele;
+    cin>>e;
     for(i=0;i<N;i++)
     {
-        if(A[i]==ele)
-        {
-            flag=true;
-            break;
-        }
+        if(e==A[i])
+        break;
     }
-    if(flag==true)
-    cout<<"Index of "<<ele<<" is "<<i<<endl;
+    if(i<N)
+    cout<<"Index of "<<e<<" is "<<i<<endl;
     else
     cout<<"Not present"<<endl;
     return 0;

@@ -1,10 +1,12 @@
 * {
     margin: 0%;
     padding: 0%;
-    box-sizing: border-box;
+    box-sizing: border-box;                                 /*content-box*/
 }
 
 .xyz {
+    height: 200px;                                          /*auto*/
+    width: 200px;                                           /*auto*/
     min-height: 50px;
     min-width: 50px;
     max-height: 500px;
@@ -18,18 +20,15 @@
 }
 
 #A {
-    height: 200px;                                          /*auto*/
-    width: 200px;                                           /*auto*/
-
     background-color: #FF0000;                            /*transparent, currentColor*/
     opacity: 0.5;
-    background-image: url(../images/github2.png);
-    background-repeat: no-repeat;                           /*repeat-x, repeat-y*/
-    background-position: left top;                          /*right top*/
-    background-attachment: scroll;                          /*fixed*/
-    background-size: 100px 100px;                           /*contain, cover, auto*/
+    background-image: url(../Media/images/github2.png);
+    background-repeat: no-repeat;                           /*repeat, repeat-x, repeat-y, space, round*/
+    background-position: left top;                          /*right, bottom, center*/
+    background-size: 50% 50%;                               /*contain, cover, auto*/
     background-origin: padding-box;                         /*border-box, content-box*/
     background-clip: border-box;                            /*padding-box, content-box*/
+    background-attachment: scroll;                          /*fixed*/
 
     border-style: solid;                                    /*dashed, dotted, double, groove, ridge, inset, outset, none*/
     border-width: 5px;
@@ -43,7 +42,6 @@
 }
 
 #B {
-    height: 150px;
     width: 300px;
     border-style: solid;
 
@@ -71,8 +69,6 @@
 }
 
 #C {
-    height: 200px;
-    width: 200px;
     border-style: solid;
 }
 #Ca {
@@ -81,7 +77,7 @@
     white-space: nowrap;                                    /*normal, pre, pre-line, pre-wrap*/
     text-overflow: clip;                                    /*ellipsis*/
 }
-#Ca span {
+p span {                                                    /*p > span, p + span, p ~ span*/
     writing-mode: vertical-rl;                              /*horizontal-tb, vertical-lr*/
 }
 #Cb {
@@ -93,7 +89,7 @@
 
 #D {
     height: 100px;
-    width: 75px;
+    width: 100px;
     border-style: solid;
     
     overflow-x: scroll;                                     /*visible, hidden, auto*/

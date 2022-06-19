@@ -3,7 +3,6 @@
     width: 50px;
     background-color: #000000;
     position: relative;
-    left: 0%;
     
     animation-name: anim;
     animation-duration: 3s;
@@ -24,8 +23,6 @@
 }
 
 #J {
-    height: 200px;
-    width: 200px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -57,6 +54,23 @@
 }
 
 #K {
+    background-color: #FF0000;
+
+    -webkit-mask-image: url(../Media/images/w3schools.png);
+    mask-image: url(../Media/images/w3schools.png);
+    -webkit-mask-repeat: no-repeat;                         /*repeat, repeat-x, repeat-y, space, round*/
+    mask-repeat: no-repeat;
+    -webkit-mask-position: left top;                        /*right, bottom, center*/
+    mask-position: left top;
+    -webkit-mask-size: 50% 50%;                             /*contain, cover, auto*/
+    mask-size: 50% 50%;
+    -webkit-mask-origin: border-box;                        /*content-box, padding-box, margin-box, fill-box, stroke-box, view-box*/
+    mask-origin: border-box;
+    -webkit-mask-mode: match-source;                        /*luminance, alpha*/
+    mask-mode: match-source;
+}
+
+#L {
     height: 500px;
     width: 500px;
     padding: 0px;
@@ -69,7 +83,7 @@
     align-items: flex-start;                                /*flex-end, center, stretch, baseline*/
     align-content: flex-start;                              /*flex-end, center, stretch, space-between, space-around, space-evenly*/
 }
-#K div {
+#L div {
     height: 50px;
     width: 50px;
     margin: 10px;

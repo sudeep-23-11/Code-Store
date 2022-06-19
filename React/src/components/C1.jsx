@@ -8,7 +8,7 @@ export default function C1(props) {
 
     let {l1, l2}=props;
 
-    if(l1==="React" && l2==="Angular")
+    if((l1==="React")&&(l2==="Angular"))
     {
         return (
             <>

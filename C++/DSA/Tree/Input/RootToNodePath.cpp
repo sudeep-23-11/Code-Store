@@ -18,7 +18,7 @@ bool preorder(struct node *n, int N)
     if(n==NULL)
     return false;
     v.push_back(n->data);
-    if((n->data==N)||(preorder(n->left, N)==true)||(preorder(n->right, N)==true))
+    if((n->data==N)||preorder(n->left, N)||preorder(n->right, N))
     return true;
     v.pop_back();
     return false;

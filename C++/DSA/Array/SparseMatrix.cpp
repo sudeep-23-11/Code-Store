@@ -4,9 +4,9 @@ using namespace std;
 int main()
 {
     int i, j, N, M, c;
-    c=0;
     cin>>N>>M;
     int A[N][M];
+    c=0;
     for(i=0;i<N;i++)
     {
         for(j=0;j<M;j++)
@@ -16,7 +16,7 @@ int main()
             c++;
         }
     }
-    int spma[3][c];
+    int sparse[3][c];
     c=0;
     for(i=0;i<N;i++)
     {
@@ -24,9 +24,9 @@ int main()
         {
             if(A[i][j]!=0)
             {
-                spma[0][c]=i;
-                spma[1][c]=j;
-                spma[2][c]=A[i][j];
+                sparse[0][c]=i;
+                sparse[1][c]=j;
+                sparse[2][c]=A[i][j];
                 c++;
             }
         }
@@ -34,7 +34,7 @@ int main()
     for(i=0;i<3;i++)
     {
         for(j=0;j<c;j++)
-        cout<<spma[i][j]<<" ";
+        cout<<sparse[i][j]<<" ";
         cout<<endl;
     }
     return 0;

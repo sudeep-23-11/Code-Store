@@ -23,8 +23,7 @@ int fibo(int n)
 {
     if(memo[n]!=-1)
     return memo[n];
-    else if(n==0||n==1)
+    if((n==0)||(n==1))
     return memo[n]=n;
-    else
     return memo[n]=fibo(n-1)+fibo(n-2);
 }

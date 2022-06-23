@@ -1,6 +1,7 @@
-//MergeSort
+//CountInversions
 #include<iostream>
 using namespace std;
+int c;
 void merge(int A[], int l, int m, int r);
 void mergesort(int A[], int l, int r);
 int main()
@@ -10,9 +11,9 @@ int main()
     int A[N];
     for(i=0;i<N;i++)
     cin>>A[i];
+    c=0;
     mergesort(A, 0, N-1);
-    for(i=0;i<N;i++)
-    cout<<A[i]<<" ";
+    cout<<c<<endl;
     return 0;
 }
 void merge(int A[], int l, int m, int r)
@@ -39,6 +40,7 @@ void merge(int A[], int l, int m, int r)
         {
             A[k]=rA[j];
             j++;
+            c+=(nl-i);
         }
         k++;
     }

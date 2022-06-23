@@ -5,6 +5,10 @@
 * FindRepeatingAndMissing -
     * hash elements of array
     * subtract sum of elements from n*(n+1)/2, subtract sum of squares of elements from n*(n+1)*(n+2)/6
+* MatrixSearch -
+    * linear search across matrix
+    * binary search across every row
+    * binary search across matrix with e==A[m/M][m%M] only if last element of i th row is smaller than first element of i+1 th row
 * MergeTwoSortedArrays -
     * place elements of both arrays in third array, sort it, replace elements from third array to original arrays
     * compare every element of first array with first element of second array, place smaller one in first array, sort second array

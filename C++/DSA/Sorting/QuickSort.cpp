@@ -10,7 +10,7 @@ int main()
     int A[N];
     for(i=0;i<N;i++)
     cin>>A[i];
-    quicksort(A, 0, N-1);    
+    quicksort(A, 0, N-1);
     for(i=0;i<N;i++)
     cout<<A[i]<<" ";
     return 0;

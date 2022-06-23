@@ -1,4 +1,4 @@
-//BitwiseManipulation
+//BitwiseCheck
 #include<iostream>
 using namespace std;
 void evenodd(int n);

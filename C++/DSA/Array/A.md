@@ -5,6 +5,9 @@
 * FindRepeatingAndMissing -
     * hash elements of array
     * subtract sum of elements from n*(n+1)/2, subtract sum of squares of elements from n*(n+1)*(n+2)/6
+* GridUniquePaths -
+    * Recursion with j+1 for right and i+1 for down, for finding return 1, for out of bound return 0
+    * Dynamic Programming
 * MajorityElement, MajorityElementII, RemoveDuplicatesFromSortedArray - hash elements of array
 * MatrixSearch -
     * linear search across matrix

@@ -8,11 +8,12 @@ int main()
     for(i=1;i<=N;i++)
     {
         c=1;
-        for(j=1;j<=i;j++)
+        cout<<c<<" ";
+        for(j=1;j<i;j++)
         {
-            cout<<c<<" ";
             c*=(i-j);
             c/=j;
+            cout<<c<<" ";
         }
         cout<<endl;
     }

@@ -1,4 +1,4 @@
-//MaxStack
+//MinimumStack
 #include<iostream>
 #include<stack>
 using namespace std;
@@ -8,7 +8,7 @@ int main()
     cout<<"0 for top"<<endl;
     cout<<"1 for push"<<endl;
     cout<<"2 for pop"<<endl;
-    cout<<"3 for max"<<endl;
+    cout<<"3 for min"<<endl;
     stack<int>st;
     while(1)
     {
@@ -16,7 +16,7 @@ int main()
         cin>>ch;
         if(ch==0)
         {
-            if(st.top()>m)
+            if(st.top()<m)
             cout<<m<<endl;
             else
             cout<<st.top()<<endl;
@@ -29,7 +29,7 @@ int main()
                 st.push(data);
                 m=data;
             }
-            else if(data<st.top())
+            else if(data>st.top())
             st.push(data);
             else
             {
@@ -39,7 +39,7 @@ int main()
         }
         else if(ch==2)
         {
-            if(st.top()>m)
+            if(st.top()<m)
             m=m*2-st.top();
             st.pop();
         }

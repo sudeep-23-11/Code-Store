@@ -1,2 +1,2 @@
 # Stack Approaches
-* MaxStack, MinStack - push {value, max/min} to stack
+* MaximumStack, MinimumStack - push {value, max/min} to stack

@@ -1,16 +1,16 @@
-//NthNodeFromLast
+//KthNodeFromLast
 #include"LL.h"
 int main()
 {
-    int N, c;
+    int K, c;
     struct node *f, *s;
     int A[]={10, 20, 30, 40, 50};
     head=convert(A, 5);
-    cin>>N;
+    cin>>K;
     c=1;
     f=head;
     s=head;
-    while(c!=N)
+    while(c!=K)
     {
         f=f->next;
         c++;

@@ -22,6 +22,4 @@
 * Sort012Array -
     * sort array
     * count no. of elements of each color, place each color according to their no. from starting
-* UniquePathsInMatrix -
-    * Recursion with j+1 for right and i+1 for down, for finding return 1, for out of bound return 0
-    * Dynamic Programming
+* UniquePathsInMatrix - Dynamic Programming, if dp[i][j]!=-1 return dp[i][j], else return dp[i][j]=sum of j+1 for right and i+1 for down, if path found return 1, if out of bound return 0

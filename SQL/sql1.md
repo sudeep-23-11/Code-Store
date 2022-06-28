@@ -3,12 +3,14 @@
 * select distinct c ---------------------------------------------- distinct entries of column c
 * select c as a -------------------------------------------------- alias of column c is a
 * select c1, c2, … from t1, t2, … -------------------------------- cartesian product of c1, c2, …
-
+*
+*
 * limit n -------------------------------------------------------- n entries only
 * offset n ------------------------------------------------------- entries after n entries
 * order by c asc ------------------------------------------------- entries in ascending order of column c
 * order by c desc ------------------------------------------------ entries in descending order of column c
-
+*
+*
 * where x -------------------------------------------------------- entries which satisfy condition x
     * x1 and x2 -------------------------------------------------- both x1 and  x2
     * x1 or x2 --------------------------------------------------- either x1 or x2
@@ -26,7 +28,8 @@
     * x all (q) -------------------------------------------------- returns True if entries satify condition x for all records of qurey q else False
         * any ---------------------------------------------------- any record
         * some --------------------------------------------------- any record
-
+*
+*
 * select count (c) from t ---------------------------------------- count of entries of column c of table t
     * sum (c) ---------------------------------------------------- sum
     * max (c) ---------------------------------------------------- maximum

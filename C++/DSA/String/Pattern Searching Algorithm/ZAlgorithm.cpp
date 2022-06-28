@@ -6,7 +6,7 @@ int main()
     int i, l, r;
     string s, p, rs;
     cin>>s>>p;
-    rs=p+'$'+s;
+    rs=p+"$"+s;
     int Z[rs.size()];
     l=0;
     r=0;
@@ -17,7 +17,7 @@ int main()
         {
             r=i;
             x:l=i;
-            while((r<rs.size())&&(rs.at(r)==rs.at(r-l)))
+            while((r<rs.size())&&(rs[r]==rs[r-l]))
             r++;
             Z[i]=r-l;
             r--;

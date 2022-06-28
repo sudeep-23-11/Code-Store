@@ -12,7 +12,7 @@ int main()
     lps[0]=0;
     while(i!=p.size())
     {
-        if(p.at(i)==p.at(j))
+        if(p[i]==p[j])
         {
             j++;
             lps[i]=j;
@@ -30,7 +30,7 @@ int main()
     j=0;
     while(i!=s.size())
     {
-        if(s.at(i)==p.at(j))
+        if(s[i]==p[j])
         {
             i++;
             j++;

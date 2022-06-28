@@ -5,7 +5,8 @@
     * alter c set default v -------------------------------------- default values
     * auto_increment=v ------------------------------------------- set starting value to v
     * alter c drop default --------------------------------------- drop default values from column c
-
+*
+*
 * create table t (c dt, constraint ct unique (c)) ---------------- unique values in column c
 * alter table t add constraint ct unique (c) --------------------- add unique values to column c
     * check (x)) ------------------------------------------------- values which satisfy conditon x
@@ -19,7 +20,8 @@
     * check ct --------------------------------------------------- check
     * primary key ct --------------------------------------------- primary key
     * foreign key ct --------------------------------------------- foreign key
-
+*
+*
 * create index i on t (c1, c2, …) -------------------------------- create indexes for entries of table t
     * unique index ----------------------------------------------- distinct entries
 * alter table t drop index i ------------------------------------- drop indexes

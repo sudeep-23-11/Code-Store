@@ -11,22 +11,22 @@ int main()
     hp=0;
     for(i=0;i<p.size();i++)
     {
-        hs+=(((int)s.at(i)-96)*pow(3, i));
-        hp+=(((int)p.at(i)-96)*pow(3, i));
+        hs+=((s[i]-'a'+1)*pow(3, i));
+        hp+=((p[i]-'a'+1)*pow(3, i));
     }
     for(i=0;i<=(s.size()-p.size());i++)
     {
         if(i!=0)
         {
-            hs-=((int)s.at(i-1)-96);
+            hs-=(s[i-1]-'a'+1);
             hs/=3;
-            hs+=(((int)s.at(i+p.size()-1)-96)*pow(3, p.size()-1));
+            hs+=((s[i+p.size()-1]-'a'+1)*pow(3, p.size()-1));
         }
         if(hs==hp)
         {
             for(j=0;j<p.size();j++)
             {
-                if(p.at(j)!=s.at(i+j))
+                if(p[j]!=s[i+j])
                 break;
             }
             if(j==p.size())

@@ -15,12 +15,12 @@ int main()
         s=c;
         if(i>=0)
         {
-            s+=(x.at(i)-'0');
+            s+=(x[i]-'0');
             i--;
         }
         if(j>=0)
         {
-            s+=(y.at(j)-'0');
+            s+=(y[j]-'0');
             j--;
         }
         z=to_string(s%10)+z;

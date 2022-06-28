@@ -7,7 +7,6 @@
     * hash elements of array
     * subtract sum of elements from n*(n+1)/2, subtract sum of squares of elements from n*(n+1)*(n+2)/6
 * LongestConsecutiveSequence - sort array
-* LongestSubstringWithoutRepeatingCharacters - use set instead of map, iterate i instead of jump, deleting elements from set while iteration
 * MajorityElement, RemoveDuplicatesFromSortedArray - hash elements of array
 * MergeTwoSortedArrays -
     * place elements of both arrays in third array, sort it, replace elements from third array to original arrays

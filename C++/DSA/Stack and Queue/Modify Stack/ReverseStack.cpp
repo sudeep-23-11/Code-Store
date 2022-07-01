@@ -1,9 +1,9 @@
-//SortedStack
+//ReverseStack
 #include<iostream>
 #include<stack>
 using namespace std;
 stack<int>st;
-void sort();
+void reverse();
 void insert(int x);
 int main()
 {
@@ -13,7 +13,7 @@ int main()
         cin>>x;
         st.push(x);
     }
-    sort();
+    reverse();
     while(st.empty()==0)
     {
         cout<<st.top()<<" ";
@@ -21,20 +21,20 @@ int main()
     }
     return 0;
 }
-void sort()
+void reverse()
 {
     int x;
     if(st.empty()==1)
     return;
     x=st.top();
     st.pop();
-    sort();
+    reverse();
     insert(x);
 }
 void insert(int x)
 {
     int y;
-    if((st.empty()==1)||(x>st.top()))
+    if(st.empty()==1)
     st.push(x);
     else
     {

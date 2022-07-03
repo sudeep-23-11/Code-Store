@@ -1,58 +1,38 @@
 //LowestCommonAncestor
 #include<iostream>
 #include<vector>
-#include<cstring>
-#include<algorithm>
 using namespace std;
 vector<int>adj[100001];
-int parent[100001];
-void DFS(int n, int p);
-int lca(int u, int v);
+bool DFS(int n, int N, vector<int>&v);
 int main()
 {
     int i, n, m, u, v;
     cin>>n>>m;
-    memset(parent, -1, sizeof(parent));
     for(i=1;i<=m;i++)
     {
         cin>>u>>v;
         adj[u].push_back(v);
     }
-    DFS(1, -1);
     cin>>u>>v;
-    cout<<lca(u, v)<<endl;
+    vector<int>up, vp;
+    DFS(1, u, up);
+    DFS(1, v, vp);
+    i=0;
+    while((up[i]==vp[i])&&(i<up.size())&&(i<vp.size()))
+    i++;
+    cout<<up[i-1]<<endl;
     return 0;
 }
-void DFS(int n, int p)
+bool DFS(int n, int N, vector<int>&v)
 {
-    parent[n]=p;
+    v.push_back(n);
+    if(n==N)
+    return true;
     for(auto i:adj[n])
-    DFS(i, n);
-}
-int lca(int u, int v)
-{
-    int i, lca;
-    vector<int>a, b;
-    i=u;
-    while(i!=-1)
     {
-        a.push_back(i);
-        i=parent[i];
+        if(DFS(i, N, v)==true)
+        return true;
     }
-    i=v;
-    while(i!=-1)
-    {
-        b.push_back(i);
-        i=parent[i];
-    }
-    reverse(a.begin(), a.end());
-    reverse(b.begin(), b.end());
-    for(i=0;i<min(a.size(), b.size());i++)
-    {
-        if(a.at(i)==b.at(i))
-        lca=a.at(i);
-        else
-        break;
-    }
-    return lca;
+    v.pop_back();
+    return false;
 }

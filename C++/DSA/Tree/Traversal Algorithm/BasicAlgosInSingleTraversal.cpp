@@ -1,4 +1,4 @@
-//AllInOne
+//BasicAlgosInSingleTraversal
 #include"../T.h"
 #include<vector>
 #include<stack>

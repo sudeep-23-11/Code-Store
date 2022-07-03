@@ -1,4 +1,4 @@
-//BasicOnes
+//BasicAlgos
 #include"../T.h"
 void preorder(struct node *n);
 void inorder(struct node *n);

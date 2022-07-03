@@ -1,4 +1,4 @@
-//Trie
+//PrefixString
 #include<iostream>
 using namespace std;
 struct trie
@@ -7,7 +7,7 @@ struct trie
     {
         trieNode *child[27];
         int count;
-        trieNode() 
+        trieNode()
         {
             int i;
             for(i=0;i<27;i++)
@@ -22,7 +22,7 @@ struct trie
         trieNode *curNode=rootNode;
         for(i=0;i<S.size();i++)
         {
-            index=(int)S.at(i)-96;
+            index=S[i]-'a'+1;
             if(curNode->child[index]==NULL)
             curNode->child[index]=new trieNode();
             curNode=curNode->child[index];
@@ -35,7 +35,7 @@ struct trie
         trieNode *curNode=rootNode;
         for(i=0;i<S.size();i++)
         {
-            index=(int)S.at(i)-96;
+            index=S[i]-'a'+1;
             if(curNode->child[index]==NULL)
             return 0;
             curNode=curNode->child[index];
@@ -71,7 +71,7 @@ struct trie
             }
             return curNode;
         }
-        index=(int)S.at(key)-96;
+        index=S[key]-'a'+1;
         curNode->child[index]=removeChlid(curNode->child[index], S, (key+1));
         if((emptyChlid(curNode)==1)&&(curNode->count==0))
         {
@@ -84,7 +84,7 @@ struct trie
 int main()
 {
     trie t;
-    int N, Q, q;
+    int N, ch;
     string S;
     cin>>N;
     while(N--)
@@ -92,19 +92,21 @@ int main()
         cin>>S;
         t.insert(S);
     }
-    cin>>Q;
-    cout<<"Press 1 to insert a particular string"<<endl;
-    cout<<"Press 2 to find number of strings which have the given string as their prefix"<<endl;
-    cout<<"Press 3 to remove a particular string"<<endl;
-    while(Q--)
+    cout<<"0 for number of strings which have the given string as their prefix"<<endl;
+    cout<<"1 for insert"<<endl;
+    cout<<"2 for remove"<<endl;
+    while(1)
     {
-        cin>>q>>S;
-        if(q==1)
-        t.insert(S);
-        else if(q==2)
+        cout<<"Choice"<<endl;
+        cin>>ch>>S;
+        if(ch==0)
         cout<<t.prefix(S)<<endl;
-        else if(q==3)
+        else if(ch==1)
+        t.insert(S);
+        else if(ch==2)
         t.remove(S);
+        else
+        break;
     }
     return 0;
 }

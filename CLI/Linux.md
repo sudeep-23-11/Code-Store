@@ -1,3 +1,4 @@
+* "_" ------------------------------ multi word string
 * . -------------------------------- current directory
 * .. ------------------------------- parent directory
 * ~ -------------------------------- home directory
@@ -30,7 +31,7 @@
 * rmdir _ -------------------------- remove empty directory _
 * rm -r _ -------------------------- remove non-empty directory _
 * cd _ ----------------------------- change directory to _
-* pwd ------------------------------ path of working directory
+* pwd ------------------------------ present working directory
 *
 *
 * mv _ _ --------------------------- move/rename file/directory _ to _
@@ -52,7 +53,7 @@
 *
 * echo _ --------------------------- display _
     * -e --------------------------- enable escape sequences
-    * -n --------------------------- continue in same line after displaying
+    * -n --------------------------- disable trailing newline
 * echo $ _ ------------------------- display value of variable _
 *
 *

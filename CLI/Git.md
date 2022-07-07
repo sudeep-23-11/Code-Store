@@ -59,6 +59,6 @@
     * --no-merged ------------------ list not merged branches
 * git branch _ --------------------- create branch _
     * -d --------------------------- delete merged branch _
-    * -D --------------------------- delete branch _
+    * -D --------------------------- delete not merged branch _
 * git checkout _ ------------------- switch to branch _
 * git merge _ ---------------------- merge branch _

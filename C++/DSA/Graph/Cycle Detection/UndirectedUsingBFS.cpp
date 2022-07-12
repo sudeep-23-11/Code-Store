@@ -48,11 +48,8 @@ void BFS(int n, int p)
                 q.push(make_pair(i, n));
                 vis[i]=true;
             }
-            else if((vis[i]==true)&&(i!=p))
-            {
-                c=true;
-                return;
-            }
+            else if(i!=p)
+            c=true;
         }
     }
 }

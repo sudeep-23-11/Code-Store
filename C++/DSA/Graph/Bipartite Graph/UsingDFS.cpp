@@ -6,14 +6,14 @@ using namespace std;
 bool vis[100001];
 vector<int>adj[100001];
 bool color[100001];
-bool c;
+bool b;
 void DFS(int n);
 int main()
 {
     int i, n, m, u, v;
     cin>>n>>m;
     memset(vis, false, sizeof(vis));
-    c=false;
+    b=false;
     for(i=1;i<=m;i++)
     {
         cin>>u>>v;
@@ -28,7 +28,7 @@ int main()
             DFS(i);
         }
     }
-    if(c==true)
+    if(b==true)
     cout<<"Not a Bipartite graph"<<endl;
     else
     cout<<"Bipartite graph"<<endl;
@@ -44,10 +44,7 @@ void DFS(int n)
             color[i]=!color[n];
             DFS(i);
         }
-        else if((vis[i]==true)&&(color[i]==color[n]))
-        {
-            c=true;
-            return;
-        }
+        else if(color[i]==color[n])
+        b=true;
     }
 }

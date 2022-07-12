@@ -39,11 +39,8 @@ void DFS(int n)
     {
         if(vis[i]==false)
         DFS(i);
-        else if((vis[i]==true)&&(dfsvis[i]==true))
-        {
-            c=true;
-            return;
-        }
+        else if(dfsvis[i]==true)
+        c=true;
     }
     dfsvis[n]=false;
 }

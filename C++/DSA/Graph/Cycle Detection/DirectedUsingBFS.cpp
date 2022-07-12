@@ -8,7 +8,7 @@ using namespace std;
 bool vis[100001];
 vector<int>adj[100001];
 int indeg[100001];
-bool c;
+int c;
 void BFS(int n);
 int main()
 {
@@ -16,7 +16,7 @@ int main()
     cin>>n>>m;
     memset(vis, false, sizeof(vis));
     memset(indeg, 0, sizeof(indeg));
-    c=false;
+    c=0;
     for(i=1;i<=m;i++)
     {
         cin>>u>>v;
@@ -24,7 +24,7 @@ int main()
         indeg[v]++;
     }
     BFS(n);
-    if(c==true)
+    if(c!=n)
     cout<<"Cycle present"<<endl;
     else
     cout<<"Cycle not present"<<endl;
@@ -32,9 +32,6 @@ int main()
 }
 void BFS(int n)
 {
-    int s, ct;
-    s=n;
-    ct=0;
     queue<int>q;
     for(int i=1;i<=n;i++)
     {
@@ -47,7 +44,7 @@ void BFS(int n)
     while(q.empty()==0)
     {
         n=q.front();
-        ct++;
+        c++;
         q.pop();
         for(auto i:adj[n])
         {
@@ -62,6 +59,4 @@ void BFS(int n)
             }
         }
     }
-    if(ct!=s)
-    c=true;
 }

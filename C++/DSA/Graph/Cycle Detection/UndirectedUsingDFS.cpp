@@ -37,10 +37,7 @@ void DFS(int n, int p)
     {
         if(vis[i]==false)
         DFS(i, n);
-        else if((vis[i]==true)&&(i!=p))
-        {
-            c=true;
-            return;
-        }
+        else if(i!=p)
+        c=true;
     }
 }

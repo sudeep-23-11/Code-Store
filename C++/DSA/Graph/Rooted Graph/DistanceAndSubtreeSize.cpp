@@ -1,4 +1,4 @@
-//RootedGraph
+//DistanceAndSubtreeSize
 #include<iostream>
 #include<vector>
 #include<cstring>

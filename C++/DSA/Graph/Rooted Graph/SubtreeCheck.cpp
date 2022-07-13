@@ -1,4 +1,4 @@
-//Subgraph
+//SubtreeCheck
 #include<iostream>
 #include<vector>
 #include<cstring>
@@ -26,11 +26,11 @@ int main()
     outtime[1]=t;
     cin>>u>>v;
     if((intime[u]<intime[v])&&(outtime[u]>outtime[v]))
-    cout<<v<<" is in subgraph of "<<u<<endl;
+    cout<<v<<" is in subtree of "<<u<<endl;
     else if((intime[v]<intime[u])&&(outtime[v]>outtime[u]))
-    cout<<u<<" is in subgraph of "<<v<<endl;
+    cout<<u<<" is in subtree of "<<v<<endl;
     else
-    cout<<u<<" and "<<v<<" are not in subgraphs of each other"<<endl;
+    cout<<u<<" and "<<v<<" are not in subtrees of each other"<<endl;
     return 0;
 }
 void DFS(int n)

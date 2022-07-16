@@ -28,8 +28,8 @@ int main()
         {
             for(j=1;j<=n;j++)
             {
-                if((dist[i][k]!=1001)&&(dist[k][j]!=1001))
-                dist[i][j]=min(dist[i][j], (dist[i][k]+dist[k][j]));
+                if((dist[i][k]!=1001)&&(dist[k][j]!=1001)&&(dist[i][j]>(dist[i][k]+dist[k][j])))
+                dist[i][j]=dist[i][k]+dist[k][j];
             }
         }
     }

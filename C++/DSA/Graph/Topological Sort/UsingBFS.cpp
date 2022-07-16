@@ -38,8 +38,8 @@ void BFS(int n)
     while(q.empty()==0)
     {
         n=q.front();
-        cout<<n<<" ";
         q.pop();
+        cout<<n<<" ";
         for(auto i:adj[n])
         {
             if(vis[i]==false)

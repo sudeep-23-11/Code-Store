@@ -28,11 +28,13 @@ int main()
     while(pq.empty()==0)
     {
         u=pq.top().second;
-        mst[u]=true;
         pq.pop();
+        if(mst[u]==true)
+        continue;
+        mst[u]=true;
         for(auto j:adj[u])
         {
-            if((mst[j.first]==false)&&(j.second<key[j.first]))
+            if((mst[j.first]==false)&&(key[j.first]>j.second))
             {
                 key[j.first]=j.second;
                 parent[j.first]=u;

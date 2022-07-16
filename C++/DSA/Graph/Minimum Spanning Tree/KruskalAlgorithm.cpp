@@ -15,6 +15,7 @@ bool cmp(struct edge a, struct edge b)
 }
 int parent[100001];
 int _rank[100001];
+void makeset(int n);
 int findparent(int n);
 void _union(int u, int v);
 int main()
@@ -29,11 +30,7 @@ int main()
         e[i].wt=wt;
     }
     sort(e+1, e+m+1, cmp);
-    for(i=1;i<=n;i++)
-    {
-        parent[i]=i;
-        _rank[i]=0;
-    }
+    makeset(n);
     for(i=1;i<=m;i++)
     {
         if(findparent(e[i].u)!=findparent(e[i].v))
@@ -43,6 +40,15 @@ int main()
         }
     }
     return 0;
+}
+void makeset(int n)
+{
+    int i;
+    for(i=1;i<=n;i++)
+    {
+        parent[i]=i;
+        _rank[i]=0;
+    }
 }
 int findparent(int n)
 {

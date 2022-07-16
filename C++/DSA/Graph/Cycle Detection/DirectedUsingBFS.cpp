@@ -44,8 +44,8 @@ void BFS(int n)
     while(q.empty()==0)
     {
         n=q.front();
-        c++;
         q.pop();
+        c++;
         for(auto i:adj[n])
         {
             if(vis[i]==false)

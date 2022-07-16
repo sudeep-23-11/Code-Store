@@ -26,7 +26,7 @@ int main()
         pq.pop();
         for(auto j:adj[u])
         {
-            if((dist[u]+j.second)<dist[j.first])
+            if(dist[j.first]>(dist[u]+j.second))
             {
                 dist[j.first]=dist[u]+j.second;
                 pq.push(make_pair(dist[j.first], j.first));

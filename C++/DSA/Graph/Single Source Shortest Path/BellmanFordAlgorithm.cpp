@@ -27,7 +27,7 @@ int main()
     {
         for(j=1;j<=m;j++)
         {
-            if((dist[e[j].u]+e[j].wt)<dist[e[j].v])
+            if(dist[e[j].v]>(dist[e[j].u]+e[j].wt))
             dist[e[j].v]=dist[e[j].u]+e[j].wt;
         }
     }

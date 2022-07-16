@@ -8,10 +8,10 @@ int findparent(int n);
 void _union(int u, int v);
 int main()
 {
-    int n, m, u, v;
+    int i, n, m, u, v;
     cin>>n>>m;
     makeset(n);
-    while(m--)
+    for(i=1;i<=m;i++)
     {
         cout<<"Make union"<<endl;
         cin>>u>>v;

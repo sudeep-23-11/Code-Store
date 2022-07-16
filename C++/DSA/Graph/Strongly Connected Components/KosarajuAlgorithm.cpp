@@ -6,9 +6,9 @@
 using namespace std;
 bool vis[100001];
 vector<int>adj[100001];
-vector<int>trans[100001];
+vector<int>adjt[100001];
 stack<int>st;
-void DFSa(int n);
+void DFS(int n);
 void DFSt(int n);
 int main()
 {
@@ -19,12 +19,12 @@ int main()
     {
         cin>>u>>v;
         adj[u].push_back(v);
-        trans[v].push_back(u);
+        adjt[v].push_back(u);
     }
     for(i=1;i<=n;i++)
     {
         if(vis[i]==false)
-        DFSa(i);
+        DFS(i);
     }
     memset(vis, false, sizeof(vis));
     while(st.empty()==0)
@@ -38,13 +38,13 @@ int main()
     }
     return 0;
 }
-void DFSa(int n)
+void DFS(int n)
 {
     vis[n]=true;
     for(auto i:adj[n])
     {
         if(vis[i]==false)
-        DFSa(i);
+        DFS(i);
     }
     st.push(n);
 }
@@ -52,7 +52,7 @@ void DFSt(int n)
 {
     vis[n]=true;
     cout<<n<<" ";
-    for(auto i:trans[n])
+    for(auto i:adjt[n])
     {
         if(vis[i]==false)
         DFSt(i);

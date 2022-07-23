@@ -20,7 +20,7 @@ void evenodd(int n)
 }
 void powerof2(int n)
 {
-    if((n&(n-1))==0)
+    if((n!=0)&&((n&(n-1))==0))
     cout<<"Power of 2"<<endl;
     else
     cout<<"Not a Power of 2"<<endl;

@@ -15,12 +15,14 @@ int main()
     t2=h2;
     while(t1!=t2)
     {
+        t1=t1->next;
+        t2=t2->next;
+        if((t1==NULL)&&(t2==NULL))
+        break;
         if(t1==NULL)
         t1=h2;
         if(t2==NULL)
         t2=h1;
-        t1=t1->next;
-        t2=t2->next;
     }
     if(t1!=NULL)
     cout<<"Intersection present at "<<t1->data<<endl;

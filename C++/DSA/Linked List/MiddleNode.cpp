@@ -1,5 +1,4 @@
 //MiddleNode
-//FloydTortoiseAndHareAlgorithm
 #include"LL.h"
 int main()
 {

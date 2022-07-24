@@ -12,20 +12,25 @@ int main()
 string countsay(int N)
 {
     int i, c;
+    char ch;
     string s, r;
     if(N==1)
     return "1";
     s=countsay(N-1);
     r="";
-    i=0;
-    while(i<s.size())
+    ch=s[0];
+    c=1;
+    for(i=1;i<s.size();i++)
     {
-        c=0;
-        while(((i+c)<s.size())&&(s[i]==s[i+c]))
+        if(s[i]==ch)
         c++;
-        r+=to_string(c);
-        r+=s[i];
-        i+=c;
+        else
+        {
+            r+=(to_string(c)+ch);
+            ch=s[i];
+            c=1;
+        }
     }
+    r+=(to_string(c)+ch);
     return r;
 }

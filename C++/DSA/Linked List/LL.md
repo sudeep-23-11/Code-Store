@@ -7,5 +7,5 @@
     difference from head of list 1, move pointers together
 * MergeTwoSortedLists - place pointers at head of lists, put smaller node in new
 list, move corresponding pointer
-* KthNodeFromLast, MiddleNode - find length of list
+* MiddleNode, RemoveKthNodeFromLast - find length of list
 * RotateList - pick last node, place it at front

@@ -10,13 +10,13 @@ int main()
     for(i=0;i<N;i++)
     cin>>A[i];
     s=0;
-    m=0;
+    m=-100001;
     for(i=0;i<N;i++)
     {
         s+=A[i];
+        m=max(m, s);
         if(s<0)
         s=0;
-        m=max(m, s);
     }
     cout<<m<<endl;
     return 0;

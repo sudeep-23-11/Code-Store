@@ -1,5 +1,6 @@
 //ReverseWords
 #include<iostream>
+#include<algorithm>
 using namespace std;
 int main()
 {
@@ -8,21 +9,22 @@ int main()
     getline(cin, s);
     w="";
     r="";
-    for(i=0;i<s.size();i++)
+    for(i=(s.size()-1);i>=0;i--)
     {
         if(s[i]!=' ')
         w+=s[i];
-        else if(w!="")
+        else
         {
-            if(r=="")
-            r=w;
-            else
-            r=w+" "+r;
+            reverse(w.begin(), w.end());
+            if(w!="")
+            r=r+w+' ';
             w="";
         }
     }
+    reverse(w.begin(), w.end());
     if(w!="")
-    r=w+" "+r;
+    r=r+w+' ';
+    r.pop_back();
     cout<<r<<endl;
     return 0;
 }

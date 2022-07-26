@@ -1,40 +1,51 @@
 //CompareVersionNumbers
 #include<iostream>
 using namespace std;
+int version(string X, string Y);
 int main()
 {
-    int i, j, r1, r2;
+    int n;
     string s1, s2;
     cin>>s1>>s2;
+    n=version(s1, s2);
+    if(n>0)
+    cout<<"Version "<<s1<<" is greater than Version "<<s2<<endl;
+    else if(n<0)
+    cout<<"Version "<<s1<<" is smaller than Version "<<s2<<endl;
+    else
+    cout<<"Version "<<s1<<" is equal to Version "<<s2<<endl;
+    return 0;
+}
+int version(string X, string Y)
+{
+    int i, j,  v1, v2;
     i=0;
     j=0;
-    while((i<s1.size())||(j<s2.size()))
+    v1=0;
+    v2=0;
+    while((i<X.size())||(j<Y.size()))
     {
-        r1=0;
-        while((i<s1.size())&&(s1[i]!='.'))
+        if((i<X.size())&&(isdigit(X[i])!=0))
         {
-            r1=r1*10+(s1[i]-'0');
+            v1=(v1*10)+(X[i]-'0');
             i++;
         }
-        r2=0;
-        while((j<s2.size())&&(s2[j]!='.'))
+        if((j<Y.size())&&(isdigit(Y[j])!=0))
         {
-            r2=r2*10+(s2[j]-'0');
+            v2=(v2*10)+(Y[j]-'0');
             j++;
         }
-        i++;
-        j++;
-        if(r1>r2)
+        if(((i>=X.size())||(X[i]=='.'))&&((j>=Y.size())||(Y[j]=='.')))
         {
-            cout<<"Version "<<s1<<" is greater than Version "<<s2<<endl;
-            exit(0);
-        }
-        else if(r1<r2)
-        {
-            cout<<"Version "<<s1<<" is smaller than Version "<<s2<<endl;
-            exit(0);
+            if(v1<v2)
+            return -1;
+            else if(v1>v2)
+            return 1;
+            v1=0;
+            v2=0;
+            i++;
+            j++;
         }
     }
-    cout<<"Version "<<s1<<" is equal to Version "<<s2<<endl;
     return 0;
 }

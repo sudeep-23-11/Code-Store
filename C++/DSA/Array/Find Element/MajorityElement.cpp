@@ -68,6 +68,11 @@ void nby3(int A[], int N)
             v1--;
             v2--;
         }
+        if(v1==0)
+        {
+            swap(c1, c2);
+            swap(v1, v2);
+        }
     }
     v1=0;
     v2=0;

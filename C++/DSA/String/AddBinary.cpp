@@ -1,5 +1,6 @@
-//AddTwoStrings
+//AddBinary
 #include<iostream>
+#include<algorithm>
 using namespace std;
 int main()
 {
@@ -23,9 +24,10 @@ int main()
             s+=(y[j]-'0');
             j--;
         }
-        z=to_string(s%10)+z;
+        z+=to_string(s%10);
         c=s/10;
     }
+    reverse(z.begin(), z.end());
     cout<<z<<endl;
     return 0;
 }

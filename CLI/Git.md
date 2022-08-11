@@ -47,6 +47,7 @@
     * -v --------------------------- include fetch and push
 * git remote add origin _ ---------- add remote repository _ as origin
 * git push -u origin _ ------------- push changes of branch _ to origin from local
+    * --force ---------------------- force push without any restrictions
 * git push -d origin _ ------------- delete branch _ in origin
 * git fetch ------------------------ fetch changes from origin to local
 * git merge ------------------------ merge changes to local

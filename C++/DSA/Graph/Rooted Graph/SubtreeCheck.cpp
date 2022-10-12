@@ -19,11 +19,8 @@ int main()
         cin>>u>>v;
         adj[u].push_back(v);
     }
-    t=1;
-    intime[1]=t;
+    t=0;
     DFS(1);
-    t++;
-    outtime[1]=t;
     cin>>u>>v;
     if((intime[u]<intime[v])&&(outtime[u]>outtime[v]))
     cout<<v<<" is in subtree of "<<u<<endl;
@@ -35,12 +32,10 @@ int main()
 }
 void DFS(int n)
 {
+    t++;
+    intime[n]=t;
     for(auto i:adj[n])
-    {
-        t++;
-        intime[i]=t;
-        DFS(i);
-        t++;
-        outtime[i]=t;
-    }
+    DFS(i);
+    t++;
+    outtime[n]=t;
 }

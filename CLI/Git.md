@@ -4,7 +4,7 @@
 * Newly created file/directory will always be untracked, after staging it for the first time, Git will start tracking it
 * Git will ignore changes of untracked file/directory written in .gitignore file
 * Branch Types are Long running, Topic
-* Merge Conflicts can be resolved by manually selecting in code editor, which changes we want to keep, after that add them and commit 
+* Merge Conflicts can be resolved by manually selecting in code editor, which changes we want to keep, after that add them and commit
 *
 *
 * git config --global user.name _ -- set _ as name
@@ -21,7 +21,11 @@
     * --staged --------------------- compare staging area with last commit
 * git restore _ -------------------- discard changes of changed file _
     * --staged --------------------- unstage changed file _
-* git checkout -f ------------------ discard changes of all changed files
+*
+*
+* git checkout _ ------------------- move Head to commit _
+* git checkout -f ------------------ discard all changes after last commit
+* git reset --hard _ --------------- discard all changes after _ commit
 *
 *
 * git commit -m _ ------------------ commit with message _
@@ -46,6 +50,8 @@
 * git remote ----------------------- list remote repositories
     * -v --------------------------- include fetch and push
 * git remote add origin _ ---------- add remote repository _ as origin
+* git remote show origin ----------- show origin
+* git remote rm origin ------------- remove origin
 * git push -u origin _ ------------- push changes of branch _ to origin from local
     * --force ---------------------- force push without any restrictions
 * git push -d origin _ ------------- delete branch _ in origin

@@ -21,4 +21,7 @@
 * Sort012Array -
     * sort array
     * count no. of elements of each color, place each color according to their no. from starting
+* TrappingRainwater -
+    * min(max(left heights), max(right heights))-height
+    * prefix max and suffix max arrays of heights
 * UniquePathsInMatrix - Dynamic Programming, if dp[i][j]!=-1 return dp[i][j], else return dp[i][j]=sum of j+1 for right and i+1 for down, if path found return 1, if out of bound return 0

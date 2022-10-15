@@ -1,5 +1,5 @@
 //RemoveKthNodeFromLast
-#include"LL.h"
+#include"../LL.h"
 int main()
 {
     int K, c;

@@ -1,5 +1,11 @@
 # Array Approaches
-* 2Sum - sort array, i at 0 and j at N-1, move i and j according to difference between A[i]+A[j] and s
+* 2Sum -
+    * sort array, binary search
+    * sort array, l at 0 and r at N-1, move l and r according to difference between A[l]+A[r] and s
+* 3Sum -
+    * sort array, binary search with 2 loops
+    * 2Sum hashing with 2 loops
+* 4Sum - sort array, binary search with 3 loops
 * FindDuplicate -
     * sort array
     * hash elements of array

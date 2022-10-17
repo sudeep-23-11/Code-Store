@@ -17,8 +17,8 @@ void palindrome(string s, int i)
     int j;
     if(i==s.size())
     {
-        for(auto j:v)
-        cout<<j<<" ";
+        for(j=0;j<v.size();j++)
+        cout<<v[j]<<" ";
         cout<<endl;
         return;
     }

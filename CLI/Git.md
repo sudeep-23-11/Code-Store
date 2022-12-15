@@ -1,9 +1,12 @@
-* VCS Types are Local, Centralized, Distributed
-* Three Stage Architecture of Git is Working directory, Staging area, Git directory
+* Types of Version Control Systems are Local, Centralized, Distributed
+* Three Stage Architecture of Git are Working directory, Staging area, Git directory
+* Types of Primary branches in Git are Main, Develop
+* Types of Supporting branches in Git are Feature, Release, Hotfix
+*
+*
 * All Git related information is present in .git directory
 * Newly created file/directory will always be untracked, after staging it for the first time, Git will start tracking it
 * Git will ignore changes of untracked file/directory written in .gitignore file
-* Branch Types are Long running, Topic
 * Merge Conflicts can be resolved by manually selecting in code editor, which changes we want to keep, after that add them and commit
 *
 *

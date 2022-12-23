@@ -20,6 +20,8 @@ st.caption("Caption")
 st.text("Text")
 
 st.markdown("Markdown")
+st.latex("Latex")
+
 st.write("x =", x)
 st.code(y)
 
@@ -42,4 +44,5 @@ ax.scatter([1, 3, 5, 7, 8, 6, 4, 2], [2, 4, 6, 8, 1, 3, 5, 7])
 st.pyplot(fig)
 
 
+#streamlit hello
 #streamlit run app.py

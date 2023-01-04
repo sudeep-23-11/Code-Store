@@ -1,16 +1,14 @@
 //DepthFirstSearch
 #include<iostream>
 #include<vector>
-#include<cstring>
 using namespace std;
-bool vis[100001];
-vector<int>adj[100001];
-void DFS(int n);
+void DFS(int n, vector<int>adj[], bool vis[]);
 int main()
 {
     int i, n, m, u, v;
     cin>>n>>m;
-    memset(vis, false, sizeof(vis));
+    vector<int>adj[n+1];
+    bool vis[n+1]={false};
     for(i=1;i<=m;i++)
     {
         cin>>u>>v;
@@ -20,17 +18,17 @@ int main()
     for(i=1;i<=n;i++)
     {
         if(vis[i]==false)
-        DFS(i);
+        DFS(i, adj, vis);
     }
     return 0;
 }
-void DFS(int n)
+void DFS(int n, vector<int>adj[], bool vis[])
 {
     vis[n]=true;
     cout<<n<<" ";
     for(auto i:adj[n])
     {
         if(vis[i]==false)
-        DFS(i);
+        DFS(i, adj, vis);
     }
 }

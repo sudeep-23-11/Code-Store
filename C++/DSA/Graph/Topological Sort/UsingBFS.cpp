@@ -2,38 +2,31 @@
 //KahnAlgorithm
 #include<iostream>
 #include<vector>
-#include<cstring>
 #include<queue>
 using namespace std;
-bool vis[100001];
-vector<int>adj[100001];
-int indeg[100001];
-void BFS(int n);
+void BFS(int n, vector<int>adj[], int indeg[]);
 int main()
 {
     int i, n, m, u, v;
     cin>>n>>m;
-    memset(vis, false, sizeof(vis));
-    memset(indeg, 0, sizeof(indeg));
+    vector<int>adj[n+1];
+    int indeg[n+1]={0};
     for(i=1;i<=m;i++)
     {
         cin>>u>>v;
         adj[u].push_back(v);
         indeg[v]++;
     }
-    BFS(n);
+    BFS(n, adj, indeg);
     return 0;
 }
-void BFS(int n)
+void BFS(int n, vector<int>adj[], int indeg[])
 {
     queue<int>q;
     for(int i=1;i<=n;i++)
     {
         if(indeg[i]==0)
-        {
-            q.push(i);
-            vis[i]=true;
-        }
+        q.push(i);
     }
     while(q.empty()==0)
     {
@@ -42,15 +35,9 @@ void BFS(int n)
         cout<<n<<" ";
         for(auto i:adj[n])
         {
-            if(vis[i]==false)
-            {
-                indeg[i]--;
-                if(indeg[i]==0)
-                {
-                    q.push(i);
-                    vis[i]=true;
-                }
-            }
+            indeg[i]--;
+            if(indeg[i]==0)
+            q.push(i);
         }
     }
 }

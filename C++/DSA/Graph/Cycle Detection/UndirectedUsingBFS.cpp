@@ -1,18 +1,16 @@
 //UndirectedUsingBFS
 #include<iostream>
 #include<vector>
-#include<cstring>
 #include<queue>
 using namespace std;
-bool vis[100001];
-vector<int>adj[100001];
-bool c;
-void BFS(int n, int p);
+void BFS(int n, vector<int>adj[], bool vis[], int p, bool &c);
 int main()
 {
+    bool c;
     int i, n, m, u, v;
     cin>>n>>m;
-    memset(vis, false, sizeof(vis));
+    vector<int>adj[n+1];
+    bool vis[n+1]={false};
     c=false;
     for(i=1;i<=m;i++)
     {
@@ -23,7 +21,7 @@ int main()
     for(i=1;i<=n;i++)
     {
         if(vis[i]==false)
-        BFS(i, -1);
+        BFS(i, adj, vis, -1, c);
     }
     if(c==true)
     cout<<"Cycle present"<<endl;
@@ -31,7 +29,7 @@ int main()
     cout<<"Cycle not present"<<endl;
     return 0;
 }
-void BFS(int n, int p)
+void BFS(int n, vector<int>adj[], bool vis[], int p, bool &c)
 {
     queue<pair<int, int>>q;
     q.push(make_pair(n, p));

@@ -1,19 +1,16 @@
 //DirectedUsingDFS
 #include<iostream>
 #include<vector>
-#include<cstring>
 using namespace std;
-bool vis[100001];
-vector<int>adj[100001];
-bool dfsvis[100001];
-bool c;
-void DFS(int n);
+void DFS(int n, vector<int>adj[], bool vis[], bool pathvis[], bool &c);
 int main()
 {
+    bool c;
     int i, n, m, u, v;
     cin>>n>>m;
-    memset(vis, false, sizeof(vis));
-    memset(dfsvis, false, sizeof(dfsvis));
+    vector<int>adj[n+1];
+    bool vis[n+1]={false};
+    bool pathvis[n+1]={false};
     c=false;
     for(i=1;i<=m;i++)
     {
@@ -23,7 +20,7 @@ int main()
     for(i=1;i<=n;i++)
     {
         if(vis[i]==false)
-        DFS(i);
+        DFS(i, adj, vis, pathvis, c);
     }
     if(c==true)
     cout<<"Cycle present"<<endl;
@@ -31,16 +28,16 @@ int main()
     cout<<"Cycle not present"<<endl;
     return 0;
 }
-void DFS(int n)
+void DFS(int n, vector<int>adj[], bool vis[], bool pathvis[], bool &c)
 {
     vis[n]=true;
-    dfsvis[n]=true;
+    pathvis[n]=true;
     for(auto i:adj[n])
     {
         if(vis[i]==false)
-        DFS(i);
-        else if(dfsvis[i]==true)
+        DFS(i, adj, vis, pathvis, c);
+        else if(pathvis[i]==true)
         c=true;
     }
-    dfsvis[n]=false;
+    pathvis[n]=false;
 }

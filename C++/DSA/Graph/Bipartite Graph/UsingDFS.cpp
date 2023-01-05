@@ -1,18 +1,16 @@
 //UsingDFS
 #include<iostream>
 #include<vector>
-#include<cstring>
 using namespace std;
-bool vis[100001];
-vector<int>adj[100001];
-bool color[100001];
-bool b;
-void DFS(int n);
+void DFS(int n, vector<int>adj[], bool vis[], int color[], bool &b);
 int main()
 {
+    bool b;
     int i, n, m, u, v;
     cin>>n>>m;
-    memset(vis, false, sizeof(vis));
+    vector<int>adj[n+1];
+    bool vis[n+1]={false};
+    int color[n+1];
     b=false;
     for(i=1;i<=m;i++)
     {
@@ -24,8 +22,8 @@ int main()
     {
         if(vis[i]==false)
         {
-            color[i]=false;
-            DFS(i);
+            color[i]=0;
+            DFS(i, adj, vis, color, b);
         }
     }
     if(b==true)
@@ -34,7 +32,7 @@ int main()
     cout<<"Bipartite graph"<<endl;
     return 0;
 }
-void DFS(int n)
+void DFS(int n, vector<int>adj[], bool vis[], int color[], bool &b)
 {
     vis[n]=true;
     for(auto i:adj[n])
@@ -42,7 +40,7 @@ void DFS(int n)
         if(vis[i]==false)
         {
             color[i]=!color[n];
-            DFS(i);
+            DFS(i, adj, vis, color, b);
         }
         else if(color[i]==color[n])
         b=true;

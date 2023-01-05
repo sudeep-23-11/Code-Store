@@ -1,19 +1,17 @@
 //UsingBFS
 #include<iostream>
 #include<vector>
-#include<cstring>
 #include<queue>
 using namespace std;
-bool vis[100001];
-vector<int>adj[100001];
-bool color[100001];
-bool b;
-void BFS(int n);
+void BFS(int n, vector<int>adj[], bool vis[], int color[], bool &b);
 int main()
 {
+    bool b;
     int i, n, m, u, v;
     cin>>n>>m;
-    memset(vis, false, sizeof(vis));
+    vector<int>adj[n+1];
+    bool vis[n+1]={false};
+    int color[n+1];
     b=false;
     for(i=1;i<=m;i++)
     {
@@ -24,7 +22,10 @@ int main()
     for(i=1;i<=n;i++)
     {
         if(vis[i]==false)
-        BFS(i);
+        {
+            color[i]=0;
+            BFS(i, adj, vis, color, b);
+        }
     }
     if(b==true)
     cout<<"Not a Bipartite graph"<<endl;
@@ -32,12 +33,11 @@ int main()
     cout<<"Bipartite graph"<<endl;
     return 0;
 }
-void BFS(int n)
+void BFS(int n, vector<int>adj[], bool vis[], int color[], bool &b)
 {
     queue<int>q;
     q.push(n);
     vis[n]=true;
-    color[n]=false;
     while(q.empty()==0)
     {
         n=q.front();

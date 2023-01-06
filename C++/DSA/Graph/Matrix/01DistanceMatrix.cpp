@@ -8,7 +8,7 @@ int main()
 {
     int i, j, N, M;
     cin>>N>>M;
-    vector<vector<int>>A(N, vector<int>(M, 0)), R(N, vector<int>(M, 0));
+    vector<vector<int>>A(N, vector<int>(M, 0)), R(N, vector<int>(M, -1));
     for(i=0;i<N;i++)
     {
         for(j=0;j<M;j++)
@@ -54,9 +54,8 @@ void BFS(vector<vector<int>>&A, vector<vector<int>>&R)
             {
                 for(j=x.second-1;j<=(x.second+1);j++)
                 {
-                    if((i>=0)&&(i<A.size())&&(j>=0)&&(j<A[0].size())&&((i==x.first)||(j==x.second))&&(A[i][j]==0))
+                    if((i>=0)&&(i<A.size())&&(j>=0)&&(j<A[0].size())&&((i==x.first)||(j==x.second))&&(A[i][j]==0)&&(R[i][j]==-1))
                     {
-                        A[i][j]=1;
                         R[i][j]=t;
                         q.push(make_pair(i, j));
                     }

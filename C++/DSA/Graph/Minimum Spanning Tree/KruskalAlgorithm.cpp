@@ -8,20 +8,17 @@ struct edge
     int v;
     int wt;
 };
-struct edge e[100001];
-bool cmp(struct edge a, struct edge b)
-{
-    return (a.wt<b.wt);
-}
-int parent[100001];
-int _rank[100001];
-void makeset(int n);
-int findparent(int n);
-void _union(int u, int v);
+bool cmp(struct edge a, struct edge b) {return (a.wt<b.wt);}
+void makeset(int n, int parent[], int _rank[]);
+int findparent(int n, int parent[]);
+void _union(int u, int v, int parent[], int _rank[]);
 int main()
 {
     int i, n, m, u, v, wt;;
     cin>>n>>m;
+    int parent[n+1];
+    int _rank[n+1];
+    struct edge e[n+1];
     for(i=1;i<=m;i++)
     {
         cin>>u>>v>>wt;
@@ -30,18 +27,18 @@ int main()
         e[i].wt=wt;
     }
     sort(e+1, e+m+1, cmp);
-    makeset(n);
+    makeset(n, parent, _rank);
     for(i=1;i<=m;i++)
     {
-        if(findparent(e[i].u)!=findparent(e[i].v))
+        if(findparent(e[i].u, parent)!=findparent(e[i].v, parent))
         {
             cout<<e[i].u<<" - "<<e[i].v<<endl;
-            _union(e[i].u, e[i].v);
+            _union(e[i].u, e[i].v, parent, _rank);
         }
     }
     return 0;
 }
-void makeset(int n)
+void makeset(int n, int parent[], int _rank[])
 {
     int i;
     for(i=1;i<=n;i++)
@@ -50,17 +47,17 @@ void makeset(int n)
         _rank[i]=0;
     }
 }
-int findparent(int n)
+int findparent(int n, int parent[])
 {
     if(parent[n]==n)
     return n;
     else
-    return parent[n]=findparent(parent[n]);
+    return parent[n]=findparent(parent[n], parent);
 }
-void _union(int u, int v)
+void _union(int u, int v, int parent[], int _rank[])
 {
-    u=findparent(u);
-    v=findparent(v);
+    u=findparent(u, parent);
+    v=findparent(v, parent);
     if(_rank[u]<_rank[v])
     parent[u]=v;
     else if(_rank[u]>_rank[v])

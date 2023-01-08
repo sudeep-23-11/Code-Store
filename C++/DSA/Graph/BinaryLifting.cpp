@@ -1,38 +1,34 @@
 //BinaryLifting
 #include<iostream>
 #include<vector>
-#include<cstring>
 using namespace std;
-vector<int>adj[100001];
-int parent[100001][20];
-int intime[100001];
-int outtime[100001];
 int t;
-void DFS(int n, int p);
-bool ancestor(int u, int v);
-int lca(int u, int v);
-int kthancestor(int n, int k);
+void DFS(int n, int p, vector<int>adj[], int parent[][20], int intime[], int outtime[]);
+bool ancestor(int u, int v, int intime[], int outtime[]);
+int lca(int u, int v, int parent[][20], int intime[], int outtime[]);
+int kthancestor(int n, int k, int parent[][20]);
 int main()
 {
     int i, n, m, u, v;
     cin>>n>>m;
-    memset(parent, -1, sizeof(parent));
-    memset(intime, -1, sizeof(intime));
-    memset(outtime, -1, sizeof(outtime));
+    vector<int>adj[n+1];
+    int parent[n+1][20]={-1};
+    int intime[n+1]={-1};
+    int outtime[n+1]={-1};
     for(i=1;i<=m;i++)
     {
         cin>>u>>v;
         adj[u].push_back(v);
     }
     t=0;
-    DFS(1, -1);
+    DFS(1, -1, adj, parent, intime, outtime);
     cin>>u>>v;
-    cout<<lca(u, v)<<endl;
+    cout<<lca(u, v, parent, intime, outtime)<<endl;
     cin>>u>>v;
-    cout<<kthancestor(u, v)<<endl;
+    cout<<kthancestor(u, v, parent)<<endl;
     return 0;
 }
-void DFS(int n, int p)
+void DFS(int n, int p, vector<int>adj[], int parent[][20], int intime[], int outtime[])
 {
     int i;
     parent[n][0]=p;
@@ -46,34 +42,34 @@ void DFS(int n, int p)
         parent[n][i]=parent[parent[n][i-1]][i-1];
     }
     for(auto j:adj[n])
-    DFS(j, n);
+    DFS(j, n, adj, parent, intime, outtime);
     outtime[n]=t;
 }
-bool ancestor(int u, int v)
+bool ancestor(int u, int v, int intime[], int outtime[])
 {
     if((intime[u]<=intime[v])&&(outtime[u]>=outtime[v]))
     return true;
     else
     return false;
 }
-int lca(int u, int v)
+int lca(int u, int v, int parent[][20], int intime[], int outtime[])
 {
     int i;
-    if(ancestor(u, v)==1)
+    if(ancestor(u, v, intime, outtime)==1)
     return u;
-    else if(ancestor(v, u)==1)
+    else if(ancestor(v, u, intime, outtime)==1)
     return v;
     else
     {
         for(i=19;i>=0;i--)
         {
-            if((parent[u][i]!=-1)&&(ancestor(parent[u][i], v)==0))
+            if((parent[u][i]!=-1)&&(ancestor(parent[u][i], v, intime, outtime)==0))
             u=parent[u][i];
         }
         return parent[u][0];
     }
 }
-int kthancestor(int n, int k)
+int kthancestor(int n, int k, int parent[][20])
 {
     int i;
     if(k==0)

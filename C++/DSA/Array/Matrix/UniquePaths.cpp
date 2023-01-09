@@ -1,4 +1,4 @@
-//UniquePathsInMatrix
+//UniquePaths
 #include<iostream>
 using namespace std;
 int main()

@@ -1,4 +1,4 @@
-//01DistanceMatrix
+//DistanceOfNearestOne
 #include<iostream>
 #include<vector>
 #include<queue>

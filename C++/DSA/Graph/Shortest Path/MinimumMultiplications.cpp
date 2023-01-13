@@ -32,6 +32,6 @@ int main()
             }
         }
     }
-    l: cout<<dist[n]<<endl;
+    l: cout<<dist[d]<<endl;
     return 0;
 }

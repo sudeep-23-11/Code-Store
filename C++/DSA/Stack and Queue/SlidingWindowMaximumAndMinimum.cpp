@@ -2,27 +2,27 @@
 #include<iostream>
 #include<deque>
 using namespace std;
-deque<int>q;
-void max(int A[], int K, int x);
-void min(int A[], int K, int x);
+void _max(int A[], int K, int x, deque<int>q);
+void _min(int A[], int K, int x, deque<int>q);
 int main()
 {
     int i, N, K;
     cin>>N;
     int A[N];
+    deque<int>q;
     for(i=0;i<N;i++)
     cin>>A[i];
     cin>>K;
     cout<<"Sliding Window Maximum"<<endl;
     for(i=0;i<N;i++)
-    max(A, K, i);
+    _max(A, K, i, q);
     q.clear();
     cout<<endl<<"Sliding Window Minimum"<<endl;
     for(i=0;i<N;i++)
-    min(A, K, i);
+    _min(A, K, i, q);
     return 0;
 }
-void max(int A[], int K, int x)
+void _max(int A[], int K, int x, deque<int>q)
 {
     if((q.empty()==0)&&(q.front()==(x-K)))
     q.pop_front();
@@ -32,7 +32,7 @@ void max(int A[], int K, int x)
     if(x>=(K-1))
     cout<<A[q.front()]<<" ";
 }
-void min(int A[], int K, int x)
+void _min(int A[], int K, int x, deque<int>q)
 {
     if((q.empty()==0)&&(q.front()==(x-K)))
     q.pop_front();

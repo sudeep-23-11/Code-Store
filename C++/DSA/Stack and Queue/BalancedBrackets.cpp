@@ -2,19 +2,19 @@
 #include<iostream>
 #include<stack>
 using namespace std;
-stack<char>st;
-bool balance(string s);
+bool balance(string s, stack<char>st);
 int main()
 {
     string s;
+    stack<char>st;
     cin>>s;
-    if(balance(s)==true)
+    if(balance(s, st)==true)
     cout<<"Balanced brackets"<<endl;
     else
     cout<<"Unbalanced brackets"<<endl;
     return 0;
 }
-bool balance(string s)
+bool balance(string s, stack<char>st)
 {
     int i;
     char c1, c2;

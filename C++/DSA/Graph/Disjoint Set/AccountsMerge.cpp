@@ -5,7 +5,7 @@
 #include<algorithm>
 using namespace std;
 int findparent(int n, int parent[]);
-void _union(int u, int v, int _rank[], int parent[]); 
+void _union(int u, int v, int _rank[], int parent[]);
 int main()
 {
     int i, j, n, m;

@@ -8,8 +8,8 @@ int main()
     int i, n, m, u, v, t;
     cin>>n>>m;
     vector<int>adj[n+1];
-    int intime[n+1]={-1};
-    int outtime[n+1]={-1};
+    int intime[n+1];
+    int outtime[n+1];
     for(i=1;i<=m;i++)
     {
         cin>>u>>v;

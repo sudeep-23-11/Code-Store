@@ -10,7 +10,7 @@ int main()
     vector<pair<int, int>>adj[n+1];
     int key[n+1];
     bool mst[n+1]={false};
-    int parent[n+1]={-1};
+    int parent[n+1];
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>>q;
     for(i=1;i<=n;i++)
     key[i]=100001;

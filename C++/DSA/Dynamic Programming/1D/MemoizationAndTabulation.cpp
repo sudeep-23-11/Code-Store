@@ -1,36 +1,36 @@
 //MemoizationAndTabulation
 #include<iostream>
-#include<vector>
+#include<cstring>
 using namespace std;
-int fibo(int n, vector<int>dp);
+int func(int n, int dp[]);
 int main()
 {
-    int i, N, p1, p2, curr;
+    int i, N, p1, p2, cr;
     cin>>N;
-    vector<int>dp;
-    dp.resize(N+1, -1);
-    cout<<fibo(N, dp)<<endl;
-    if(N<=1)
+    int dp[N+1];
+    memset(dp, -1, sizeof(dp));
+    cout<<func(N, dp)<<endl;
+    if(N<2)
     cout<<N<<endl;
     else
     {
-        p1=1;
         p2=0;
+        p1=1;
         for(i=2;i<=N;i++)
         {
-            curr=p1+p2;
+            cr=p1+p2;
             p2=p1;
-            p1=curr;
+            p1=cr;
         }
-        cout<<curr<<endl;
+        cout<<cr<<endl;
     }
     return 0;
 }
-int fibo(int n, vector<int>dp)
+int func(int n, int dp[])
 {
-    if(n<=1)
+    if(n<2)
     return n;
     if(dp[n]!=-1)
     return dp[n];
-    return dp[n]=fibo(n-1, dp)+fibo(n-2, dp);
+    return dp[n]=func(n-1, dp)+func(n-2, dp);
 }

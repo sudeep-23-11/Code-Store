@@ -1,4 +1,4 @@
-//DistinctSubsequences
+//NumberOfDistinctSubsequences
 #include<iostream>
 #include<vector>
 using namespace std;

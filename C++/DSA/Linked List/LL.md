@@ -1,4 +1,4 @@
-# Approaches
+# Linked List Approaches
 * CycleCheck - hash nodes of list
 * CloneListWithNextAndRandomPointer - hash nodes of list with their deep copies
 * IntersectionCheck -

@@ -26,7 +26,7 @@ subtrees are BST, inorder traversal is sorted
 
 # Binary Search Tree Approaches
 * 2Sum, Iterator - inorder traversal array
-* InorderSuccessorAndPredecessor, CeilAndFloor -
+* InorderSuccessorAndPredecessor -
     * sort preorder traversal array
     * do inorder traversal
 * KthLargestAndSmallestElement - sort preorder traversal array

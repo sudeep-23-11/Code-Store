@@ -18,6 +18,6 @@ int main()
         else
         hi=m-1;
     }
-    cout<<"Single Element is "<<A[lo]<<endl;
+    cout<<A[lo]<<endl;
     return 0;
 }

@@ -4,11 +4,10 @@ using namespace std;
 int main()
 {
     int i, N, e, lo, hi, m;
-    cin>>N;
+    cin>>N>>e;
     int A[N];
     for(i=0;i<N;i++)
     cin>>A[i];
-    cin>>e;
     lo=0;
     hi=N-1;
     while(lo<=hi)
@@ -32,7 +31,7 @@ int main()
         }
     }
     if(lo<=hi)
-    cout<<"Index of "<<e<<" is "<<m<<endl;
+    cout<<m<<endl;
     else
     cout<<"Not present"<<endl;
     return 0;

@@ -1,7 +1,6 @@
 //NthRoot
 #include<iostream>
 #include<cmath>
-#include<iomanip>
 using namespace std;
 int main()
 {
@@ -14,12 +13,11 @@ int main()
     while((hi-lo)>eps)
     {
         m=(lo+hi)/2;
-        if(N>pow(m, n))
-        lo=m;
-        else
+        if(N<=pow(m, n))
         hi=m;
+        else
+        lo=m;
     }
-    cout<<n<<"th root of "<<N<<" correct upto "<<p<<" decimal places is ";
-    cout<<fixed<<setprecision(p)<<hi<<endl;
+    cout<<n<<"th root of "<<N<<" correct upto "<<p<<" decimal places is "<<hi<<endl;
     return 0;
 }

@@ -6,12 +6,13 @@ void upperbound(int A[], int N, int e);
 int main()
 {
     int i, N, e;
-    cin>>N;
+    cin>>N>>e;
     int A[N];
     for(i=0;i<N;i++)
     cin>>A[i];
-    cin>>e;
+    cout<<"Lower Bound ";
     lowerbound(A, N, e);
+    cout<<"Upper Bound ";
     upperbound(A, N, e);
     return 0;
 }
@@ -23,15 +24,15 @@ void lowerbound(int A[], int N, int e)
     while((hi-lo)>1)
     {
         m=(lo+hi)/2;
-        if(e>A[m])
-        lo=m+1;
-        else
+        if(e<=A[m])
         hi=m;
+        else
+        lo=m+1;
     }
     if(A[lo]>=e)
-    cout<<"Lower Bound of "<<e<<" is "<<lo<<endl;
+    cout<<lo<<endl;
     else if(A[hi]>=e)
-    cout<<"Lower Bound of "<<e<<" is "<<hi<<endl;
+    cout<<hi<<endl;
     else
     cout<<"Not present"<<endl;
 }
@@ -43,15 +44,15 @@ void upperbound(int A[], int N, int e)
     while((hi-lo)>1)
     {
         m=(lo+hi)/2;
-        if(e>=A[m])
-        lo=m+1;
-        else
+        if(e<A[m])
         hi=m;
+        else
+        lo=m+1;
     }
     if(A[lo]>e)
-    cout<<"Upper Bound of "<<e<<" is "<<lo<<endl;
+    cout<<lo<<endl;
     else if(A[hi]>e)
-    cout<<"Upper Bound of "<<e<<" is "<<hi<<endl;
+    cout<<hi<<endl;
     else
     cout<<"Not present"<<endl;
 }

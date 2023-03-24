@@ -18,29 +18,35 @@ export default function C3() {
             <Router>
                 <ul>
                     <li>
-                        <Link to="/">C4</Link>
+                        <Link to="/">C4.1</Link>
                     </li>
                     <li>
                         <Link to="/1">C5.1</Link>
                     </li>
                     <li>
-                        <Link to="/2">C5.2</Link>
+                        <Link to="/2">C4.2</Link>
                     </li>
                 </ul>
                 <Routes>
                     <Route path="/" element={
                         <C4 l2="Angular" lf={click} />
                     } />
-                    <Route exact path="/1" element={
+                    <Route path="/1" element={
                         <C5 p="Bootstrap" />
                     } />
-                    <Route exact path="/2" element={
-                        <C5 p="Tailwind" />
-                    } />
+                    <Route path="/2" element={<C4/>}>
+                        <Route index element={
+                            <C5 p="Tailwind" />
+                        } />
+                        <Route path=".1" element={
+                            <C5 p="Tailwind.1" />
+                        }/>
+                        <Route path=".2" element={
+                            <C5 p="Tailwind.2" />
+                        }/>
+                    </Route>
                 </Routes>
             </Router>
         </>
     )
 }
-
-//npm install react-router-dom

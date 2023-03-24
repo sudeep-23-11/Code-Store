@@ -21,5 +21,3 @@ export default function C1() {
         </>
     )
 }
-
-//npm install redux react-redux redux-thunk

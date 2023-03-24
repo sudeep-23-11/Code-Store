@@ -27,7 +27,7 @@ export default function C2() {
 
     return (
         <>
-            <form onSubmit={submit}>
+            <form action="https://www.youtube.com/" onSubmit={submit}>
                 <label htmlFor="xyz">{text}</label>
                 <input type="text" name="xyz" value={text} style={{color: textColor.color}} onChange={change} /><br />
                 <button type="button" onClick={click1}>Change Text</button>

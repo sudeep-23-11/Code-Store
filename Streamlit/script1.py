@@ -25,6 +25,7 @@ st.latex("Latex")
 st.write("x =", x)
 st.code(y)
 
+st.divider()
 
 #Data
 st.metric(label="Temperature", value="25 °C", delta="-2.5 °C", delta_color="normal")                    #inverse, off

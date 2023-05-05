@@ -1,0 +1,63 @@
+{
+	"boilerplate": {
+		"prefix": "!",
+        "body": [
+			"public class $1 {",
+				"\tpublic static void main(String[] args) {",
+					"\t\t$2",
+				"\t}",
+			"}"
+		],
+        "description": "boilerplate"
+	},
+
+	"print": {
+		"prefix": "pt",
+        "body": "System.out.print($1);",
+		"description": "print"
+	},
+
+	"print and new line": {
+		"prefix": "ptln",
+        "body": "System.out.println($1);",
+		"description": "print and new line"
+	},
+
+	"import scanner class": {
+		"prefix": "imsc",
+        "body": "import java.util.Scanner;",
+		"description": "import scanner class"
+	},
+
+	"scanner class": {
+		"prefix": "sc",
+        "body": [
+			"Scanner Sc = new Scanner(System.in);",
+			"$1",
+			"Sc.close();"
+		],
+        "description": "scanner class"
+	},
+
+	"import buffered reader": {
+		"prefix": "imbr",
+        "body": [
+			"import java.io.IOException;",
+			"import java.io.InputStreamReader;",
+			"import java.io.BufferedReader;"
+		],
+        "description": "import buffered reader"
+	},
+
+	"buffered reader": {
+		"prefix": "br",
+        "body": [
+			"InputStreamReader Isr=new InputStreamReader(System.in);",
+			"BufferedReader Br=new BufferedReader(Isr);",
+			"$1",
+			"Br.close();",
+			"Isr.close();"
+		],
+		"description": "buffered reader"
+	}
+}

@@ -1,0 +1,178 @@
+{
+	"boilerplate": {
+		"prefix": "!",
+        "body": [
+			"#include<iostream>",
+			"using namespace std;",
+			"int main()",
+			"{",
+				"\t$1",
+				"\treturn 0;",
+			"}"
+		],
+        "description": "boilerplate"
+	},
+
+	"competitive programming": {
+		"prefix": "cp",
+        "body": [
+			"#include<bits/stdc++.h>",
+			"using namespace std;",
+			"#pragma GCC optimize(\"Ofast,unroll-loops\")",
+			"#pragma GCC target(\"avx,avx2,fma\")",
+			"#define ll long long",
+			"int main()",
+			"{",
+				"\tios::sync_with_stdio(false);",
+				"\tcin.tie(0);",
+				"\tcout.tie(0);",
+				"\t#ifndef ONLINE_JUDGE",
+					"\t\tfreopen(\"input.txt\", \"r\", stdin);",
+					"\t\tfreopen(\"output.txt\", \"w\", stdout);",
+				"\t#endif",
+				"\t$1",
+				"\treturn 0;",
+			"}"
+		],
+        "description": "competitive programming"
+	},
+
+	"modulus": {
+		"prefix": "mod",
+        "body": "1000000007",
+        "description": "modulus"
+	},
+	
+	"infinty": {
+		"prefix": "inf",
+        "body": "2000000000000000000",
+        "description": "infinty"
+	},
+
+	"new line": {
+		"prefix": "nl",
+        "body": "cout<<endl;",
+        "description": "new line"
+	},
+
+	"print yes": {
+		"prefix": "yes",
+        "body": "cout<<\"YES\"<<endl;",
+        "description": "print yes"
+	},
+
+	"print no": {
+		"prefix": "no",
+        "body": "cout<<\"NO\"<<endl;",
+        "description": "print no"
+	},
+
+	"test cases": {
+		"prefix": "test",
+        "body": [
+			"cin>>$1;",
+			"while($1--)"
+		],
+        "description": "test cases"
+	},
+
+	"forward loop": {
+		"prefix": "fl",
+        "body": "for($1=0;$1<$2;++i)",
+        "description": "forward loop"
+	},
+
+	"backward loop": {
+		"prefix": "bl",
+        "body": "for($1=$2-1;$1>=0;--i)",
+        "description": "backward loop"
+	},
+
+	"all elements": {
+		"prefix": "all",
+        "body": "$1.begin(), $1.end()",
+		"description": "all elements"
+	},
+
+	"print container": {
+		"prefix": "print",
+        "body": [
+			"for(auto i:$1)",
+			"cout<<i<<\" \";",
+			"cout<<endl;"
+		],
+        "description": "print container"
+	},
+
+	"first element of pair": {
+		"prefix": "p1",
+        "body": "$1.first",
+        "description": "first element of pair"
+	},
+
+	"second element of pair": {
+		"prefix": "p2",
+        "body": "$1.second",
+        "description": "second element of pair"
+	},
+
+	"push_back to container": {
+		"prefix": "pb",
+        "body": "$1.push_back($2);",
+        "description": "push_back to container"
+	},
+
+	"insert to container": {
+		"prefix": "in",
+        "body": "$1.insert($2);",
+        "description": "insert to container"
+	},
+
+	"size of container": {
+		"prefix": "sz",
+        "body": "$1.size()",
+        "description": "size of container"
+	},
+
+	"clear container": {
+		"prefix": "cl",
+        "body": "$1.clear()",
+        "description": "clear container"
+	},
+
+	"long long vector": {
+		"prefix": "lv",
+        "body": "vector<ll>$1;",
+        "description": "long long vector"
+	},
+
+	"string vector": {
+		"prefix": "sv",
+        "body": "vector<string>$1;",
+        "description": "string vector"
+	},
+
+	"long long set": {
+		"prefix": "ls",
+        "body": "set<ll>$1;",
+        "description": "long long set"
+	},
+
+	"string set": {
+		"prefix": "ss",
+        "body": "set<string>$1;",
+        "description": "string set"
+	},
+
+	"long long map": {
+		"prefix": "lm",
+        "body": "map<ll, ll>$1;",
+        "description": "long long map"
+	},
+
+	"string map": {
+		"prefix": "sm",
+        "body": "map<string, ll>$1;",
+        "description": "string map"
+	}
+}

@@ -1,9 +1,11 @@
 * Color Highlight
 * indent-rainbow
 * Better Comments
+* Import Cost
 * Prettier
 * Material Icon Theme
-* Community Material Theme
+* Synthwave '84
+* CodeSnap
 * Error Lens
 * GitLens
 * Code Runner

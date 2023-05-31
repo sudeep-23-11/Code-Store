@@ -1,4 +1,4 @@
-//MajorityElement
+//Majority
 //BoyerMooreMajorityVoteAlgorithm
 #include<iostream>
 using namespace std;

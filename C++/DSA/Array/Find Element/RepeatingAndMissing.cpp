@@ -1,4 +1,4 @@
-//FindRepeatingAndMissing
+//RepeatingAndMissing
 #include<iostream>
 #include<vector>
 using namespace std;

@@ -1,4 +1,4 @@
-//SearchInMatrix
+//MatrixSearch
 #include<iostream>
 using namespace std;
 int main()

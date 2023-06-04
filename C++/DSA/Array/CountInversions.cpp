@@ -2,8 +2,8 @@
 #include<iostream>
 using namespace std;
 int c1, c2;
-void merge(int A[], int l, int m, int r);
 void mergesort(int A[], int l, int r);
+void merge(int A[], int l, int m, int r);
 int main()
 {
     int i, N;
@@ -18,54 +18,6 @@ int main()
     cout<<"A[i]>(A[j]*2), j>i "<<c2<<endl;
     return 0;
 }
-void merge(int A[], int l, int m, int r)
-{
-    int i, j, k, nl, nr;
-    nl=m-l+1; 
-    nr=r-m;
-    int lA[nl], rA[nr];
-    for(i=0;i<nl;i++)
-    lA[i]=A[l+i];
-    for(j=0;j<nr;j++)
-    rA[j]=A[m+1+j];
-    j=0;
-    for(i=0;i<nl;i++)
-    {
-        while((j<nr)&&(lA[i]>(rA[j]*2)))
-        j++;
-        c2+=j;
-    }
-    i=0; 
-    j=0; 
-    k=l;
-    while((i<nl)&&(j<nr))
-    {
-        if(lA[i]<=rA[j]) 
-        {
-            A[k]=lA[i];
-            i++;
-        }
-        else
-        {
-            A[k]=rA[j];
-            j++;
-            c1+=(nl-i);
-        }
-        k++;
-    }
-    while(i<nl) 
-    {       
-        A[k]=lA[i];
-        i++;
-        k++;
-    }
-    while(j<nr) 
-    {    
-        A[k]=rA[j];
-        j++;
-        k++;
-    }
-}
 void mergesort(int A[], int l, int r)
 {
     int m;
@@ -75,4 +27,48 @@ void mergesort(int A[], int l, int r)
     mergesort(A, l, m);
     mergesort(A, m+1, r);
     merge(A, l, m, r);
+}
+void merge(int A[], int l, int m, int r)
+{
+    int i, j, k;
+    j=m+1;
+    for(i=l;i<=m;i++)
+    {
+        while((j<=r)&&(A[i]>(A[j]*2)))
+        j++;
+        c2+=(j-m-1);
+    }
+    int B[r-l+1];
+    i=l;
+    j=m+1;
+    k=0;
+    while((i<=m)&&(j<=r))
+    {
+        if(A[i]<=A[j])
+        {
+            B[k]=A[i];
+            i++;
+        }
+        else
+        {
+            B[k]=A[j];
+            j++;
+            c1+=(m-i);
+        }
+        k++;
+    }
+    while(i<=m)
+    {
+        B[k]=A[i];
+        i++;
+        k++;
+    }
+    while(j<=r)
+    {
+        B[k]=A[j];
+        j++;
+        k++;
+    }
+    for(i=0;i<(r-l+1);i++)
+    A[l+i]=B[i];
 }

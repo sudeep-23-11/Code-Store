@@ -15,8 +15,8 @@
     * binary search across every row
     * binary search across matrix with e==A[m/M][m%M] only if last element of i th row is smaller than first element of i+1 th row
 * MergeTwoSortedArrays -
-    * place elements of both arrays in third array, sort it, replace elements from third array to original arrays
-    * compare every element of first array with first element of second array, place smaller one in first array, sort second array
+    * place elements of both arrays in third array, sort it, replace elements of first array with third array
+    * compare every element of first array with first element of second array, if greater then swap them, sort second array
 * RepeatingAndMissing -
     * hash elements of array
     * subtract sum of elements from n*(n+1)/2, subtract sum of squares of elements from n*(n+1)*(n+2)/6
@@ -29,4 +29,3 @@
 * TrappingRainwater -
     * min(max(left heights), max(right heights))-height
     * prefix max and suffix max arrays of heights
-* UniquePathsInMatrix - Dynamic Programming, if dp[i][j]!=-1 return dp[i][j], else return dp[i][j]=sum of j+1 for right and i+1 for down, if path found return 1, if out of bound return 0

@@ -1,8 +1,8 @@
 //QuickSort
 #include<iostream>
 using namespace std;
-int partiton(int A[], int l, int r);
 void quicksort(int A[], int l, int r);
+int partiton(int A[], int l, int r);
 int main()
 {
     int i, N;
@@ -14,6 +14,15 @@ int main()
     for(i=0;i<N;i++)
     cout<<A[i]<<" ";
     return 0;
+}
+void quicksort(int A[], int l, int r)
+{
+    int pa;
+    if(l>=r)
+    return;
+    pa=partition(A, l, r);
+    quicksort(A, l, pa-1);
+    quicksort(A, pa+1, r);
 }
 int partition(int A[], int l, int r)
 {
@@ -30,13 +39,4 @@ int partition(int A[], int l, int r)
     }
     swap(A[i+1], A[r]);
     return (i+1);
-}
-void quicksort(int A[], int l, int r)
-{
-    int pa;
-    if(l>=r)
-    return;
-    pa=partition(A, l, r);
-    quicksort(A, l, pa-1);
-    quicksort(A, pa+1, r);
 }

@@ -1,34 +1,35 @@
 //Power
 #include<iostream>
 using namespace std;
+int pow(int x, int y);
 int main()
 {
     bool c;
-    int x, n;
-    double p;
-    cin>>x>>n;
+    int x, y;
+    double z;
+    cin>>x>>y;
     c=false;
-    if(n<0)
+    if(y<0)
     {
-        n*=-1;
+        y*=-1;
         c=true;
     }
-    p=1.0;
-    while(n>0)
-    {
-        if(n%2==0)
-        {
-            x=x*x;
-            n/=2;
-        }
-        else
-        {
-            p*=x;
-            n--;
-        }
-    }
     if(c==true)
-    p=1/p;
-    cout<<p<<endl;
+    {
+        z=1.0/pow(x, y);
+        cout<<z<<endl;
+    }
+    else
+    cout<<pow(x, y)<<endl;
     return 0;
+}
+int pow(int x, int y)
+{
+    int z;
+    if(y==0)
+    return 1;
+    if((y%2)==1)
+    return pow(x, y-1)*x;
+    z=pow(x, y/2);
+    return z*z;
 }

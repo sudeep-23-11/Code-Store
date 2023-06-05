@@ -13,17 +13,16 @@ int main()
     cin>>K;
     x=0;
     c=0;
+    m.insert(make_pair(0, 1));
     for(i=0;i<N;i++)
     {
         x^=A[i];
-        if(x==K)
-        c++;
-        if(m.count(x^K)!=0)
-        c+=m[x^K];
         if(m.count(x)==0)
         m.insert(make_pair(x, 1));
         else
         m[x]++;
+        if(m.count(x^K)!=0)
+        c+=m[x^K];
     }
     cout<<c<<endl;
     return 0;

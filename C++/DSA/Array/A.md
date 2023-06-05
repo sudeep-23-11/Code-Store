@@ -9,6 +9,7 @@
     * sort array
     * hash elements of array
 * LongestConsecutiveSequence - sort array
+* LongestSubarrayWithKSum - hash sums along with their respective indexes, check if sum-K is already present in hash or not  
 * Majority - hash elements of array
 * MatrixSearch -
     * linear search across matrix
@@ -17,9 +18,12 @@
 * MergeTwoSortedArrays -
     * place elements of both arrays in third array, sort it, replace elements of first array with third array
     * compare every element of first array with first element of second array, if greater then swap them, sort second array
+* MoveZeroesToEnd - count no. of zeroes, shift rest elements to start, place zeroes at end
+* RearrangeSigns - first array contains positives, second array contains negatives, place back these elements alternatively
 * RepeatingAndMissing -
     * hash elements of array
     * subtract sum of elements from n*(n+1)/2, subtract sum of squares of elements from n*(n+1)*(n+2)/6
+* RotateArrayByKPlaces - take out first K elements, shift rest elements to left by K places, place back those K elements
 * SetMatrixZeroes -
     * make every element of row and column -1, change to 0
     * create row and column array, place 0 at corresponding position

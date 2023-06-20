@@ -29,13 +29,13 @@ int main()
                 st.push(data);
                 m=data;
             }
-            else if(data<st.top())
-            st.push(data);
-            else
+            else if(data>m)
             {
                 st.push(data*2-m);
                 m=data;
             }
+            else
+            st.push(data);
         }
         else if(ch==2)
         {

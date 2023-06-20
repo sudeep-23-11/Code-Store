@@ -11,14 +11,14 @@ int main()
     int A[N];
     for(i=0;i<N;i++)
     cin>>A[i];
-    cout<<"Delete Index"<<endl;
-    cin>>idx;
-    _delete(A, N, idx);
-    display(A, N-1);
     cout<<"Insert Index and Element"<<endl;
     cin>>idx>>ele;
     insert(A, N, idx, ele);
     display(A, N);
+    cout<<"Delete Index"<<endl;
+    cin>>idx;
+    _delete(A, N, idx);
+    display(A, N-1);
     return 0;
 }
 void display(int A[], int N)

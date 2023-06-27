@@ -2,10 +2,10 @@
 #include"../LL.h"
 int main()
 {
-    int N, c;
+    int K, c;
     int A[]={10, 20, 30, 40, 50};
     head=convert(A, 5);
-    cin>>N;
+    cin>>K;
     c=1;
     temp=head;
     while(temp->next!=NULL)
@@ -14,11 +14,11 @@ int main()
         c++;
     }
     temp->next=head;
-    N%=c;
-    N=c-N;
+    K%=c;
+    K=c-K;
     c=1;
     temp=head;
-    while(c!=N)
+    while(c!=K)
     {
         temp=temp->next;
         c++;

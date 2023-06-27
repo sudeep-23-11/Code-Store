@@ -1,4 +1,4 @@
-//CloneListWithNextAndRandomPointer
+//CopyList
 #include<iostream>
 using namespace std;
 struct node

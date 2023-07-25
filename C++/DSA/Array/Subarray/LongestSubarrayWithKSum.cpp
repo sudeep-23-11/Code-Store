@@ -23,7 +23,7 @@ int main()
                 i++;
             }
             if(s==K)
-            m=max(m, (j-i+1));
+            m=max(m, j-i+1);
         }
     }
     cout<<m<<endl;

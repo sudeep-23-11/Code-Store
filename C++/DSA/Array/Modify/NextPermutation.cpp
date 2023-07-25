@@ -10,7 +10,7 @@ int main()
     for(i=0;i<N;i++)
     cin>>A[i];
     i=N-2;
-    while((i>=0)&&(A[i]>=A[i+1]))
+    while(i>=0 && A[i]>=A[i+1])
     i--;
     if(i!=-1)
     {

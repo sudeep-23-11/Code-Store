@@ -17,14 +17,14 @@ int main()
         break;
         if(A[lo]<=A[m])
         {
-            if((e>=A[lo])&&(e<=A[m]))
+            if(e>=A[lo] && e<=A[m])
             hi=m-1;
             else
             lo=m+1;
         }
         else
         {
-            if((e>=A[m])&&(e<=A[hi]))
+            if(e>=A[m] && e<=A[hi])
             lo=m+1;
             else
             hi=m-1;

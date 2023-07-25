@@ -11,29 +11,29 @@ int main()
     cin>>A[i];
     cin>>s;
     sort(A, A+N);
-    for(i=0;i<(N-3);i++)
+    for(i=0;i<N-3;i++)
     {
-        if((i!=0)&&(A[i]==A[i-1]))
+        if(i && A[i]==A[i-1])
         continue;
-        for(j=i+1;j<(N-2);j++)
+        for(j=i+1;j<N-2;j++)
         {
-            if((j!=(i+1))&&(A[j]==A[j-1]))
+            if(j!=(i+1) && A[j]==A[j-1])
             continue;
             l=j+1;
             r=N-1;
             while(l<r)
             {
-                if((A[l]+A[r])==(s-A[i]-A[j]))
+                if(A[l]+A[r] == s-A[i]-A[j])
                 {
                     cout<<A[i]<<" "<<A[j]<<" "<<A[l]<<" "<<A[r]<<endl;
-                    while((l<r)&&(A[l]==A[l+1]))
+                    while(l<r && A[l]==A[l+1])
                     l++;
                     l++;
-                    while((l<r)&&(A[r]==A[r-1]))
+                    while(l<r && A[r]==A[r-1])
                     r--;
                     r--;
                 }
-                else if((A[l]+A[r])<(s-A[i]-A[j]))
+                else if(A[l]+A[r] < s-A[i]-A[j])
                 l++;
                 else
                 r--;

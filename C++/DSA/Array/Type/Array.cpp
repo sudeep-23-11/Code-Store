@@ -31,13 +31,13 @@ void display(int A[], int N)
 void insert(int A[], int N, int idx, int ele)
 {
     int i;
-    for(i=(N-1);i>idx;i--)
+    for(i=N-1;i>idx;i--)
     A[i]=A[i-1];
     A[idx]=ele;
 }
 void _delete(int A[], int N, int idx)
 {
     int i;
-    for(i=idx;i<(N-1);i++)
+    for(i=idx;i<N-1;i++)
     A[i]=A[i+1];
 }

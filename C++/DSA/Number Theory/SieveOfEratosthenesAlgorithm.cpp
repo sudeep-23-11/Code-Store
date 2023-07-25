@@ -1,39 +1,39 @@
 //SieveOfEratosthenesAlgorithm
 #include<iostream>
 using namespace std;
-bool prime[100001];
-int factorsum[100001];
 int main()
 {
-    int i, j, N;
-    for(i=0;i<100001;i++)
+    int i, j, N, n;
+    N=100001;
+    bool p[N];
+    int fs[N];
+    for(i=0;i<N;i++)
     {
-        if((i==0)||(i==1))
-        prime[i]=false;
+        if(i<2)
+        p[i]=false;
         else
-        prime[i]=true;
-        factorsum[i]=i;
+        p[i]=true;
+        fs[i]=i;
     }
-    for(i=0;i<100001;i++)
+    for(i=0;i<N;i++)
     {
-        if(prime[i]==true)
+        if(p[i])
         {
-            for(j=(i*2);j<100001;j+=i)
-            prime[j]=false;
+            for(j=i*2;j<N;j+=i)
+            p[j]=false;
         }
-        if(i!=0)
+        if(i)
         {
-            for(j=2*i;j<100001;j+=i)
-            factorsum[j]+=i;
+            for(j=i*2;j<N;j+=i)
+            fs[j]+=i;
         }
     }
-    for(i=0;i<100001;i++)
+    for(i=0;i<N;i++)
     {
-        if(prime[i]==true)
+        if(p[i])
         cout<<i<<" ";
     }
-    cout<<endl;
-    cin>>N;
-    cout<<factorsum[N]<<endl;
+    cin>>n;
+    cout<<endl<<fs[n]<<endl;
     return 0;
 }

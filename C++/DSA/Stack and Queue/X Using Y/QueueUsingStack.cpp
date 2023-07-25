@@ -13,10 +13,10 @@ int main()
     {
         cout<<"Choice"<<endl;
         cin>>ch;
-        if(ch==0)
+        if(!ch)
         {
             t=st;
-            while(t.empty()==0)
+            while(!t.empty())
             {
                 cout<<t.top()<<" ";
                 t.pop();
@@ -26,13 +26,13 @@ int main()
         else if(ch==1)
         {
             cin>>data;
-            while(st.empty()==0)
+            while(!st.empty())
             {
                 st2.push(st.top());
                 st.pop();
             }
             st2.push(data);
-            while(st2.empty()==0)
+            while(!st2.empty())
             {
                 st.push(st2.top());
                 st2.pop();

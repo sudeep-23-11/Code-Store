@@ -2,7 +2,7 @@
 #include"../LL.h"
 int main()
 {
-    struct node *t1, *t2;
+    node *t1, *t2;
     int A[]={10, 30, 50, 70, 90};
     t1=convert(A, 5);
     int B[]={20, 40, 60, 80, 100};
@@ -10,7 +10,7 @@ int main()
     if(t1->data>t2->data)
     swap(t1, t2);
     head=t1;
-    while(t1!=NULL)
+    while(t1)
     {
         if(t1->data<=t2->data)
         {

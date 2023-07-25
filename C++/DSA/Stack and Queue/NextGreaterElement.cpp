@@ -10,11 +10,11 @@ int main()
     stack<int>st;
     for(i=0;i<N;i++)
     cin>>A[i];
-    for(i=(N*2-1);i>=0;i--)
+    for(i=N*2-1;i>=0;i--)
     {
-        while((st.empty()==0)&&(st.top()<=A[i%N]))
+        while(!st.empty() && st.top()<=A[i%N])
         st.pop();
-        if(st.empty()==0)
+        if(!st.empty())
         nge[i%N]=st.top();
         else
         nge[i%N]=-1;
@@ -22,5 +22,6 @@ int main()
     }
     for(i=0;i<N;i++)
     cout<<nge[i]<<" ";
+    cout<<endl;
     return 0;
 }

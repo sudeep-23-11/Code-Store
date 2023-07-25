@@ -10,7 +10,7 @@ int main()
     cin>>A[i];
     lo=0;
     hi=N-1;
-    while((hi-lo)>1)
+    while(hi-lo > 1)
     {
         m=(lo+hi)/2;
         if(e<=A[m])

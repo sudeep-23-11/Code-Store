@@ -13,7 +13,7 @@ int main()
     while(lo<=hi)
     {
         m=(lo+hi)/2;
-        if(((m%2==0)&&(A[m]==A[m+1]))||((m%2==1)&&(A[m]==A[m-1])))
+        if((!(m%2) && A[m]==A[m+1]) || (m%2 && A[m]==A[m-1]))
         lo=m+1;
         else
         hi=m-1;

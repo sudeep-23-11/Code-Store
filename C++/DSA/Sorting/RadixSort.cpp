@@ -14,6 +14,7 @@ int main()
     radixsort(A, N);
     for(i=0;i<N;i++)
     cout<<A[i]<<" ";
+    cout<<endl;
     return 0;
 }
 void radixsort(int A[], int n)
@@ -25,7 +26,7 @@ void radixsort(int A[], int n)
         if(max<A[i])
         max=A[i];
     }
-    for(exp=1;(max/exp)>0;exp*=10)
+    for(exp=1;max/exp>0;exp*=10)
     countingsort(A, n, exp);
 }
 void countingsort(int A[], int n, int exp)
@@ -37,7 +38,7 @@ void countingsort(int A[], int n, int exp)
     count[(A[i]/exp)%10]++;
     for(i=1;i<10;i++)
     count[i]+=count[i-1];
-    for(i=(n-1);i>=0;i--)
+    for(i=n-1;i>=0;i--)
     {
         B[count[(A[i]/exp)%10]-1]=A[i];
         count[(A[i]/exp)%10]--;

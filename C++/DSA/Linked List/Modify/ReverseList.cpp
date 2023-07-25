@@ -2,12 +2,12 @@
 #include"../LL.h"
 int main()
 {
-    struct node *t1, *t2;
+    node *t1, *t2;
     int A[]={10, 20, 30, 40, 50};
     head=convert(A, 5);
     temp=head;
     t1=head->next;
-    while(t1!=NULL)
+    while(t1)
     {
         t2=t1->next;
         t1->next=temp;

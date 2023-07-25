@@ -17,7 +17,7 @@ int main()
     printf("Inside the Main thread with id %ld\n", pthread_self());
     for(i=6;i<=10;i++)
     {
-        printf("%d\n", (x*i));
+        printf("%d\n", x*i);
         s+=(x*i);
         sleep(1);
     }
@@ -32,7 +32,7 @@ void *thread_function(void *args)
     printf("Inside the thread with id %ld\n", pthread_self());
     for(i=1;i<=5;i++)
     {
-        printf("%d\n", (x*i));
+        printf("%d\n", x*i);
         s+=(x*i);
         sleep(1);
     }

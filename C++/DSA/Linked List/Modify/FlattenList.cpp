@@ -4,8 +4,7 @@ using namespace std;
 struct node
 {
     int data;
-    struct node *next;
-    struct node *bottom;
+    node *next, *bottom;
     node(int val)
     {
         data=val;
@@ -13,9 +12,9 @@ struct node
         bottom=NULL;
     }
 };
-struct node *head, *temp;
-struct node *flatten(struct node *n);
-struct node *merge(struct node *h1, struct node *h2);
+node *head, *temp;
+node *flatten(node *n);
+node *merge(node *h1, node *h2);
 int main()
 {
     head=new node(10);
@@ -29,7 +28,7 @@ int main()
     head->next->next->bottom->bottom=new node(90);
     head=flatten(head);
     temp=head;
-    while(temp!=NULL)
+    while(temp)
     {
         cout<<temp->data<<" ";
         temp=temp->bottom;
@@ -37,17 +36,17 @@ int main()
     cout<<endl;
     return 0;
 }
-struct node *flatten(struct node *n)
+node *flatten(node *n)
 {
-    if(n->next==NULL)
+    if(!(n->next))
     return n;
     return merge(n, flatten(n->next));
 }
-struct node *merge(struct node *h1, struct node *h2)
+node *merge(node *h1, node *h2)
 {
     head=h1;
     h1->next=NULL;
-    while(h1!=NULL)
+    while(h1)
     {
         if(h1->data<=h2->data)
         {

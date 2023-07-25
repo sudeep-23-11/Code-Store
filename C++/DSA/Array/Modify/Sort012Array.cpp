@@ -14,7 +14,7 @@ int main()
     m=0;
     while(m<=hi)
     {
-        if(A[m]==0)
+        if(!A[m])
         {
             swap(A[m], A[lo]);
             lo++;

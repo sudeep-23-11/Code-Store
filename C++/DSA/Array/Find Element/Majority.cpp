@@ -23,7 +23,7 @@ void nby2(int A[], int N)
     v=0;
     for(i=0;i<N;i++)
     {
-        if(v==0)
+        if(!v)
         {
             c=A[i];
             v++;
@@ -49,14 +49,14 @@ void nby3(int A[], int N)
     v2=0;
     for(i=0;i<N;i++)
     {
-        if(v1==0)
+        if(!v1)
         {
             c1=A[i];
             v1++;
         }
         else if(A[i]==c1)
         v1++;
-        else if(v2==0)
+        else if(!v2)
         {
             c2=A[i];
             v2++;
@@ -68,7 +68,7 @@ void nby3(int A[], int N)
             v1--;
             v2--;
         }
-        if(v1==0)
+        if(!v1)
         {
             swap(c1, c2);
             swap(v1, v2);

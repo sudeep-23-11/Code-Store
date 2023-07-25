@@ -5,7 +5,7 @@ int main()
 {
     int f;
     f=fork();
-    if(f==0)
+    if(!f)
     {
         printf("Inside the Child process\n");
         printf("fork function value = %d\n", f);

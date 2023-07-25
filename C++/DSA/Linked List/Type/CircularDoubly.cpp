@@ -4,10 +4,15 @@ using namespace std;
 struct node
 {
     int data;
-    struct node *next;
-    struct node *prev;
+    node *next, *prev;
+    node(int val)
+    {
+        data=val;
+        next=NULL;
+        prev=NULL;
+    }
 };
-struct node *head, *_new, *temp, *temp2;
+node *head, *_new, *temp, *temp2;
 void display();
 void insert(int data);
 void insertat(int pos, int data);
@@ -24,7 +29,7 @@ int main()
     {
         cout<<"Choice"<<endl;
         cin>>ch;
-        if(ch==0)
+        if(!ch)
         display();
         else if(ch==1)
         {
@@ -59,9 +64,8 @@ void display()
 }
 void insert(int data)
 {
-    _new=new node;
-    _new->data=data;
-    if(head==NULL)
+    _new=new node(data);
+    if(!head)
     head=_new;
     else
     {
@@ -76,8 +80,8 @@ void insert(int data)
 }
 void insertat(int pos, int data)
 {
-    _new=new node;
-    _new->data=data;
+    int c;
+    _new=new node(data);
     if(pos==1)
     {
         temp2=head->prev;
@@ -89,7 +93,7 @@ void insertat(int pos, int data)
     }
     else
     {
-        int c=0;
+        c=0;
         temp=head;
         while(temp->next!=head)
         {
@@ -105,7 +109,7 @@ void insertat(int pos, int data)
             temp=temp->next;
         }
         c++;
-        if((temp->next==head)&&(c==pos))
+        if(temp->next==head && c==pos)
         {
             temp->prev->next=_new;
             _new->prev=temp->prev;
@@ -139,7 +143,7 @@ void _delete(int data)
             }
             temp=temp->next;
         }
-        if((temp->next==head)&&(temp->data==data))
+        if(temp->next==head && temp->data==data)
         {
             temp->prev->next=temp->next;
             temp->next->prev=temp->prev;

@@ -4,8 +4,7 @@ using namespace std;
 struct node
 {
     int data;
-    struct node *next;
-    struct node *random;
+    node *next, *random;
     node(int val)
     {
         data=val;
@@ -13,7 +12,7 @@ struct node
         random=NULL;
     }
 };
-struct node *head, *h, *t1, *t2, *t3;
+node *head, *h, *t1, *t2, *t3;
 int main()
 {
     head=new node(10);
@@ -27,7 +26,7 @@ int main()
     t1->random=head;
     t3->random=t1;
     t1=head;
-    while(t1!=NULL)
+    while(t1)
     {
         t2=t1->next;
         t1->next=new node(t1->data);
@@ -35,25 +34,25 @@ int main()
         t1=t2;
     }
     t1=head;
-    while(t1!=NULL)
+    while(t1)
     {
-        if(t1->random!=NULL)
+        if(t1->random)
         t1->next->random=t1->random->next;
         t1=t1->next->next;
     }
     h=head->next;
     t1=head;
-    while(t1!=NULL)
+    while(t1)
     {
         t2=t1->next;
         t3=t2->next;
-        if(t3!=NULL)
+        if(t3)
         t2->next=t3->next;
         t1->next=t3;
         t1=t3;
     }
     t1=h;
-    while(t1!=NULL)
+    while(t1)
     {
         cout<<t1->data<<" ";
         t1=t1->next;

@@ -13,10 +13,10 @@ int main()
     for(i=0;i<M;i++)
     cin>>B[i];
     g=ceil((N+M)/2.0);
-    while(g!=0)
+    while(g)
     {
         i=0;
-        while((i+g)<(N+M))
+        while(i+g < N+M)
         {
             j=i+g;
             if(i<N)

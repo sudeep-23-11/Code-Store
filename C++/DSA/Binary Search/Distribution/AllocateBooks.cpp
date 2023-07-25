@@ -1,13 +1,15 @@
 //AllocateBooks
 #include<iostream>
 #include<vector>
+#include<climits>
 using namespace std;
 int main()
 {
     int i, N, s, lo, hi, m;
     cin>>N>>s;
     int A[N];
-    lo=-100001;
+    vector<int>v;
+    lo=INT_MIN;
     hi=0;
     for(i=0;i<N;i++)
     {
@@ -18,11 +20,10 @@ int main()
     while(lo<=hi)
     {
         m=(lo+hi)/2;
-        vector<int>v;
         v.push_back(0);
         for(i=0;i<N;i++)
         {
-            if((v[v.size()-1]+A[i])<=m)
+            if(v[v.size()-1]+A[i] <= m)
             v[v.size()-1]+=A[i];
             else
             v.push_back(A[i]);
@@ -31,6 +32,7 @@ int main()
         hi=m-1;
         else
         lo=m+1;
+        v.clear();
     }
     cout<<lo<<endl;
     return 0;

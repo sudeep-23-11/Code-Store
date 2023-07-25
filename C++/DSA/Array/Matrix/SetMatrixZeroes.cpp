@@ -16,19 +16,19 @@ int main()
     c=false;
     for(i=0;i<N;i++)
     {
-        if(A[i][0]==0)
+        if(!A[i][0])
         r=true;
     }
     for(i=0;i<M;i++)
     {
-        if(A[0][i]==0)
+        if(!A[0][i])
         c=true;
     }
     for(i=1;i<N;i++)
     {
         for(j=1;j<M;j++)
         {
-            if(A[i][j]==0)
+            if(!A[i][j])
             {
                 A[i][0]=0;
                 A[0][j]=0;
@@ -39,16 +39,16 @@ int main()
     {
         for(j=1;j<M;j++)
         {
-            if((A[i][0]==0)||(A[0][j]==0))
+            if(!A[i][0] || !A[0][j])
             A[i][j]=0;
         }
     }
-    if(r==true)
+    if(r)
     {
         for(i=0;i<N;i++)
         A[i][0]=0;
     }
-    if(c==true)
+    if(c)
     {
         for(i=0;i<M;i++)
         A[0][i]=0;

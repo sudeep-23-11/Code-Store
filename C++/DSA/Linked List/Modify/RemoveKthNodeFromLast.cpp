@@ -3,7 +3,7 @@
 int main()
 {
     int K, c;
-    struct node *f, *s;
+    node *f, *s;
     int A[]={10, 20, 30, 40, 50};
     head=convert(A, 5);
     cin>>K;
@@ -14,12 +14,12 @@ int main()
         f=f->next;
         c++;
     }
-    if(f==NULL)
+    if(!f)
     head=head->next;
     else
     {
         s=head;
-        while(f->next!=NULL)
+        while(f->next)
         {
             s=s->next;
             f=f->next;

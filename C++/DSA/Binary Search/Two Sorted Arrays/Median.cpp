@@ -1,6 +1,7 @@
 //Median
 #include<iostream>
 #include<vector>
+#include<climits>
 using namespace std;
 int main()
 {
@@ -20,13 +21,13 @@ int main()
     {
         x=(lo+hi)/2;
         y=(A.size()+B.size())/2-x;
-        l1=(x==0) ? -100001 : A[x-1];
-        l2=(y==0) ? -100001 : B[y-1];
-        r1=(x==A.size()) ? 100001 : A[x];
-        r2=(y==B.size()) ? 100001 : B[y];
-        if((l1<=r2)&&(l2<=r1))
+        l1=x==0 ? INT_MIN : A[x-1];
+        l2=y==0 ? INT_MIN : B[y-1];
+        r1=x==A.size() ? INT_MAX : A[x];
+        r2=y==B.size() ? INT_MAX : B[y];
+        if(l1<=r2 && l2<=r1)
         {
-            if((A.size()+B.size())%2==0)
+            if(!((A.size()+B.size())%2))
             m=(max(l1, l2)+min(r1, r2))/2.0;
             else
             m=min(r1, r2);

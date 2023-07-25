@@ -6,9 +6,9 @@ public class ExeceptionHandling
     {
         int i, n, x;
         String s;
-        Scanner Sc=new Scanner(System.in);
         for(i=0;i<5;i++)
         {
+            Scanner Sc=new Scanner(System.in);
             n=Sc.nextInt();
             try
             {
@@ -56,7 +56,7 @@ public class ExeceptionHandling
             {
                 System.out.println("Null Pointer Exception Handled");
             }
+            Sc.close();
         }
-        Sc.close();
     }
 }

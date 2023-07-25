@@ -7,15 +7,15 @@ int main()
     cout<<"0 for display"<<endl;
     cout<<"1 for push"<<endl;
     cout<<"2 for pop"<<endl;
-    int stack[100001];
+    int stack[100];
     top=0;
     while(1)
     {
         cout<<"Choice"<<endl;
         cin>>ch;
-        if(ch==0)
+        if(!ch)
         {
-            for(i=(top-1);i>=0;i--)
+            for(i=top-1;i>=0;i--)
             cout<<stack[i]<<" ";
             cout<<endl;
         }

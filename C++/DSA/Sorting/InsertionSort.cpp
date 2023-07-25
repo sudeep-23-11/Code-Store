@@ -12,7 +12,7 @@ int main()
     {
         t=A[i+1];
         pos=i;
-        while((t<A[pos])&&(pos>=0))
+        while(t<A[pos] && pos>=0)
         {
             A[pos+1]=A[pos];
             pos--;
@@ -21,5 +21,6 @@ int main()
     }
     for(i=0;i<N;i++)
     cout<<A[i]<<" ";
+    cout<<endl;
     return 0;
 }

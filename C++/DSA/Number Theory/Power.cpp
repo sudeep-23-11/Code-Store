@@ -14,7 +14,7 @@ int main()
         y*=-1;
         c=true;
     }
-    if(c==true)
+    if(c)
     {
         z=1.0/pow(x, y);
         cout<<z<<endl;
@@ -26,9 +26,9 @@ int main()
 int pow(int x, int y)
 {
     int z;
-    if(y==0)
+    if(!y)
     return 1;
-    if((y%2)==1)
+    if(y%2 == 1)
     return pow(x, y-1)*x;
     z=pow(x, y/2);
     return z*z;

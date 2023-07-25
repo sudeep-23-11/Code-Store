@@ -13,6 +13,7 @@ int main()
     mergesort(A, 0, N-1);
     for(i=0;i<N;i++)
     cout<<A[i]<<" ";
+    cout<<endl;
     return 0;
 }
 void mergesort(int A[], int l, int r)
@@ -32,7 +33,7 @@ void merge(int A[], int l, int m, int r)
     i=l;
     j=m+1;
     k=0;
-    while((i<=m)&&(j<=r))
+    while(i<=m && j<=r)
     {
         if(A[i]<=A[j])
         {
@@ -58,6 +59,6 @@ void merge(int A[], int l, int m, int r)
         j++;
         k++;
     }
-    for(i=0;i<(r-l+1);i++)
+    for(i=0;i<r-l+1;i++)
     A[l+i]=B[i];
 }

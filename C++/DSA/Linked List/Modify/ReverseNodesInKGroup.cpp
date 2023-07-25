@@ -3,18 +3,18 @@
 int main()
 {
     int K, c, i;
-    struct node *t1, *t2;
+    node *t1, *t2;
     int A[]={10, 20, 30, 40, 50, 60};
     head=convert(A, 6);
     cin>>K;
     c=1;
     temp=head;
-    while(temp->next!=NULL)
+    while(temp->next)
     {
         temp=temp->next;
         c++;
     }
-    _new=new node();
+    _new=new node(-1);
     _new->next=head;
     temp=_new;
     while(c>=K)

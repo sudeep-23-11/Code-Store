@@ -2,17 +2,17 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-vector<string>v;
-void palindrome(string s, int i);
+void palindrome(string s, int i, vector<string>&v);
 bool check(string s, int i, int j);
 int main()
 {
     string s;
+    vector<string>v;
     cin>>s;
-    palindrome(s, 0);
+    palindrome(s, 0, v);
     return 0;
 }
-void palindrome(string s, int i)
+void palindrome(string s, int i, vector<string>&v)
 {
     int j;
     if(i==s.size())
@@ -24,10 +24,10 @@ void palindrome(string s, int i)
     }
     for(j=i;j<s.size();j++)
     {
-        if(check(s, i, j)==true)
+        if(check(s, i, j))
         {
-            v.push_back(s.substr(i, (j-i+1)));
-            palindrome(s, j+1);
+            v.push_back(s.substr(i, j-i+1));
+            palindrome(s, j+1, v);
             v.pop_back();
         }
     }

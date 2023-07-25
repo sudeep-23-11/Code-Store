@@ -15,7 +15,7 @@ int main()
     b=N-1;
     l=0;
     r=M-1;
-    while((t<=b)&&(l<=r))
+    while(t<=b && l<=r)
     {
         for(i=l;i<=r;i++)
         cout<<A[t][i]<<" ";

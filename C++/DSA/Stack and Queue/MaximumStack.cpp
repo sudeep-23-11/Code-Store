@@ -14,7 +14,7 @@ int main()
     {
         cout<<"Choice"<<endl;
         cin>>ch;
-        if(ch==0)
+        if(!ch)
         {
             if(st.top()>m)
             cout<<m<<endl;
@@ -24,7 +24,7 @@ int main()
         else if(ch==1)
         {
             cin>>data;
-            if(st.empty()==1)
+            if(st.empty())
             {
                 st.push(data);
                 m=data;

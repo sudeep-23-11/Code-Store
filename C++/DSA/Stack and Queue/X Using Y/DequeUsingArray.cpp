@@ -9,14 +9,14 @@ int main()
     cout<<"2 for push front"<<endl;
     cout<<"3 for pop rear"<<endl;
     cout<<"4 for pop front"<<endl;
-    int deque[100001];
-    front=50000;
-    rear=50000;
+    int deque[100];
+    front=50;
+    rear=50;
     while(1)
     {
         cout<<"Choice"<<endl;
         cin>>ch;
-        if(ch==0)
+        if(!ch)
         {
             for(i=front;i<rear;i++)
             cout<<deque[i]<<" ";

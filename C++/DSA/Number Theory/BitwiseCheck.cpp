@@ -13,14 +13,14 @@ int main()
 }
 void evenodd(int n)
 {
-    if((n&1)==0)
+    if(!(n&1))
     cout<<"Even"<<endl;
     else
     cout<<"Odd"<<endl;
 }
 void powerof2(int n)
 {
-    if((n!=0)&&((n&(n-1))==0))
+    if(n && !(n&(n-1)))
     cout<<"Power of 2"<<endl;
     else
     cout<<"Not a Power of 2"<<endl;

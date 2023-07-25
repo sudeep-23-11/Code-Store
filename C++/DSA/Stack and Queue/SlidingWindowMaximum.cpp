@@ -13,12 +13,12 @@ int main()
     cin>>K;
     for(i=0;i<N;i++)
     {
-        if((q.empty()==0)&&(q.front()==(i-K)))
+        if(!q.empty() && q.front()==(i-K))
         q.pop_front();
-        while((q.empty()==0)&&(A[i]>A[q.back()]))
+        while(!q.empty() && A[i]>A[q.back()])
         q.pop_back();
         q.push_back(i);
-        if(i>=(K-1))
+        if(i >= K-1)
         cout<<A[q.front()]<<" ";
     }
     return 0;

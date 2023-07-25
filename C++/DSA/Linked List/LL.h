@@ -3,28 +3,32 @@ using namespace std;
 struct node
 {
     int data;
-    struct node *next;
+    node *next;
+    node(int val)
+    {
+        data=val;
+        next=NULL;
+    }
 };
-struct node *head, *_new, *temp;
-struct node *convert(int A[], int N)
+node *head, *_new, *temp;
+node *convert(int A[], int N)
 {
     int i;
-    temp=new node;
-    head=temp;
-    for(i=0;i<N;i++)
+    head=new node(A[0]);
+    temp=head;
+    for(i=1;i<N;i++)
     {
-        _new=new node;
-        _new->data=A[i];
+        _new=new node(A[i]);
         temp->next=_new;
         temp=_new;
     }
     temp->next=NULL; 
-    return head->next;
+    return head;
 }
-void display(struct node *head)
+void display(node *head)
 {
     temp=head;
-    while(temp!=NULL)
+    while(temp)
     {
         cout<<temp->data<<" ";
         temp=temp->next;

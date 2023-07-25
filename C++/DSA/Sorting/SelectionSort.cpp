@@ -8,11 +8,11 @@ int main()
     int A[N];
     for(i=0;i<N;i++)
     cin>>A[i];
-    for(i=0;i<(N-1);i++)
+    for(i=0;i<N-1;i++)
     {
         ele=A[i];
         pos=i;
-        for(j=(i+1);j<N;j++)
+        for(j=i+1;j<N;j++)
         {
             if(ele>A[j])
             {
@@ -24,5 +24,6 @@ int main()
     }
     for(i=0;i<N;i++)
     cout<<A[i]<<" ";
+    cout<<endl;
     return 0;
 }

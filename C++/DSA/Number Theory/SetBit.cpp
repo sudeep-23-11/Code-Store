@@ -9,7 +9,7 @@ int main()
     binary(n);
     cout<<"Bit you want to check"<<endl;
     cin>>i;
-    if((n&(1<<i))!=0)
+    if(n&(1<<i))
     cout<<"Set bit"<<endl;
     else
     cout<<"Not Set bit"<<endl;

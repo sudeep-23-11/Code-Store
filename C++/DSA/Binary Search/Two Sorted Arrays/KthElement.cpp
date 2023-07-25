@@ -1,6 +1,7 @@
 //KthElement
 #include<iostream>
 #include<vector>
+#include<climits>
 using namespace std;
 int main()
 {
@@ -13,17 +14,17 @@ int main()
     cin>>B[i];
     if(N>M)
     swap(A, B);
-    lo=max((K-B.size()), 0);
+    lo=max(K-B.size(), 0);
     hi=min(K, A.size());
     while(lo<=hi)
     {
         x=(lo+hi)/2;
         y=K-x;
-        l1=(x==0) ? -100001 : A[x-1];
-        l2=(y==0) ? -100001 : B[y-1];
-        r1=(x==A.size()) ? 100001 : A[x];
-        r2=(y==B.size()) ? 100001 : B[y];
-        if((l1<=r2)&&(l2<=r1))
+        l1=x==0 ? INT_MIN : A[x-1];
+        l2=y==0 ? INT_MIN : B[y-1];
+        r1=x==A.size() ? INT_MAX : A[x];
+        r2=y==B.size() ? INT_MAX : B[y];
+        if(l1<=r2 && l2<=r1)
         {
             cout<<max(l1, l2)<<endl;
             break;

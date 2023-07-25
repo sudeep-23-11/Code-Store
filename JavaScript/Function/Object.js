@@ -4,7 +4,7 @@ let name1={
     last:"DEF",
     First:function(n)
     {
-        return (n+" "+this.first);
+        return n+" "+this.first;
     }
 };
 name1.Last=function()
@@ -22,7 +22,7 @@ function name4(first, last)
     this.last=last,
     this.First=function()
     {
-        return (this.n+" "+this.first);
+        return this.n+" "+this.first;
     }
 };
 name4.prototype.n=0;

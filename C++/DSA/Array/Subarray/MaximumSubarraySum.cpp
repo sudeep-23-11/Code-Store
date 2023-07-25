@@ -1,6 +1,7 @@
 //MaximumSubarraySum
 //KadaneAlgorithm
 #include<iostream>
+#include<climits>
 using namespace std;
 int main()
 {
@@ -10,7 +11,7 @@ int main()
     for(i=0;i<N;i++)
     cin>>A[i];
     s=0;
-    m=-100001;
+    m=INT_MIN;
     for(i=0;i<N;i++)
     {
         s+=A[i];

@@ -7,14 +7,14 @@ int main()
     cout<<"0 for display"<<endl;
     cout<<"1 for push"<<endl;
     cout<<"2 for pop"<<endl;
-    int queue[100001];
+    int queue[100];
     front=0;
     rear=0;
     while(1)
     {   
         cout<<"Choice"<<endl;
         cin>>ch;
-        if(ch==0)
+        if(!ch)
         {
             for(i=front;i<rear;i++)
             cout<<queue[i]<<" ";

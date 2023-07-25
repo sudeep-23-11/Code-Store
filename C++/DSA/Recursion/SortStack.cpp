@@ -2,45 +2,45 @@
 #include<iostream>
 #include<stack>
 using namespace std;
-stack<int>st;
-void sort();
-void insert(int x);
+void sort(stack<int>&st);
+void insert(int x, stack<int>&st);
 int main()
 {
     int x;
-    while(x!=0)
+    stack<int>st;
+    while(x)
     {
         cin>>x;
         st.push(x);
     }
-    sort();
-    while(st.empty()==0)
+    sort(st);
+    while(!st.empty())
     {
         cout<<st.top()<<" ";
         st.pop();
     }
     return 0;
 }
-void sort()
+void sort(stack<int>&st)
 {
     int x;
-    if(st.empty()==1)
+    if(st.empty())
     return;
     x=st.top();
     st.pop();
-    sort();
-    insert(x);
+    sort(st);
+    insert(x, st);
 }
-void insert(int x)
+void insert(int x, stack<int>&st)
 {
     int y;
-    if((st.empty()==1)||(x>=st.top()))
+    if(st.empty() || x>=st.top())
     st.push(x);
     else
     {
         y=st.top();
         st.pop();
-        insert(x);
+        insert(x, st);
         st.push(y);
     }
 }

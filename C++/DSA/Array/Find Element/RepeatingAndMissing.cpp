@@ -2,10 +2,10 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-vector<int>sb, usb;
 int main()
 {
     int i, N, x, s;
+    vector<int>sb, usb;
     cin>>N;
     int A[N];
     for(i=0;i<N;i++)
@@ -17,15 +17,15 @@ int main()
         x^=(i+1);
     }
     s=0;
-    while((x&(1<<s))==0)
+    while(!(x&(1<<s)))
     s++;
     for(i=0;i<N;i++)
     {
-        if((A[i]&(1<<s))!=0)
+        if(A[i]&(1<<s))
         sb.push_back(A[i]);
         else
         usb.push_back(A[i]);
-        if(((i+1)&(1<<s))!=0)
+        if((i+1)&(1<<s))
         sb.push_back(i+1);
         else
         usb.push_back(i+1);

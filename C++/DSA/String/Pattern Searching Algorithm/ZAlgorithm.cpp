@@ -17,12 +17,12 @@ int main()
         {
             r=i;
             x:l=i;
-            while((r<rs.size())&&(rs[r]==rs[r-l]))
+            while(r<rs.size() && rs[r]==rs[r-l])
             r++;
             Z[i]=r-l;
             r--;
         }
-        else if((Z[i-l]+i)<=r)
+        else if(Z[i-l]+i <= r)
         Z[i]=Z[i-l];
         else
         goto x;

@@ -1,7 +1,7 @@
 //LongestPalindromicSubstring
 #include<iostream>
 using namespace std;
-int palindrome(string s, int i, int j);
+int palindrome(string &s, int i, int j);
 int main()
 {
     int i, m, l;
@@ -14,18 +14,18 @@ int main()
         if(m>l)
         {
             l=m;
-            r=s.substr((i-l/2), l);
+            r=s.substr(i-l/2, l);
         }
     }
     cout<<r<<endl;
     return 0;
 }
-int palindrome(string s, int i, int j)
+int palindrome(string &s, int i, int j)
 {
-    while((i>=0)&&(j<s.size())&&(s[i]==s[j]))
+    while(i>=0 && j<s.size() && s[i]==s[j])
     {
         i--;
         j++;
     }
-    return (j-i-1);
+    return j-i-1;
 }

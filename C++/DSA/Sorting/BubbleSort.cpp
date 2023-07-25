@@ -10,7 +10,7 @@ int main()
     cin>>A[i];
     for(i=0;i<N;i++)
     {
-        for(j=0;j<(N-1);j++)
+        for(j=0;j<N-1;j++)
         {
             if(A[j]>A[j+1])
             swap(A[j], A[j+1]);
@@ -18,5 +18,6 @@ int main()
     }
     for(i=0;i<N;i++)
     cout<<A[i]<<" ";
+    cout<<endl;
     return 0;
 }

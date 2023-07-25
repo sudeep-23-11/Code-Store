@@ -10,12 +10,12 @@ int main()
     cin>>A[i];
     for(i=0;i<N;i++)
     {
-        if(A[i]==0)
+        if(!A[i])
         break;
     }
-    for(j=(i+1);j<N;j++)
+    for(j=i+1;j<N;j++)
     {
-        if(A[j]!=0)
+        if(A[j])
         {
             swap(A[i], A[j]);
             i++;

@@ -12,7 +12,7 @@ int main()
 }
 int gcd(int x, int y)
 {
-    if(y==0)
+    if(!y)
     return x;
     return gcd(y, x%y);
 }

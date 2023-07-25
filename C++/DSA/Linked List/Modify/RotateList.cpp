@@ -8,7 +8,7 @@ int main()
     cin>>K;
     c=1;
     temp=head;
-    while(temp->next!=NULL)
+    while(temp->next)
     {
         temp=temp->next;
         c++;

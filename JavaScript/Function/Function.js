@@ -6,9 +6,11 @@ function print(i, j, k)
 }
 print(2, 3, 5);
 console.log(print.toString());
-let square=function(n) {return n**2};
+let square=function(n) {
+    return n**2;
+};
 console.log(square(5));
-let cube=(n)=> {
+let cube=(n) => {
     let cb;
     cb=n**3;
     return cb;

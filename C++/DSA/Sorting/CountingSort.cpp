@@ -13,6 +13,7 @@ int main()
     countingsort(A, N);
     for(i=0;i<N;i++)
     cout<<A[i]<<" ";
+    cout<<endl;
     return 0;
 }
 void countingsort(int A[], int n)
@@ -34,7 +35,7 @@ void countingsort(int A[], int n)
     count[A[i]-min]++;
     for(i=1;i<range;i++)
     count[i]+=count[i-1];
-    for(i=(n-1);i>=0;i--)
+    for(i=n-1;i>=0;i--)
     {
         B[count[A[i]-min]-1]=A[i];
         count[A[i]-min]--;

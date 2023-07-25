@@ -2,10 +2,10 @@
 #include<iostream>
 #include<unordered_set>
 using namespace std;
-unordered_set<int>st;
 int main()
 {
     int i, N, c, m;
+    unordered_set<int>st;
     cin>>N;
     int A[N];
     for(i=0;i<N;i++)
@@ -15,10 +15,10 @@ int main()
     m=0;
     for(i=0;i<N;i++)
     {
-        if(st.count(A[i]-1)==0)
+        if(!st.count(A[i]-1))
         {
             c=0;
-            while(st.count(A[i]+c)!=0)
+            while(st.count(A[i]+c))
             c++;
             m=max(m, c);
         }

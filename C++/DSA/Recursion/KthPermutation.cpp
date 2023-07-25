@@ -2,10 +2,10 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-vector<int>v;
 int main()
 {
     int i, N, K, f, j;
+    vector<int>v;
     cin>>N>>K;
     f=1;
     for(i=1;i<=N;i++)
@@ -14,7 +14,7 @@ int main()
         f*=i;
     }
     K--;
-    while(v.empty()==0)
+    while(!v.empty())
     {
         j=f/v.size();
         cout<<v[K/j]<<" ";

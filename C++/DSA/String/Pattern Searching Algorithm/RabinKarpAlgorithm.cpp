@@ -14,9 +14,9 @@ int main()
         hs+=((s[i]-'a'+1)*pow(3, i));
         hp+=((p[i]-'a'+1)*pow(3, i));
     }
-    for(i=0;i<=(s.size()-p.size());i++)
+    for(i=0;i<=s.size()-p.size();i++)
     {
-        if(i!=0)
+        if(i)
         {
             hs-=(s[i-1]-'a'+1);
             hs/=3;

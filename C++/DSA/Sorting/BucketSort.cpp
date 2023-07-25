@@ -13,6 +13,7 @@ int main()
     bucketsort(A, N);
     for(i=0;i<N;i++)
     cout<<A[i]<<" ";
+    cout<<endl;
     return 0;
 }
 void bucketsort(int A[], int n)

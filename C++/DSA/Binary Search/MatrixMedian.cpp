@@ -1,6 +1,7 @@
 //MatrixMedian
 #include<iostream>
 #include<algorithm>
+#include<climits>
 using namespace std;
 int main()
 {
@@ -13,7 +14,7 @@ int main()
         cin>>A[i][j];
     }
     lo=0;
-    hi=100001;
+    hi=INT_MAX;
     while(lo<=hi)
     {
         m=(lo+hi)/2;
@@ -23,7 +24,7 @@ int main()
             j=upper_bound(A[i], A[i]+M, m)-A[i];
             c+=j;
         }
-        if((N*M)/2<c)
+        if((N*M)/2 < c)
         hi=m-1;
         else
         lo=m+1;

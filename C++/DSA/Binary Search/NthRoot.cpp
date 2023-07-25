@@ -10,7 +10,7 @@ int main()
     lo=1;
     hi=N;
     eps=pow(10, -(p+1));
-    while((hi-lo)>eps)
+    while(hi-lo > eps)
     {
         m=(lo+hi)/2;
         if(N<=pow(m, n))

@@ -39,7 +39,7 @@ void nby2(int A[], int N)
         if(A[i]==c)
         v++;
     }
-    if(v>(N/2))
+    if(v>N/2)
     cout<<c<<endl;
 }
 void nby3(int A[], int N)
@@ -83,8 +83,8 @@ void nby3(int A[], int N)
         else if(A[i]==c2)
         v2++;
     }
-    if(v1>(N/3))
+    if(v1>N/3)
     cout<<c1<<endl;
-    if(v2>(N/3))
+    if(v2>N/3)
     cout<<c2<<endl;
 }

@@ -1,43 +1,42 @@
-//AccountsMerge
+//MergeAccounts
 #include<iostream>
 #include<vector>
-#include<map>
+#include<unordered_map>
 #include<algorithm>
 using namespace std;
 int findparent(int n, int parent[]);
-void _union(int u, int v, int _rank[], int parent[]);
+void _union(int u, int v, int parent[], int _rank[]);
 int main()
 {
-    int i, j, n, m;
+    int i, j, N, M;
     string s;
-    cin>>n;
-    int _rank[n+1]={0};
-    int parent[n+1];
-    vector<string>v[n+1], u[n+1];
-    map<string, int>mp;
-    for(i=1;i<=n;i++)
+    cin>>N;
+    int parent[N+1], _rank[N+1]={0};
+    vector<string>v[N+1], u[N+1];
+    unordered_map<string, int>mp;
+    for(i=1;i<=N;i++)
     parent[i]=i;
-    for(i=1;i<=n;i++)
+    for(i=1;i<=N;i++)
     {
-        cin>>m;
-        for(j=0;j<m;j++)
+        cin>>M;
+        for(j=0;j<M;j++)
         {
             cin>>s;
-            if(j!=0)
+            if(j)
             {
-                if(mp.count(s)==0)
-                mp.insert(make_pair(s, i));
+                if(!mp.count(s))
+                mp.insert({s, i});
                 else
-                _union(i, mp[s], _rank, parent);
+                _union(i, mp[s], parent, _rank);
             }
             v[i].push_back(s);
         }
     }
     for(auto x:mp)
     u[findparent(x.second, parent)].push_back(x.first);
-    for(i=1;i<=n;i++)
+    for(i=1;i<=N;i++)
     {
-        if(u[i].empty()==0)
+        if(!u[i].empty())
         {
             cout<<v[i][0]<<" ";
             sort(u[i].begin(), u[i].end());
@@ -52,10 +51,9 @@ int findparent(int n, int parent[])
 {
     if(parent[n]==n)
     return n;
-    else
     return parent[n]=findparent(parent[n], parent);
 }
-void _union(int u, int v, int _rank[], int parent[])
+void _union(int u, int v, int parent[], int _rank[])
 {
     u=findparent(u, parent);
     v=findparent(v, parent);

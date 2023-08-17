@@ -1,7 +1,6 @@
 //JobSequencing
 #include<iostream>
 #include<algorithm>
-#include<cstring>
 using namespace std;
 struct job
 {
@@ -19,8 +18,7 @@ int main()
     for(i=0;i<N;i++)
     cin>>A[i].id>>A[i].dl>>A[i].p;
     sort(A, A+N, cmp);
-    int slot[N];
-    memset(slot, -1, sizeof(slot));
+    int slot[N]={-1};
     for(i=0;i<N;i++)
     {
         for(j=min(N, A[i].dl);j>=0;j--)

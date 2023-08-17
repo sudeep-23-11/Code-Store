@@ -6,7 +6,7 @@ int main()
 {
     int i, N;
     cin>>N;
-    int A[N], nge[N];
+    int A[N], B[N];
     stack<int>st;
     for(i=0;i<N;i++)
     cin>>A[i];
@@ -15,13 +15,13 @@ int main()
         while(!st.empty() && st.top()<=A[i%N])
         st.pop();
         if(!st.empty())
-        nge[i%N]=st.top();
+        B[i%N]=st.top();
         else
-        nge[i%N]=-1;
+        B[i%N]=-1;
         st.push(A[i%N]);
     }
     for(i=0;i<N;i++)
-    cout<<nge[i]<<" ";
+    cout<<B[i]<<" ";
     cout<<endl;
     return 0;
 }

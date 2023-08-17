@@ -2,44 +2,45 @@
 #include<iostream>
 #include<vector>
 #include<queue>
+#include<climits>
 using namespace std;
 int main()
 {
-    int i, n, m, u, v, wt;
-    cin>>n>>m;
-    vector<pair<int, int>>adj[n+1];
-    int key[n+1];
-    bool mst[n+1]={false};
-    int parent[n+1];
+    int i, N, M, u, v, wt, n;
+    cin>>N>>M;
+    vector<pair<int, int>>adj[N+1];
+    int key[N+1], parent[N+1];
+    bool mst[N+1]={false};
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>>q;
-    for(i=1;i<=n;i++)
-    key[i]=100001;
-    for(i=1;i<=m;i++)
+    for(i=1;i<=N;i++)
+    key[i]=INT_MAX;
+    for(i=1;i<=M;i++)
     {
         cin>>u>>v>>wt;
-        adj[u].push_back(make_pair(v, wt));
-        adj[v].push_back(make_pair(u, wt));
+        adj[u].push_back({v, wt});
+        adj[v].push_back({u, wt});
     }
     key[1]=0;
-    q.push(make_pair(0, 1));
-    while(q.empty()==0)
+    q.push({0, 1});
+    while(!q.empty())
     {
-        u=q.top().second;
+        n=q.top().second;
         q.pop();
-        if(mst[u]==true)
+        if(mst[n])
         continue;
-        mst[u]=true;
-        for(auto j:adj[u])
+        mst[n]=true;
+        for(auto j:adj[n])
         {
-            if((mst[j.first]==false)&&(key[j.first]>j.second))
+            if(!mst[j.first] && key[j.first]>j.second)
             {
                 key[j.first]=j.second;
-                parent[j.first]=u;
-                q.push(make_pair(key[j.first], j.first));
+                parent[j.first]=n;
+                q.push({key[j.first], j.first});
             }
         }
     }
-    for(i=2;i<=n;i++)
+    for(i=2;i<=N;i++)
     cout<<parent[i]<<" - "<<i<<endl;
+    cout<<endl;
     return 0;
 }

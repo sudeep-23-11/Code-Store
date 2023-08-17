@@ -8,27 +8,26 @@ void DFS(int n, vector<int>adj[], bool vis[], stack<int>&st);
 void rDFS(int n, vector<int>radj[], bool vis[]);
 int main()
 {
-    int i, m, n, u, v;
-    cin>>n>>m;
-    vector<int>adj[n+1], radj[n+1];
-    bool vis[n+1]={false};
+    int i, N, M, u, v;
+    cin>>N>>M;
+    vector<int>adj[N+1], radj[N+1];
+    bool vis[N+1]={false};
     stack<int>st;
-    for(i=1;i<=m;i++)
+    for(i=1;i<=M;i++)
     {
         cin>>u>>v;
         adj[u].push_back(v);
         radj[v].push_back(u);
     }
-    for(i=1;i<=n;i++)
+    for(i=1;i<=N;i++)
     {
-        if(vis[i]==false)
+        if(!vis[i])
         DFS(i, adj, vis, st);
     }
-    for(i=1;i<=n;i++)
-    vis[i]=false;
-    while(st.empty()==0)
+    vis[N+1]={false};
+    while(!st.empty())
     {
-        if(vis[st.top()]==false)
+        if(!vis[st.top()])
         {
             rDFS(st.top(), radj, vis);
             cout<<endl;
@@ -42,7 +41,7 @@ void DFS(int n, vector<int>adj[], bool vis[], stack<int>&st)
     vis[n]=true;
     for(auto i:adj[n])
     {
-        if(vis[i]==false)
+        if(!vis[i])
         DFS(i, adj, vis, st);
     }
     st.push(n);
@@ -53,7 +52,7 @@ void rDFS(int n, vector<int>radj[], bool vis[])
     cout<<n<<" ";
     for(auto i:radj[n])
     {
-        if(vis[i]==false)
+        if(!vis[i])
         rDFS(i, radj, vis);
     }
 }

@@ -13,7 +13,7 @@ int main()
     cin>>K;
     for(i=0;i<N;i++)
     {
-        if(!q.empty() && q.front()==(i-K))
+        if(!q.empty() && q.front()==i-K)
         q.pop_front();
         while(!q.empty() && A[i]>A[q.back()])
         q.pop_back();

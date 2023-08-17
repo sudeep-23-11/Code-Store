@@ -14,7 +14,7 @@ int main()
     c2=0;
     mergesort(A, 0, N-1, c1, c2);
     cout<<"A[i]>A[j], j>i "<<c1<<endl;
-    cout<<"A[i]>(A[j]*2), j>i "<<c2<<endl;
+    cout<<"A[i]>A[j]*2, j>i "<<c2<<endl;
     return 0;
 }
 void mergesort(int A[], int l, int r, int &c1, int &c2)
@@ -33,7 +33,7 @@ void merge(int A[], int l, int m, int r, int &c1, int &c2)
     j=m+1;
     for(i=l;i<=m;i++)
     {
-        while(j<=r && A[i]>(A[j]*2))
+        while(j<=r && A[i]>A[j]*2)
         j++;
         c2+=(j-m-1);
     }

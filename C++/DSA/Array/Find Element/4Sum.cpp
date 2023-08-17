@@ -17,7 +17,7 @@ int main()
         continue;
         for(j=i+1;j<N-2;j++)
         {
-            if(j!=(i+1) && A[j]==A[j-1])
+            if(j!=i+1 && A[j]==A[j-1])
             continue;
             l=j+1;
             r=N-1;

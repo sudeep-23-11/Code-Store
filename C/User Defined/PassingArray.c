@@ -1,6 +1,5 @@
 //PassingArray
-#include<iostream>
-using namespace std;
+#include<stdio.h>
 void cbv(int A[], int N);
 void cba(int *p, int N);
 int main()
@@ -17,16 +16,16 @@ void cbv(int A[], int N)
 {
     int i;
     for(i=0;i<N;i++)
-    cout<<*(A+i)<<" ";
-    cout<<endl;
+    printf("%d ", *(A+i));
+    printf("\n");
 }
 void cba(int *p, int N)
 {
     int i;
     for(i=0;i<N;i++)
     {
-        cout<<*p<<" ";
+        printf("%d ", *p);
         p++;
     }
-    cout<<endl;
+    printf("\n");
 }

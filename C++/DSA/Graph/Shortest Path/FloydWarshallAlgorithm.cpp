@@ -1,44 +1,45 @@
 //AllPairsShortestPath
 //FloydWarshallAlgorithm
 #include<iostream>
+#include<climits>
 using namespace std;
 int main()
 {
-    int i, j, k, n, m, u, v, wt;
-    cin>>n>>m;
-    int dist[n+1][n+1];
-    for(i=1;i<=n;i++)
+    int i, j, k, N, M, u, v, wt;
+    cin>>N>>M;
+    int dist[N+1][N+1];
+    for(i=1;i<=N;i++)
     {
-        for(j=1;j<=n;j++)
+        for(j=1;j<=N;j++)
         {
             if(i==j)
             dist[i][j]=0;
             else
-            dist[i][j]=100001;
+            dist[i][j]=INT_MAX;
         }
     }
-    for(i=1;i<=m;i++)
+    for(i=1;i<=M;i++)
     {
         cin>>u>>v>>wt;
         dist[u][v]=wt;
         dist[v][u]=wt;
     }
-    for(k=1;k<=n;k++)
+    for(k=1;k<=N;k++)
     {
-        for(i=1;i<=n;i++)
+        for(i=1;i<=N;i++)
         {
-            for(j=1;j<=n;j++)
+            for(j=1;j<=N;j++)
             {
-                if((dist[i][k]!=100001)&&(dist[k][j]!=100001)&&(dist[i][j]>(dist[i][k]+dist[k][j])))
+                if(dist[i][k]!=INT_MAX && dist[k][j]!=INT_MAX && dist[i][j]>dist[i][k]+dist[k][j])
                 dist[i][j]=dist[i][k]+dist[k][j];
             }
         }
     }
-    for(i=1;i<=n;i++)
+    for(i=1;i<=N;i++)
     {
-        for(j=1;j<=n;j++)
+        for(j=1;j<=N;j++)
         {
-            if(dist[i][j]!=100001)
+            if(dist[i][j]!=INT_MAX)
             cout<<dist[i][j]<<" ";
             else
             cout<<"I ";

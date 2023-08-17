@@ -2,36 +2,39 @@
 #include<iostream>
 #include<vector>
 #include<queue>
+#include<climits>
 using namespace std;
 int main()
 {
-    int i, n, m, u, v, wt, s, d, k;
-    cin>>n>>m;
-    vector<pair<int, int>>adj[n+1];
-    int dist[n+1];
-    queue<pair<int, pair<int, int>>>q;
-    for(i=1;i<=n;i++)
-    dist[i]=100001;
-    for(i=1;i<=m;i++)
+    int i, N, M, u, v, wt, s, d, k, n, _d, s;
+    cin>>N>>M;
+    vector<pair<int, int>>adj[N+1];
+    int dist[N+1];
+    queue<vector<int>>q;
+    for(i=1;i<=N;i++)
+    dist[i]=INT_MAX;
+    for(i=1;i<=M;i++)
     {
         cin>>u>>v>>wt;
-        adj[u].push_back(make_pair(v, wt));
+        adj[u].push_back({v, wt});
     }
     cin>>s>>d>>k;
     dist[s]=0;
-    q.push(make_pair(0, make_pair(s, 0)));
-    while(q.empty()==0)
+    q.push({0, 0, s});
+    while(!q.empty())
     {
-        auto x=q.front();
+        s=q.front()[0];
+        _d=q.front()[1];
+        n=q.front()[2];
         q.pop();
-        if((x.first==(k+1))||(x.second.first==d))
+        if(s==k+1)
         continue;
-        for(auto j:adj[x.second.first])
+        for(auto j:adj[n])
         {
-            if(dist[j.first]>(dist[x.second.first]+j.second))
+            if(dist[j.first] > _d+j.second)
             {
-                dist[j.first]=dist[x.second.first]+j.second;
-                q.push(make_pair(x.first+1, make_pair(j.first, dist[j.first])));
+                dist[j.first]=_d+j.second;
+                q.push({s+1, dist[j.first], j.first});
             }
         }
     }

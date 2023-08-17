@@ -5,21 +5,22 @@ using namespace std;
 void DFS(int n, vector<int>adj[], bool vis[]);
 int main()
 {
-    int i, n, m, u, v;
-    cin>>n>>m;
-    vector<int>adj[n+1];
-    bool vis[n+1]={false};
-    for(i=1;i<=m;i++)
+    int i, N, M, u, v;
+    cin>>N>>M;
+    vector<int>adj[N+1];
+    bool vis[N+1]={false};
+    for(i=1;i<=M;i++)
     {
         cin>>u>>v;
         adj[u].push_back(v);
         adj[v].push_back(u);
     }
-    for(i=1;i<=n;i++)
+    for(i=1;i<=N;i++)
     {
-        if(vis[i]==false)
+        if(!vis[i])
         DFS(i, adj, vis);
     }
+    cout<<endl;
     return 0;
 }
 void DFS(int n, vector<int>adj[], bool vis[])
@@ -28,7 +29,7 @@ void DFS(int n, vector<int>adj[], bool vis[])
     cout<<n<<" ";
     for(auto i:adj[n])
     {
-        if(vis[i]==false)
+        if(!vis[i])
         DFS(i, adj, vis);
     }
 }

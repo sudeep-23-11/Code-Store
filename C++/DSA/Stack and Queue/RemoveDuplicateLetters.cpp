@@ -1,18 +1,15 @@
 //RemoveDuplicateLetters
 #include<iostream>
 #include<stack>
-#include<cstring>
 using namespace std;
 int main()
 {
     int i;
     string s, r;
-    bool p[26];
-    int f[26];
+    bool p[26]={false};
+    int f[26]={0};
     stack<char>st;
     cin>>s;
-    memset(p, false, sizeof(p));
-    memset(f, 0, sizeof(f));
     for(i=0;i<s.size();i++)
     f[s[i]-'a']++;
     for(i=0;i<s.size();i++)

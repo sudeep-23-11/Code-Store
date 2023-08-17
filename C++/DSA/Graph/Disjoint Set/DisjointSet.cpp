@@ -2,25 +2,23 @@
 #include<iostream>
 using namespace std;
 int findparent(int n, int parent[]);
-void unionbyrank(int u, int v, int _rank[], int parent[]);
-void unionbysize(int u, int v, int _size[], int parent[]);
+void unionbyrank(int u, int v, int parent[], int _rank[]);
+void unionbysize(int u, int v, int parent[], int _size[]);
 int main()
 {
-    int i, n, m, u, v;
-    cin>>n>>m;
-    int _rank[n+1]={0};
-    int _size[n+1];
-    int parent[n+1];
-    for(i=1;i<=n;i++)
+    int i, N, M, u, v;
+    cin>>N>>M;
+    int parent[N+1], _rank[N+1]={0}, _size[N+1];
+    for(i=1;i<=N;i++)
     {
         _size[i]=1;
         parent[i]=i;
     }
-    for(i=1;i<=m;i++)
+    for(i=1;i<=M;i++)
     {
         cin>>u>>v;
-        unionbyrank(u, v, _rank, parent);
-        // unionbysize(u, v, _size, parent);
+        unionbyrank(u, v, parent, _rank);
+        // unionbysize(u, v, parent, _size);
     }
     cin>>u>>v;
     if(findparent(u, parent)==findparent(v, parent))
@@ -33,10 +31,9 @@ int findparent(int n, int parent[])
 {
     if(parent[n]==n)
     return n;
-    else
     return parent[n]=findparent(parent[n], parent);
 }
-void unionbyrank(int u, int v, int _rank[], int parent[])
+void unionbyrank(int u, int v, int parent[], int _rank[])
 {
     u=findparent(u, parent);
     v=findparent(v, parent);
@@ -50,7 +47,7 @@ void unionbyrank(int u, int v, int _rank[], int parent[])
         parent[v]=u;
     }
 }
-void unionbysize(int u, int v, int _size[], int parent[])
+void unionbysize(int u, int v, int parent[], int _size[])
 {
     u=findparent(u, parent);
     v=findparent(v, parent);

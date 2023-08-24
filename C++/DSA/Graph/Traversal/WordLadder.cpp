@@ -23,8 +23,8 @@ int main()
 void BFS(string &bw, string &ew, unordered_set<string>&vis)
 {
     int i, l;
-    char j;
-    string s, ts;
+    char j, ch;
+    string s;
     vector<string>v, tv;
     unordered_set<string>st;
     queue<vector<string>>q;
@@ -50,18 +50,19 @@ void BFS(string &bw, string &ew, unordered_set<string>&vis)
             }
             for(i=0;i<s.size();i++)
             {
+                ch=s[i];
                 for(j='a';j<='z';j++)
                 {
-                    ts=s;
-                    ts[i]=j;
-                    if(vis.count(ts))
+                    s[i]=j;
+                    if(vis.count(s))
                     {
                         tv=v;
-                        tv.push_back(ts);
+                        tv.push_back(s);
                         q.push(tv);
-                        st.insert(ts);
+                        st.insert(s);
                     }
                 }
+                s[i]=ch;
             }
         }
         for(auto i:st)

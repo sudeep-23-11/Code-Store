@@ -4,28 +4,25 @@
 using namespace std;
 int main()
 {
-    int i, N, pp, sp, p;
+    int i, N, pp, sp, m;
     cin>>N;
     int A[N];
     for(i=0;i<N;i++)
     cin>>A[i];
     pp=1;
     sp=1;
-    p=INT_MIN;
+    m=INT_MIN;
     for(i=0;i<N;i++)
     {
         pp*=A[i];
+        m=max(m, pp);
         if(!pp)
         pp=1;
-        else
-        p=max(p, pp);
         sp*=A[N-1-i];
+        m=max(m, sp);
         if(!sp)
         sp=1;
-        else
-        p=max(p, sp);
-        p=max(p, A[i]);
     }
-    cout<<p<<endl;
+    cout<<m<<endl;
     return 0;
 }

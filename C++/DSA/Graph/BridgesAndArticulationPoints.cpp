@@ -11,7 +11,7 @@ int main()
     cin>>N>>M;
     vector<int>adj[N+1];
     bool vis[N+1]={false};
-    int mintime[N+1]={-1}, deg[N+1]={0};
+    int mintime[N+1], deg[N+1]={0};
     set<int>ap;
     t=0;
     for(i=1;i<=M;i++)

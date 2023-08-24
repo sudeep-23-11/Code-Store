@@ -5,7 +5,7 @@
 #include<vector>
 int main()
 {
-    int i, l, v;
+    int l, v;
     queue<pair<node *, int>>q;
     map<int, node *>top, bottom;
     vector<node *>_v, _left, _right;
@@ -15,7 +15,7 @@ int main()
     while(!q.empty())
     {
         l=q.size();
-        for(i=0;i<l;i++)
+        while(l--)
         {
             n=q.front().first;
             v=q.front().second;

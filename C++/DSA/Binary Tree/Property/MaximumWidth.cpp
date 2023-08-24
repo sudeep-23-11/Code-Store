@@ -1,12 +1,10 @@
 //MaximumWidth
 #include"../BT.h"
 #include<queue>
-#include<vector>
 int main()
 {
-    int i, l, id, fid, m;
+    int l, id, fid, lid, m;
     queue<pair<node *, int>>q;
-    vector<int>v;
     node *n;
     root=construct();
     m=0;
@@ -15,19 +13,18 @@ int main()
     {
         l=q.size();
         fid=q.front().second;
-        for(i=0;i<l;i++)
+        while(l--)
         {
             n=q.front().first;
             id=q.front().second-fid;
             q.pop();
-            v.push_back(id);
+            lid=id;
             if(n->left)
             q.push({n->left, id*2});
             if(n->right)
             q.push({n->right, id*2+1});
         }
-        m=max(m, v[l-1]+1);
-        v.clear();
+        m=max(m, lid+1);
     }
     cout<<m<<endl;
     return 0;

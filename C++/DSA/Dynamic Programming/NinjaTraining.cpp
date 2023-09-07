@@ -1,6 +1,7 @@
 //NinjaTraining
 #include<iostream>
 #include<cstring>
+#include<climits>
 using namespace std;
 int func(int n, int d, int A[][3], int dp[][3]);
 int main()
@@ -14,7 +15,7 @@ int main()
         cin>>A[i][j];
     }
     memset(dp, -1, sizeof(dp));
-    m=-100001;
+    m=INT_MIN;
     for(i=0;i<3;i++)
     m=max(m, func(N-1, i, A, dp));
     cout<<m<<endl;
@@ -23,15 +24,15 @@ int main()
 int func(int n, int d, int A[][3], int dp[][3])
 {
     int i;
-    if(n==-1)
+    if(n<0)
     return 0;
     if(dp[n][d]!=-1)
     return dp[n][d];
-    dp[n][d]=-100001;
+    dp[n][d]=INT_MIN;
     for(i=0;i<3;i++)
     {
         if(i!=d)
-        dp[n][d]=max(dp[n][d], (A[n][d]+func(n-1, i, A, dp)));
+        dp[n][d]=max(dp[n][d], A[n][d]+func(n-1, i, A, dp));
     }
     return dp[n][d];
 }

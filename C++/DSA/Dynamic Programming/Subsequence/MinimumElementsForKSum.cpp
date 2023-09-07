@@ -1,6 +1,7 @@
-//MinimumCoins
+//MinimumElementsForKSum
 #include<iostream>
 #include<vector>
+#include<climits>
 using namespace std;
 int func(int n, int s, int A[], vector<vector<int>>&dp);
 int main()
@@ -16,11 +17,11 @@ int main()
 }
 int func(int n, int s, int A[], vector<vector<int>>&dp)
 {
-    if(s==0)
+    if(!s)
     return 0;
-    if((n==-1)||(s<0))
-    return 100001;
+    if(n<0 || s<0)
+    return INT_MAX-1;
     if(dp[n][s]!=-1)
     return dp[n][s];
-    return dp[n][s]=min((1+func(n, s-A[n], A, dp)), func(n-1, s, A, dp));
+    return dp[n][s]=min(1+func(n, s-A[n], A, dp), func(n-1, s, A, dp));
 }

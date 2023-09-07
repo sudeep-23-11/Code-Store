@@ -1,6 +1,7 @@
-//CherryPickup
+//CherryPickupII
 #include<iostream>
 #include<vector>
+#include<climits>
 using namespace std;
 int func(int n, int m1, int m2, vector<vector<int>>&A, vector<vector<vector<int>>>&dp);
 int main()
@@ -20,19 +21,23 @@ int main()
 int func(int n, int m1, int m2, vector<vector<int>>&A, vector<vector<vector<int>>>&dp)
 {
     int i, j, m;
-    if((m1==-1)||(m1==A[0].size())||(m2==-1)||(m2==A[0].size()))
-    return -100001;
-    if(n==A.size())
-    return 0;
+    if(m1<0 || m1>=A[0].size() || m2<0 || m2>=A[0].size())
+    return INT_MIN;
     if(dp[n][m1][m2]!=-1)
     return dp[n][m1][m2];
-    m=-100001;
-    for(i=-1;i<=1;i++)
-    {
-        for(j=-1;j<=1;j++)
-        m=max(m, func(n+1, m1+i, m2+j, A, dp));
-    }
     if(m1==m2)
-    return dp[n][m1][m2]=A[n][m1]+m;
-    return dp[n][m1][m2]=A[n][m1]+A[n][m2]+m;
+    dp[n][m1][m2]=A[n][m1];
+    else
+    dp[n][m1][m2]=A[n][m1]+A[n][m2];
+    if(n<A.size()-1)
+    {
+        m=INT_MIN;
+        for(i=m1-1;i<=m1+1;i++)
+        {
+            for(j=m2-1;j<=m2+1;j++)
+            m=max(m, func(n+1, i, j, A, dp));
+        }
+        dp[n][m1][m2]+=m;
+    }
+    return dp[n][m1][m2];
 }

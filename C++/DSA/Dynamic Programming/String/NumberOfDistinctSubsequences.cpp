@@ -2,24 +2,24 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-int func(int n, int m, string &s1, string &s2, vector<vector<int>>&dp);
+int func(string &s1, string &s2, int n1, int n2, vector<vector<int>>&dp);
 int main()
 {
     string s1, s2;
     cin>>s1>>s2;
     vector<vector<int>>dp(s1.size(), vector<int>(s2.size(), -1));
-    cout<<func(s1.size()-1, s2.size()-1, s1, s2, dp)<<endl;
+    cout<<func(s1, s2, s1.size()-1, s2.size()-1, dp)<<endl;
     return 0;
 }
-int func(int n, int m, string &s1, string &s2, vector<vector<int>>&dp)
+int func(string &s1, string &s2, int n1, int n2, vector<vector<int>>&dp)
 {
-    if(m==-1)
+    if(n2<0)
     return 1;
-    if(n==-1)
+    if(n1<0)
     return 0;
-    if(dp[n][m]!=-1)
-    return dp[n][m];
-    if(s1[n]==s2[m])
-    return dp[n][m]=func(n-1, m-1, s1, s2, dp)+func(n-1, m, s1, s2, dp);
-    return dp[n][m]=func(n-1, m, s1, s2, dp);
+    if(dp[n1][n2]!=-1)
+    return dp[n1][n2];
+    if(s1[n1]==s2[n2])
+    return dp[n1][n2]=func(s1, s2, n1-1, n2-1, dp)+func(s1, s2, n1-1, n2, dp);
+    return dp[n1][n2]=func(s1, s2, n1-1, n2, dp);
 }

@@ -1,6 +1,7 @@
 //01Knapsack
 #include<iostream>
 #include<vector>
+#include<climits>
 using namespace std;
 int func(int n, int w, int wt[], int val[], vector<vector<int>>&dp);
 int main()
@@ -19,10 +20,10 @@ int main()
 int func(int n, int w, int wt[], int val[], vector<vector<int>>&dp)
 {
     if(w<0)
-    return -100001;
-    if(n==-1)
+    return INT_MIN;
+    if(n<0)
     return 0;
     if(dp[n][w]!=-1)
     return dp[n][w];
-    return dp[n][w]=max((val[n]+func(n-1, w-wt[n], wt, val, dp)), func(n-1, w, wt, val, dp));
+    return dp[n][w]=max(val[n]+func(n-1, w-wt[n], wt, val, dp), func(n-1, w, wt, val, dp));
 }

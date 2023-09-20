@@ -1,12 +1,12 @@
 //PalindromePartitioningII
 #include<iostream>
 #include<cstring>
+#include<climits>
 using namespace std;
-bool palin(string s, int i, int j);
+bool palin(int i, int j, string &s);
 int func(int i, string &s, int dp[]);
 int main()
 {
-    int i;
     string s;
     cin>>s;
     int dp[s.size()];
@@ -14,7 +14,7 @@ int main()
     cout<<(func(0, s, dp)-1)<<endl;
     return 0;
 }
-bool palin(string s, int i, int j)
+bool palin(int i, int j, string &s)
 {
     while(i<j)
     {
@@ -32,11 +32,11 @@ int func(int i, string &s, int dp[])
     return 0;
     if(dp[i]!=-1)
     return dp[i];
-    dp[i]=100001;
+    dp[i]=INT_MAX;
     for(j=i;j<s.size();j++)
     {
-        if(palin(s, i, j)==true)
-        dp[i]=min(dp[i], (1+func(j+1, s, dp)));
+        if(palin(i, j, s))
+        dp[i]=min(dp[i], func(j+1, s, dp)+1);
     }
     return dp[i];
 }

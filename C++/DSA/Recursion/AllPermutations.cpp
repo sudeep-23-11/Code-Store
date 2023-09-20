@@ -1,7 +1,7 @@
 //AllPermutations
 #include<iostream>
 using namespace std;
-void permute(int A[], int N, int i);
+void func(int i, int A[], int N);
 int main()
 {
     int i, N;
@@ -9,13 +9,13 @@ int main()
     int A[N];
     for(i=0;i<N;i++)
     cin>>A[i];
-    permute(A, N, 0);
+    func(0, A, N);
     return 0;
 }
-void permute(int A[], int N, int i)
+void func(int i, int A[], int N)
 {
     int j;
-    if(i==N)
+    if(i==N-1)
     {
         for(j=0;j<N;j++)
         cout<<A[j]<<" ";
@@ -25,7 +25,7 @@ void permute(int A[], int N, int i)
     for(j=i;j<N;j++)
     {
         swap(A[i], A[j]);
-        permute(A, N, i+1);
+        func(i+1, A, N);
         swap(A[i], A[j]);
     }
 }

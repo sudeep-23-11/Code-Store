@@ -3,7 +3,7 @@
 #include<stack>
 using namespace std;
 void sort(stack<int>&st);
-void insert(int x, stack<int>&st);
+void insert(stack<int>&st, int n);
 int main()
 {
     int x;
@@ -23,24 +23,22 @@ int main()
 }
 void sort(stack<int>&st)
 {
-    int x;
     if(st.empty())
     return;
-    x=st.top();
+    int x=st.top();
     st.pop();
     sort(st);
-    insert(x, st);
+    insert(st, x);
 }
-void insert(int x, stack<int>&st)
+void insert(stack<int>&st, int n)
 {
-    int y;
-    if(st.empty() || x>=st.top())
-    st.push(x);
-    else
+    if(st.empty() || n<=st.top())
     {
-        y=st.top();
-        st.pop();
-        insert(x, st);
-        st.push(y);
+        st.push(n);
+        return;
     }
+    int x=st.top();
+    st.pop();
+    insert(st, n);
+    st.push(x);
 }

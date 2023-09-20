@@ -4,23 +4,24 @@
 using namespace std;
 int main()
 {
-    int i, N, K, f, j;
-    vector<int>v;
+    int i, N, K, tp, gp;
     cin>>N>>K;
-    f=1;
+    vector<char>v;
+    tp=1;
     for(i=1;i<=N;i++)
     {
-        v.push_back(i);
-        f*=i;
+        tp*=i;
+        v.push_back('0'+i);
     }
     K--;
-    while(!v.empty())
+    while(N)
     {
-        j=f/v.size();
-        cout<<v[K/j]<<" ";
-        v.erase(v.begin()+K/j);
-        f=j;
-        K%=j;
+        gp=tp/N;
+        cout<<v[K/gp]<<" ";
+        v.erase(v.begin()+K/gp);
+        tp/=N;
+        N--;
+        K%=gp;
     }
     cout<<endl;
     return 0;

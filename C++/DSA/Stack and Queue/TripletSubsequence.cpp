@@ -15,10 +15,10 @@ int main()
     cout<<"Triplet 123 present"<<endl;
     else
     cout<<"Triplet 123 not present"<<endl;
-    if(t132(A, N))
-    cout<<"Triplet 132 present"<<endl;
-    else
-    cout<<"Triplet 132 not present"<<endl;
+    // if(t132(A, N))
+    // cout<<"Triplet 132 present"<<endl;
+    // else
+    // cout<<"Triplet 132 not present"<<endl;
     return 0;
 }
 bool t123(int A[], int N)

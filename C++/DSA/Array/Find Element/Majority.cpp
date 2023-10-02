@@ -13,8 +13,8 @@ int main()
     cin>>A[i];
     cout<<"Greater than N/2"<<endl;
     nby2(A, N);
-    cout<<"Greater than N/3"<<endl;
-    nby3(A, N);
+    // cout<<"Greater than N/3"<<endl;
+    // nby3(A, N);
     return 0;
 }
 void nby2(int A[], int N)

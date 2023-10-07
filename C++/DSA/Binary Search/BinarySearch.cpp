@@ -10,19 +10,19 @@ int main()
     cin>>A[i];
     lo=0;
     hi=N-1;
-    while(hi-lo > 1)
+    while(lo<=hi)
     {
         m=(lo+hi)/2;
-        if(e<=A[m])
-        hi=m;
+        if(e==A[m])
+        {
+            cout<<m<<endl;
+            exit(0);
+        }
+        else if(e<A[m])
+        hi=m-1;
         else
         lo=m+1;
     }
-    if(A[lo]==e)
-    cout<<lo<<endl;
-    else if(A[hi]==e)
-    cout<<hi<<endl;
-    else
-    cout<<"Not present"<<endl;
+    cout<<-1<<endl;
     return 0;
 }

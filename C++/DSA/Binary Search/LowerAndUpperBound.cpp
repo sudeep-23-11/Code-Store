@@ -1,8 +1,8 @@
 //LowerAndUpperBound
 #include<iostream>
 using namespace std;
-void lowerbound(int A[], int N, int e);
-void upperbound(int A[], int N, int e);
+void lb(int A[], int N, int e);
+void ub(int A[], int N, int e);
 int main()
 {
     int i, N, e;
@@ -10,52 +10,47 @@ int main()
     int A[N];
     for(i=0;i<N;i++)
     cin>>A[i];
-    cout<<"Lower Bound ";
-    lowerbound(A, N, e);
-    cout<<"Upper Bound ";
-    upperbound(A, N, e);
+    cout<<"Lower Bound"<<endl;
+    lb(A, N, e);
+    // cout<<"Upper Bound"<<endl;
+    // ub(A, N, e);
     return 0;
 }
-void lowerbound(int A[], int N, int e)
+void lb(int A[], int N, int e)
 {
-    int lo, hi, m;
+    int lo, hi, m, res;
     lo=0;
     hi=N-1;
-    while(hi-lo > 1)
+    res=-1;
+    while(lo<=hi)
     {
         m=(lo+hi)/2;
         if(e<=A[m])
-        hi=m;
+        {
+            res=m;
+            hi=m-1;
+        }
         else
         lo=m+1;
     }
-    if(A[lo]>=e)
-    cout<<lo<<endl;
-    else if(A[hi]>=e)
-    cout<<hi<<endl;
-    else
-    cout<<"Not present"<<endl;
+    cout<<res<<endl;
 }
-void upperbound(int A[], int N, int e)
+void ub(int A[], int N, int e)
 {
-    int lo, hi, m;
+    int lo, hi, m, res;
     lo=0;
     hi=N-1;
-    while(hi-lo > 1)
+    res=-1;
+    while(lo<=hi)
     {
         m=(lo+hi)/2;
         if(e<A[m])
-        hi=m;
+        {
+            res=m;
+            hi=m-1;
+        }
         else
         lo=m+1;
     }
-    if(A[lo]>e)
-    cout<<lo<<endl;
-    else if(A[hi]>e)
-    cout<<hi<<endl;
-    else
-    cout<<"Not present"<<endl;
+    cout<<res<<endl;
 }
-
-//LowerBound - FirstOccurrence, LargestElementSmallerThan
-//UpperBound - LastOccurrence, SmallestElementGreaterThan

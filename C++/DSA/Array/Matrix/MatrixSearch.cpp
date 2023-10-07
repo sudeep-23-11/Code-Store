@@ -14,16 +14,19 @@ int main()
     cin>>e;
     i=0;
     j=M-1;
-    while(i<N && j>=0 && e!=A[i][j])
+    while(i<N && j>=0)
     {
-        if(e>A[i][j])
-        i++;
-        else
+        if(e==A[i][j])
+        {
+            cout<<i<<" "<<j<<endl;
+            exit(0);
+        }
+        else if(e<A[i][j])
         j--;
+        else
+        i++;
     }
-    if(i>=N || j<0)
-    cout<<"Not present"<<endl;
-    else
-    cout<<"Index of "<<e<<" is "<<i<<" "<<j<<endl;
+    
+    cout<<-1<<endl;
     return 0;
 }

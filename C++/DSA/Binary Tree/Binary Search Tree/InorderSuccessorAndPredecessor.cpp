@@ -13,40 +13,37 @@ int main()
 }
 int succ(node *root, int data)
 {
-    int s;
+    int res;
     node *n;
-    s=-1;
+    res=-1;
     n=root;
     while(n)
     {
-        if(n->data>data)
+        if(data<n->data)
         {
-            s=n->data;
+            res=n->data;
             n=n->left;
         }
         else
         n=n->right;
     }
-    return s;
+    return res;
 }
 int pred(node *root, int data)
 {
-    int p;
+    int res;
     node *n;
-    p=-1;
+    res=-1;
     n=root;
     while(n)
     {
-        if(n->data>=data)
-        n=n->left;
-        else
+        if(data>n->data)
         {
-            p=n->data;
+            res=n->data;
             n=n->right;
         }
+        else
+        n=n->left;
     }
-    return p;
+    return res;
 }
-
-//InorderSuccessor - Ceil
-//InorderSuccessor - , SmallestElementGreaterThan

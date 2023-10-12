@@ -3,21 +3,20 @@
 using namespace std;
 int main()
 {
-    int i, N, e, lo, hi, m, res;
+    int i, N, e, lo, hi, m;
     cin>>N>>e;
     int A[N];
     for(i=0;i<N;i++)
     cin>>A[i];
     lo=0;
     hi=N-1;
-    res=-1;
     while(lo<=hi)
     {
         m=(lo+hi)/2;
         if(A[m]==e)
         {
-            res=m;
-            break;
+            cout<<m<<endl;
+            exit(0);
         }
         else if(A[m]==A[lo] && A[m]==A[hi])
         {
@@ -39,6 +38,6 @@ int main()
             hi=m-1;
         }
     }
-    cout<<res<<endl;
+    cout<<-1<<endl;
     return 0;
 }

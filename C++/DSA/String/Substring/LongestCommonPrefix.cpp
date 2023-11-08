@@ -13,7 +13,7 @@ int main()
     for(i=1;i<N;i++)
     {
         while(r!="" && A[i].find(r))
-        r=r.substr(0, r.size()-1);
+        r.pop_back();
     }
     cout<<r<<endl;
     return 0;

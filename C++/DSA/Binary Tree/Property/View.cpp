@@ -19,11 +19,11 @@ int main()
         {
             n=q.front().first;
             v=q.front().second;
+            q.pop();
             _v.push_back(n);
             if(!top.count(v))
             top.insert({v, n});
             bottom[v]=n;
-            q.pop();
             if(n->left)
             q.push({n->left, v-1});
             if(n->right)

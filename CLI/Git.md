@@ -67,6 +67,7 @@
     * -v --------------------------- include last commit
     * --merged --------------------- list merged branches
     * --no-merged ------------------ list not merged branches
+* git branch -m _ _ ---------------- rename branch from _ to _ 
 * git branch _ --------------------- create branch _
     * -d --------------------------- delete merged branch _
     * -D --------------------------- delete not merged branch _

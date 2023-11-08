@@ -20,9 +20,9 @@ int main()
         for(i=0;i<l;i++)
         {
             n=q.front();
+            q.pop();
             cout<<n->data<<" ";
             v.push_back(n);
-            q.pop();
             if(n->left)
             q.push(n->left);
             if(n->right)

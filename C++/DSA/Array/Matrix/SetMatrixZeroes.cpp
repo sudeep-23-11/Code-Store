@@ -7,22 +7,18 @@ int main()
     int i, j, N, M;
     cin>>N>>M;
     int A[N][M];
-    for(i=0;i<N;i++)
-    {
-        for(j=0;j<M;j++)
-        cin>>A[i][j];
-    }
     r=false;
     c=false;
     for(i=0;i<N;i++)
     {
-        if(!A[i][0])
-        r=true;
-    }
-    for(i=0;i<M;i++)
-    {
-        if(!A[0][i])
-        c=true;
+        for(j=0;j<M;j++)
+        {
+            cin>>A[i][j];
+            if(!j && !A[i][j])
+            r=true;
+            if(!i && !A[i][j])
+            c=true;
+        }
     }
     for(i=1;i<N;i++)
     {

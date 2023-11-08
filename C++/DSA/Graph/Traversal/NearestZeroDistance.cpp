@@ -52,7 +52,7 @@ void BFS(vector<vector<int>>&A, vector<vector<int>>&R)
             {
                 for(j=y-1;j<=y+1;j++)
                 {
-                    if(i>=0 && i<A.size() && j>=0 && j<A[0].size() && (i==x || j==y) && A[i][j] && R[i][j]==-1)
+                    if(i>=0 && i<A.size() && j>=0 && j<A[0].size() && (i==x || j==y) && R[i][j]==-1)
                     {
                         q.push({i, j});
                         R[i][j]=c;

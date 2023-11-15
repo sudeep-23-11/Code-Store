@@ -2,51 +2,49 @@
 #include<iostream>
 #include<stack>
 using namespace std;
+void push(int v, stack<int>&st, int &m);
+void pop(stack<int>&st, int &m);
 int main()
 {
-    int ch, data, m;
-    cout<<"0 for top"<<endl;
-    cout<<"1 for push"<<endl;
-    cout<<"2 for pop"<<endl;
-    cout<<"3 for max"<<endl;
+    int m;
     stack<int>st;
-    while(1)
-    {
-        cout<<"Choice"<<endl;
-        cin>>ch;
-        if(!ch)
-        {
-            if(st.top()>m)
-            cout<<m<<endl;
-            else
-            cout<<st.top()<<endl;
-        }
-        else if(ch==1)
-        {
-            cin>>data;
-            if(st.empty())
-            {
-                st.push(data);
-                m=data;
-            }
-            else if(data>m)
-            {
-                st.push(data*2-m);
-                m=data;
-            }
-            else
-            st.push(data);
-        }
-        else if(ch==2)
-        {
-            if(st.top()>m)
-            m=m*2-st.top();
-            st.pop();
-        }
-        else if(ch==3)
-        cout<<m<<endl;
-        else
-        break;
-    }
+    m=0;
+    push(0, st, m);
+    cout<<"Maximum "<<m<<endl;
+    push(1, st, m);
+    cout<<"Maximum "<<m<<endl;
+    pop(st, m);
+    cout<<"Maximum "<<m<<endl;
+    push(2, st, m);
+    cout<<"Maximum "<<m<<endl;
+    pop(st, m);
+    cout<<"Maximum "<<m<<endl;
+    pop(st, m);
     return 0;
+}
+void push(int v, stack<int>&st, int &m)
+{
+    if(st.empty())
+    {
+        st.push(v);
+        m=v;
+    }
+    else if(v>m)
+    {
+        st.push(v*2-m);
+        m=v;
+    }
+    else
+    st.push(v);
+}
+void pop(stack<int>&st, int &m)
+{
+    if(st.top()>m)
+    {
+        cout<<m<<endl;
+        m=m*2-st.top();
+    }
+    else
+    cout<<st.top()<<endl;
+    st.pop();
 }

@@ -2,46 +2,36 @@
 #include<iostream>
 #include<stack>
 using namespace std;
+void push(int v, stack<int>&st);
+void pop(stack<int>&st);
 int main()
 {
-    int ch, data;
-    cout<<"0 for display"<<endl;
-    cout<<"1 for push"<<endl;
-    cout<<"2 for pop"<<endl;
-    stack<int>st, st2, t;
-    while(1)
-    {
-        cout<<"Choice"<<endl;
-        cin>>ch;
-        if(!ch)
-        {
-            t=st;
-            while(!t.empty())
-            {
-                cout<<t.top()<<" ";
-                t.pop();
-            }
-            cout<<endl;
-        }
-        else if(ch==1)
-        {
-            cin>>data;
-            while(!st.empty())
-            {
-                st2.push(st.top());
-                st.pop();
-            }
-            st2.push(data);
-            while(!st2.empty())
-            {
-                st.push(st2.top());
-                st2.pop();
-            }
-        }
-        else if(ch==2)
-        st.pop();
-        else
-        break;
-    }
+    stack<int>st;
+    push(0, st);
+    push(1, st);
+    pop(st);
+    push(2, st);
+    pop(st);
+    pop(st);
     return 0;
+}
+void push(int v, stack<int>&st)
+{
+    stack<int>t;
+    while(!st.empty())
+    {
+        t.push(st.top());
+        st.pop();
+    }
+    t.push(v);
+    while(!t.empty())
+    {
+        st.push(t.top());
+        t.pop();
+    }
+}
+void pop(stack<int>&st)
+{
+    cout<<st.top()<<endl;
+    st.pop();
 }

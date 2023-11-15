@@ -20,9 +20,9 @@ int main()
             q.pop();
             lid=id;
             if(n->left)
-            q.push({n->left, id*2});
+            q.push({n->left, id*2+1});
             if(n->right)
-            q.push({n->right, id*2+1});
+            q.push({n->right, id*2+2});
         }
         m=max(m, lid+1);
     }

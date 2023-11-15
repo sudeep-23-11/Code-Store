@@ -2,42 +2,32 @@
 #include<iostream>
 #include<queue>
 using namespace std;
+void push(int v, queue<int>&q);
+void pop(queue<int>&q);
 int main()
 {
-    int ch, data;
-    cout<<"0 for display"<<endl;
-    cout<<"1 for push"<<endl;
-    cout<<"2 for pop"<<endl;
-    queue<int>q, q2, t;
-    while(1)
-    {
-        cout<<"Choice"<<endl;
-        cin>>ch;
-        if(!ch)
-        {
-            t=q;
-            while(!t.empty())
-            {
-                cout<<t.front()<<" ";
-                t.pop();
-            }
-            cout<<endl;
-        }
-        else if(ch==1)
-        {
-            cin>>data;
-            q2.push(data);
-            while(!q.empty())
-            {
-                q2.push(q.front());
-                q.pop();
-            }
-            q.swap(q2);
-        }
-        else if(ch==2)
-        q.pop();
-        else
-        break;
-    }
+    queue<int>q;
+    push(0, q);
+    push(1, q);
+    pop(q);
+    push(2, q);
+    pop(q);
+    pop(q);
     return 0;
+}
+void push(int v, queue<int>&q)
+{
+    queue<int>t;
+    t.push(v);
+    while(!q.empty())
+    {
+        t.push(q.front());
+        q.pop();
+    }
+    q.swap(t);
+}
+void pop(queue<int>&q)
+{
+    cout<<q.front()<<endl;
+    q.pop();
 }

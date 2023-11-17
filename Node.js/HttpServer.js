@@ -5,22 +5,27 @@ import fs from 'fs';
 const port = process.env.PORT || 3000;
 
 const server = https.createServer((req, res) => {
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    
     if(req.url === '/')
     {
-        const data = fs.readFileSync('./home.html');
-        res.end(data);
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'text/html');
+        res.end('<h1>Home Page</h1>');
     }
     else if(req.url === '/about')
     {
-        const data = fs.readFileSync('./about.html');
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'text/html');
+        const data = fs.readFileSync('./public/index.html');
         res.end(data);
     }
-    else
-    res.end('<h1>Page Not Found</h1>');
+    else if(req.url === '/json')
+    {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        res.end(JSON.stringify({'hello': 'world'}));
+    }
 })
 
 server.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
-});
+})

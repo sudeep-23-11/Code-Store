@@ -21,3 +21,4 @@
 * JavaScript (ES6) code snippets
 * ES7+ React/Redux/React-Native snippets
 * Live Server
+* Thunder Client

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        .Ba {
+            height: 20px;
+            width: 100px;
+            margin: 5px;
+            background-color: #FF0000;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body onload="func()" onunload="func()">
+    <div>
+        <h5 id="Aa">Hello HTML</h5>
+        <img id="Ab" src="../public/html.png">
+        <form onsubmit="func1()">
+            <input id="Ac" type="text"
+                onfocus="this.style.backgroundColor='#FFFF00'"
+                onchange="func2()">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div>
+        <p class="Ba"
+            onmouseover="this.style.backgroundColor='#00FF00'"
+            onmouseout="this.style.backgroundColor='#FF0000'">
+            Hello C</p>
+        <p class="Ba"
+            onmousedown="this.style.backgroundColor='#0000FF'"
+            onmouseup="this.style.backgroundColor='#FF0000'">
+            Hello C++</p>
+        <p class="Ba">Hello Python</p>
+        <p class="Ba">Hello Java</p>
+    </div>
+    
+    <button type="button" onclick="func3()">Click Me 1</button>
+    <button id="btn" type="button" disabled>Click Me 2</button>
+
+    <script src="./script.js"></script>
+</body>
+</html>

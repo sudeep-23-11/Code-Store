@@ -1,16 +1,16 @@
-let func=()=> {
+let func = () => {
     console.log("Hello World");
 }
-let si=window.setInterval(func, 2000);
-let st=window.setTimeout(func, 10000);
+let si = window.setInterval(func, 2000);
+let st = window.setTimeout(func, 10000);
 
-let func1=()=> {
+let func1 = () => {
     console.log(window.name, window.length, window.closed);
     console.log(window.innerHeight, window.innerWidth);
     console.log(window.outerHeight, window.outerWidth);
     console.log(window.self, window.parent, window.top);
 
-    // w=window.open("https://www.youtube.com/", "YouTube", "width=500,height=500");
+    // w = window.open("https://www.youtube.com/", "YouTube", "width=500,height=500");
     // w.blur();
     // w.focus();
     // w.moveBy(100, 100);
@@ -27,16 +27,16 @@ let func1=()=> {
     window.clearTimeout(st);
 }
 
-let func2=()=> {
+let func2 = () => {
     window.alert("Screen");
     console.log(screen.height, screen.width);
     console.log(screen.availHeight, screen.availWidth);
     console.log(screen.colorDepth, screen.pixelDepth);
 }
 
-let func3=()=> {
-    let c=window.confirm("Location");
-    if(c===true)
+let func3 = () => {
+    let c = window.confirm("Location");
+    if(c === true)
     {
         console.log(location.href);
         console.log(location.protocol, location.pathname);
@@ -49,9 +49,9 @@ let func3=()=> {
     }
 }
 
-let func4=()=> {
-    let p=window.prompt("History");
-    if(p==="hello")
+let func4 = () => {
+    let p = window.prompt("History");
+    if(p === "hello")
     {
         console.log(history.length);
 

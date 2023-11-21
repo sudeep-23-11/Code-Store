@@ -1,25 +1,25 @@
-* create database d ---------------------------------------------- create database d
-* drop database d ------------------------------------------------ drop database d
-* backup database d to disk='f' ---------------------------------- make backup of full database d on location f
-    * with differential ------------------------------------------ changed part of database d
-* show databases ------------------------------------------------- list avaliable databases
-* use d ---------------------------------------------------------- start using database d
+* show databases ------------------------------------------------- list databases
+* create database db --------------------------------------------- create database db
+* drop database db ----------------------------------------------- delete database db
+* backup database db to disk=lo ---------------------------------- backup database db on location lo
+    * with differential ------------------------------------------ updated part of database db
+* use db --------------------------------------------------------- start using database db
 *
 *
-* create table t (c1 dt1, c2 dt2, …) ----------------------------- create table t with columns c1, c2, … having datatypes dt1, dt2, …
-* alter table t1 rename to t2 ------------------------------------ rename table t1 to t2
-* alter table t add c dt ----------------------------------------- add column c having datatype dt
-    * modifly column c dt ---------------------------------------- change datatype of column c to dt
-    * drop column c ---------------------------------------------- drop column c
-    * rename c1 to c2 -------------------------------------------- rename column c1 to c2
-* truncate table t ----------------------------------------------- remove all data from table t
-* drop table t --------------------------------------------------- drop table t
-* show tables ---------------------------------------------------- list avaliable tables
+* show tables ---------------------------------------------------- list tables
+* create table t (f1 dt1, f2 dt2) -------------------------------- create table t with fields f1, f2 having datatypes dt1, dt2
+* alter table t rename to nt ------------------------------------- rename table t to nt
+* alter table t add f dt ----------------------------------------- insert field f having datatype dt
+    * rename f to nf --------------------------------------------- rename field f to nf
+    * modify column f dt ----------------------------------------- set datatype of field f to dt
+    * drop column f ---------------------------------------------- delete field f
+* truncate table t ----------------------------------------------- delete all data of table t
+* drop table t --------------------------------------------------- delete table t
 * describe t ----------------------------------------------------- details of table t
 *
 *
-* create view v as select c1, c2, … from table t where x --------- create view v of the query
-    * temporary view v ------------------------------------------- temporary view v
-* create recursive view v as select c1, c2, ... from t1 union select c1, c2, ... from t2 --- recursive view v with first query as anchor part and second query as recursive part 
-* create or replace view v as select c1, c2, … from table t where x --- change view v according to the query
-* drop view v ---------------------------------------------------- drop view v
+* create view vw as q -------------------------------------------- create view vw of query q
+    * temporary view vw ------------------------------------------ temporary view vw
+* create or replace view vw as q --------------------------------- update view vw according to query q
+* create recursive view vw as q1 union q2 ------------------------ create recursive view vw with query q1 as anchor part and query q2 as recursive part
+* drop view vw --------------------------------------------------- delete view vw

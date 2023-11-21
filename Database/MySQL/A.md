@@ -1,39 +1,38 @@
-* select * from t ------------------------------------------------ entries of all columns of table t
-* select c1, c2, … ----------------------------------------------- entries of columns c1, c2, …
-* select distinct c ---------------------------------------------- distinct entries of column c
-* select c as a -------------------------------------------------- alias of column c is a
-* select c1, c2, … from t1, t2, … -------------------------------- cartesian product of c1, c2, …
+* select * from t ------------------------------------------------ find tuples of all fields of table t
+    * f1, f2 ----------------------------------------------------- field is f1, f2
+    * distinct f ------------------------------------------------- unique tuples according to field f
+    * f as a ----------------------------------------------------- a is alias of field f
+* select f1, f2 from t1, t2 -------------------------------------- cartesian product of t1.f1, t2.f2
 *
 *
-* limit n -------------------------------------------------------- n entries only
-* offset n ------------------------------------------------------- entries after n entries
-* order by c asc ------------------------------------------------- entries in ascending order of column c
-* order by c desc ------------------------------------------------ entries in descending order of column c
-*
-*
-* where x -------------------------------------------------------- entries which satisfy condition x
-    * x1 and x2 -------------------------------------------------- both x1 and  x2
-    * x1 or x2 --------------------------------------------------- either x1 or x2
-    * not x ------------------------------------------------------ not x
-    * c is null -------------------------------------------------- is equal to null
-    * c between v1 and v2 ---------------------------------------- between v1 and v2
-    * c in (v1, v2, ...) ----------------------------------------- any one of these v1, v2, ...
-    * c like 'p' ------------------------------------------------- contains pattern p
+* where exp ------------------------------------------------------ find tuples that matches exp
+    * f is null -------------------------------------------------- field f is null
+    * f between v1 and v2 ---------------------------------------- field f is in range [v1, v2]
+    * f in (v1, v2) ---------------------------------------------- field f is v1, v2
+    * f like p --------------------------------------------------- field f contains pattern p
         * _ ------------------------------------------------------ single character
-        * % ------------------------------------------------------ no or more characters
-        * [a1a2…] ------------------------------------------------ list of characters
-        * [a1-a2] ------------------------------------------------ range of characters
-    * c like 'p' escape '\' -------------------------------------- escape character
-    * exists (q) ------------------------------------------------- returns True if there are some records of query q else False
-    * x all (q) -------------------------------------------------- returns True if entries satify condition x for all records of qurey q else False
-        * any ---------------------------------------------------- any record
-        * some --------------------------------------------------- any record
+        * % ------------------------------------------------------ zero or more characters
+        * [c1c2] ------------------------------------------------- character is c1, c2
+        * [c1-c2] ------------------------------------------------ character is in range [c1, c2]
+    * not exp ---------------------------------------------------- not of exp
+    * exp1 and exp2 ---------------------------------------------- and of exp1, exp2
+        * or ----------------------------------------------------- or of exp1, exp2
+    * exists (q) ------------------------------------------------- check if there are tuples of query q
+    * exp all (q) ------------------------------------------------ check if all tuples of query q match exp
+        * any ---------------------------------------------------- any tuple
+        * some --------------------------------------------------- any tuple
 *
 *
-* select count (c) from t ---------------------------------------- count of entries of column c of table t
-    * sum (c) ---------------------------------------------------- sum
-    * max (c) ---------------------------------------------------- maximum
-    * min (c) ---------------------------------------------------- minimum
-    * avg (c) ---------------------------------------------------- average
-* group by c ----------------------------------------------------- make groups of entries of column c
-* having x ------------------------------------------------------- functions which satisfy condition x
+* order by f asc ------------------------------------------------- sort tuples in ascending order according to field f
+    * desc ------------------------------------------------------- descending order
+* limit n -------------------------------------------------------- limit tuples to n
+* offset n ------------------------------------------------------- skip first n tuples
+*
+*
+* select count (f) from t ---------------------------------------- count tuples of field f
+    * sum (f) ---------------------------------------------------- sum
+    * max (f) ---------------------------------------------------- maximum
+    * min (f) ---------------------------------------------------- minimum
+    * avg (f) ---------------------------------------------------- average
+* group by f ----------------------------------------------------- make groups of tuples of field f
+* having exp ----------------------------------------------------- find functions that matches exp

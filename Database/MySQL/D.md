@@ -1,27 +1,26 @@
-* create table t (c dt not null) --------------------------------- non-null values in column c
-    * default v) ------------------------------------------------- default values in column c
-    * auto_increment) -------------------------------------------- automatically increments the value in column c by one when a new entry is inserted
-* alter table t modify c dt not null ----------------------------- add non-null values to column c
-    * alter c set default v -------------------------------------- default values
+* create table t (f dt not null) --------------------------------- non-null values in field f
+    * default v -------------------------------------------------- default value is v
+    * auto_increment --------------------------------------------- automatically increments by one on new insertion
+* alter table t modify f dt not null ----------------------------- set non-null values in field f
+    * alter f set default v -------------------------------------- set default value to v
     * auto_increment=v ------------------------------------------- set starting value to v
-    * alter c drop default --------------------------------------- drop default values from column c
+    * alter f drop default --------------------------------------- delete default values
 *
 *
-* create table t (c dt, constraint ct unique (c)) ---------------- unique values in column c
-* alter table t add constraint ct unique (c) --------------------- add unique values to column c
-    * check (x)) ------------------------------------------------- values which satisfy conditon x
-    * primary key (c)) ------------------------------------------- column c is primary key (non-null and unique values)
-    * foreign key (c1) references t2 (c2)) ----------------------- column c1 of table t1 is foreign key (column c2 of table t2 is primary key)
-    * foreign key (c1) references t2 (c2)) on update cascade ----- on updating entries of c2, update entries of c1
-        * on update set null ------------------------------------- on updating entries of c2, set null values to entries of c1
-        * on delete cascade -------------------------------------- on deleting entries of c2, delete entries of c1
-        * on delete set null ------------------------------------- on deleting entries of c2, set null values to entries of c1
-* alter table t drop index ct ------------------------------------ drop unique values from column c
-    * check ct --------------------------------------------------- check
+* create table t (f dt, constraint ct unique (f)) ---------------- unique values in field f
+* alter table t add constraint ct unique (f) --------------------- set unique values in field f
+    * check (exp) ------------------------------------------------ values that match exp
+    * primary key (f) -------------------------------------------- field f is primary key
+    * foreign key (f1) references t2 (f2) ------------------------ t.f1 is foreign key with primary key as t2.f2
+    * foreign key (f1) references t2 (f2) on update cascade ------ on updation of field f2, update tuples of field f1
+        * on update set null ------------------------------------- on updation of field f2, set null values to field f1
+        * on delete cascade -------------------------------------- on deletion of field f2, delete tuples of field f1
+        * on delete set null ------------------------------------- on deletion of field f2, set null values to field f1
+* alter table t drop check ct ------------------------------------ delete check constraint ct
     * primary key ct --------------------------------------------- primary key
     * foreign key ct --------------------------------------------- foreign key
 *
 *
-* create index i on t (c1, c2, …) -------------------------------- create indexes for entries of table t
-    * unique index ----------------------------------------------- distinct entries
-* alter table t drop index i ------------------------------------- drop indexes
+* create index i on t (f1, f2) ----------------------------------- create index i for tuples of fields f1, f2
+    * unique index ----------------------------------------------- unique tuples
+* alter table t drop index i ------------------------------------- delete index i

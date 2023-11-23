@@ -1,4 +1,4 @@
-//FileSystemModule
+//FileSystem
 import fs from 'fs';
 
 const d = 'Hello World ';

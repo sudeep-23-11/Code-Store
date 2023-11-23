@@ -1,4 +1,4 @@
-//PathModule
+//Path
 import path from 'path';
 
 const p = 'C:\\mydir\\myfile.js';

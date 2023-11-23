@@ -1,4 +1,4 @@
-//UrlModule
+//Url
 import url from 'url';
 
 const u = new URL('https://username:password@example.com:3000/path/path?search=entity#hash');

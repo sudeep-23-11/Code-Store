@@ -25,3 +25,9 @@
     * -1 --------------------------------------------------------- descending order
 * .limit(n) ------------------------------------------------------ limit documents to n
 * .skip(n) ------------------------------------------------------- skip first n documents
+*
+*
+* .aggregate([{$match: {exp}}, {$group: {_id: "$f1", nf: {$sum: "$f2"}}}, {$sort: {f3: 1}}]) - pipline that firstly find all documents that matches exp, secondly group them with id as field f1 and field nf as sum of values of field f2, thirdly sort them in ascending order according to field f3
+    * max -------------------------------------------------------- maximum
+    * min -------------------------------------------------------- minimum
+    * avg -------------------------------------------------------- average

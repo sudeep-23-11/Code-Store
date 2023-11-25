@@ -20,9 +20,13 @@
 *
 *
 * show dbs ------------------------------------------------------- list databases
-* use db --------------------------------------------------------- start using database db
+* use dtb -------------------------------------------------------- start using database dtb
+* db ------------------------------------------------------------- show current database
+* db.dropDatabase() ---------------------------------------------- delete current database
 *
 *
-* .renameCollection(nco) ----------------------------------------- rename collection co to nco
-* .drop() -------------------------------------------------------- delete collection co
-* .distinct(f) --------------------------------------------------- find unique values of field f
+* show collections ----------------------------------------------- list collections
+* db.createCollection(co) ---------------------------------------- create collection co
+* db.co.renameCollection(nco) ------------------------------------ rename collection co to nco
+* db.co.drop() --------------------------------------------------- delete collection co
+* db.co.distinct(f) ---------------------------------------------- find unique values of field f

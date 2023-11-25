@@ -1,4 +1,4 @@
-* db.co.findOne({exp}) ------------------------------------------- find first document that matches exp
+* .findOne({exp}) ------------------------------------------------ find first document that matches exp
 * .find({exp}) --------------------------------------------------- find all documents that matches exp
 * .find({}) ------------------------------------------------------ find all doccuments
 *

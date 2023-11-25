@@ -1,19 +1,42 @@
 //Array
-let A=[0, 20, 30, 45, 60, 70, 90];
-A.pop();
-A.push(80);
-A.shift();
-A.unshift(10);
-A.splice(3, 1, 40, 50);
+let A=[1, 2, 5];
 console.log(Array.isArray(A), A.length);
-console.log(A[1]);
-console.log(A.indexOf(70), A.lastIndexOf(70));
-console.log(A.slice(3, 7));
-console.log(A.includes(50));
-console.log(A.join(','));
-console.log(Array.from("Sudeep"));
-let x=[10, 20, 30];
-let y=[40, 50, 60];
+
+console.log(A.pop(), A.shift())
+A.push(5);
+A.unshift(1);
+A.splice(2, 0, 3, 4);
+
+console.log(A.includes(3), A.indexOf(3), A.lastIndexOf(3));
+console.log(A.slice(1, 3));
+
+console.log(A.toString(), A.join(' '));
+console.log(Array.from("sudeep"));
+
+let s=0;
+A.forEach((i) => s+=i)
+console.log(s);
+console.log(A.map((i) => {return i*2}));
+console.log(A.flatMap((i) => {return i*2}));
+console.log(A.filter((i) => {return i>3}));
+console.log(A.reduce((t, i) => {return t+=i}));
+console.log(A.reduceRight((t, i) => {return t+=i}));
+console.log(A.every((i) => {return i>3}));
+console.log(A.some((i) => {return i>3}));
+console.log(A.find((i) => {return i>3}));
+console.log(A.findIndex((i) => {return i>3}));
+
+let x=[1, 2, 3];
+let y=[4, 5];
 console.log(x.concat(y));
-for(let i of A.keys())
+let z=[[1,2],[3,4]];
+console.log(z.flat());
+
+A.sort();
+A.reverse();
+console.log(A);
+
+for(let i in A)
+console.log(A[i]);
+for(let i of A)
 console.log(i);

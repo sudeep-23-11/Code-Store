@@ -19,12 +19,12 @@
 *
 * git status ----------------------- status of repository
 * git add _ ------------------------ stage changed file _
-* git add -A ----------------------- stage all changed files
+* git add . ------------------------ stage all changed files
 * git diff ------------------------- compare working directory with staging area
     * --staged --------------------- compare staging area with last commit
 * git restore _ -------------------- discard changes of changed file _
     * --staged --------------------- unstage changed file _
-* git restore -A ------------------- discard changes of all changed files
+* git restore . -------------------- discard changes of all changed files
 *
 *
 * git commit -m _ ------------------ commit with message _

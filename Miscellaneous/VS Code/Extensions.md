@@ -13,6 +13,7 @@
 * Genie AI
 * C/C++
 * Python
+* Jupyter
 * Extension Pack for Java
 * Auto Close Tag
 * Auto Rename Tag

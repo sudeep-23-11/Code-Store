@@ -1,10 +1,9 @@
 //String
-let x, y, s, r;
-x='hello';
-y="world";
+const x='hello';
+const y="world";
 console.log(x, y);
 
-s="sudeep";
+let s="sudeep";
 console.log(s.length);
 
 console.log(s.includes("ee"), s.indexOf("ee"), s.lastIndexOf("ee"), s.search("ee"));
@@ -24,5 +23,5 @@ console.log(s.trim(), s.trimStart(), s.trimEnd());
 s="sudeep kumar srivastava";
 console.log(s.split(' '));
 
-r=`${x} ${y==="World" ? y : null}`;
+const r=`${x} ${y==="World" ? y : null}`;
 console.log(r);

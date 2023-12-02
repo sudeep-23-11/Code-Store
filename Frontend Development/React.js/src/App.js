@@ -1,3 +1,4 @@
+import './styles/App.css';
 import FunctionalComponent from "./components/FunctionalComponent.jsx";
 import ClassComponent from "./components/ClassComponent.jsx";
 import RouterDOM from "./components/RouterDOM.jsx";
@@ -16,13 +17,13 @@ function App() {
     }
 
     return (
-        <>
+        <div className="container">
             <FunctionalComponent var={'html'} func={rfc} /><hr />
             <ClassComponent var={'html'} func={rcc} /><hr />
             <RouterDOM /><hr />
             <LifecycleMethods /><hr />
             <LifecycleHooks />
-        </>
+        </div>
     );
 }
 

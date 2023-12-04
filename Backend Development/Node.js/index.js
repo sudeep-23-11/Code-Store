@@ -9,3 +9,4 @@ console.log(web.html, web.css);
 // npm init
 // npm install
 // npm install -g nodemon
+// nodemon index.js

@@ -1,5 +1,6 @@
 'use client';
 import React, {useState, useEffect} from 'react';
+import {useRouter} from 'next/navigation';
 
 export default function ClientSide() {
 
@@ -10,9 +11,11 @@ export default function ClientSide() {
         setText(event.target.value);
     }
 
+    const router = useRouter();
     const [text, setText] = useState('Enter');
     let click = () => {
         setText(text.toUpperCase());
+        // router.push('/');
     }
     useEffect(() => {
         console.log(text);

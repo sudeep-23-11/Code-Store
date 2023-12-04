@@ -19,7 +19,7 @@ export default function Home() {
             <Link href="/clientside">Client Side</Link><br />
             <Link href="/serverside">Server Side</Link>
 
-            <Script src='script.js' />
+            <Script src='./script.js' />
         </div>
     )
 }

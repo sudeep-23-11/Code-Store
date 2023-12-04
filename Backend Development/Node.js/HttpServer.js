@@ -1,10 +1,10 @@
 //HttpServer
-import https from 'http';
+import http from 'http';
 import fs from 'fs';
 
 const port = process.env.PORT || 3000;
 
-const server = https.createServer((req, res) => {
+const server = http.createServer((req, res) => {
     if(req.url === '/')
     {
         res.statusCode = 200;
@@ -22,8 +22,10 @@ const server = https.createServer((req, res) => {
     {
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
-        res.end(JSON.stringify({'hello': 'world'}));
+        res.end(JSON.stringify({name: 'sudeep'}));
     }
+    else
+    res.statusCode = 404;
 })
 
 server.listen(port, () => {

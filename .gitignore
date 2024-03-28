@@ -1,13 +1,13 @@
 Frontend Development/HTML/public
 Frontend Development/CSS/public
-Frontend Development/JavaScript/public
+Frontend Development/DOM/public
+
+Frontend Development/Bootstrap/node_modules
+Frontend Development/Tailwind CSS/node_modules
 
 Frontend Development/React.js/node_modules
 Frontend Development/React.js/public
 Frontend Development/React.js/src/styles
-
-Frontend Development/Redux.js/node_modules
-Frontend Development/Redux.js/public
 
 Frontend Development/Next.js/node_modules
 Frontend Development/Next.js/public

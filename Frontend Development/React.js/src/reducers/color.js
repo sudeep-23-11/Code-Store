@@ -1,9 +1,9 @@
 const initialState = "#FF0000";
 
 const changeColor = (state=initialState, action) => {
-    if(state !== "#0000FF" && action.type === "Blue")
+    if(action.type === "Blue")
     return action.payLoad;
-    else if(state !== "#00FF00" && action.type === "Green")
+    else if(action.type === "Green")
     return action.payLoad;
     else
     return state;

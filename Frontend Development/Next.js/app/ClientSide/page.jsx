@@ -15,7 +15,10 @@ export default function ClientSide() {
     const [text, setText] = useState('Enter');
     let click = () => {
         setText(text.toUpperCase());
-        // router.push('/');
+        // router.push('/nextpage');
+        // router.back();
+        // router.replace('/clientside');
+        // router.reload();
     }
     useEffect(() => {
         console.log(text);

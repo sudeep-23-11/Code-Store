@@ -1,9 +1,13 @@
+import {Provider} from "react-redux";
+
 import './styles/App.css';
 import FunctionalComponent from "./components/FunctionalComponent.jsx";
 import ClassComponent from "./components/ClassComponent.jsx";
 import RouterDOM from "./components/RouterDOM.jsx";
 import LifecycleMethods from "./components/LifecycleMethods.jsx";
 import LifecycleHooks from "./components/LifecycleHooks.jsx";
+import Redux from "./components/Redux.jsx";
+import store from "./store.js";
 
 function App() {
 
@@ -23,6 +27,9 @@ function App() {
             <RouterDOM /><hr />
             <LifecycleMethods /><hr />
             <LifecycleHooks />
+            <Provider store={store}>
+                <Redux />
+            </Provider>
         </div>
     );
 }

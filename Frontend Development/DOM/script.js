@@ -1,5 +1,5 @@
 let func = () => {
-    console.log("Hello World");
+    alert("Hello World");
 }
 
 let func1 = () => {
@@ -19,13 +19,18 @@ let func3 = () => {
     for(let i=0;i<cn.length;i++)
     cn[i].style.backgroundColor="#00FF00";
     document.getElementById("btn").disabled=false;
+    clearInterval(si);
 }
 
 let func4 = () => {
-    document.querySelector("#Ab").src="../public/css.png";
+    document.querySelector("#Ab").src="./public/css.png";
     let tn = document.getElementsByTagName("p");
     for(let i=0;i<tn.length;i++)
     tn[i].style.backgroundColor="#0000FF";
     document.getElementById("btn").removeEventListener("click", func4);
+    clearTimeout(st);
 }
+
 document.getElementById("btn").addEventListener("click", func4);
+let si = setInterval(func, 5000);
+let st = setTimeout(func, 25000);

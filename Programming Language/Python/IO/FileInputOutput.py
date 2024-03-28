@@ -1,18 +1,14 @@
 #FileInputOutput
-CP="Data Structures, Algorithms for Competitive Programming\n"
-AI="Data Science, Machine Learning, Deep Learning in Artificial Intelligence\n"
-WD="HTML, CSS, JavaScript, Bootstrap, ReactJS, NodeJS, ExpressJS, MongoDB in Full Stack Web Development\n"
-AD="Kotlin, Java in Native Android, Dart in Flutter, JavaScript in React Native for Mobile App Development\n"
-Languages=["C\n", "C++\n", "Python\n", "SQL\n", "HTML\n", "CSS\n", "JavaScript\n", "Java\n", "Kotlin\n", "Dart\n"]
+front="HTML, CSS, Bootstrap, Tailwind CSS, React.js, Next.js\n"
+back="Node.js, Express.js, Rest API, MySQL, MongoDB\n"
+pl=["C\n", "C++\n", "Python\n", "JavaScript\n", "TypeScript\n"]
 
 f=open("demo1.txt", 'w')
-f.write(CP)
-f.write(AI)
+f.write(front)
 f.close()
 
 f=open("demo1.txt", 'a')
-f.write(WD)
-f.write(AD)
+f.write(back)
 f.close()
 
 f=open("demo1.txt", 'r')
@@ -47,6 +43,6 @@ print(f.tell())
 f.close()
 
 with open("demo3.txt", 'w') as f :
-  f.writelines(Languages)
+  f.writelines(pl)
 with open("demo3.txt", 'r') as f :
   print(f.readlines())

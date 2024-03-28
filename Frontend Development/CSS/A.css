@@ -16,18 +16,20 @@
 }
 
 .xyz {
-    height: 200px;                                          /*auto*/
-    width: 200px;                                           /*auto*/
-    min-height: 50px;
-    min-width: 50px;
-    max-height: 500px;
-    max-width: 500px;
+    height: 250px;                                          /*auto*/
+    width: 250px;                                           /*auto*/
+    min-height: 50px;                                       /*auto*/
+    min-width: 50px;                                        /*auto*/
+    max-height: 500px;                                      /*auto*/
+    max-width: 500px;                                       /*auto*/
 
-    margin: 25px;                                           /*auto*/
-    padding: 10px;                                          /*auto*/
+    margin: 10px;                                           /*auto*/
+    padding: 5px;                                           /*auto*/
 
     display: inline-block;                                  /*block, inline, none*/
     visibility: visible;                                    /*hidden*/
+
+    border: solid;
 }
 
 #A {
@@ -53,9 +55,6 @@
 }
 
 #B {
-    width: 300px;
-    border-style: solid;
-
     color: #FF0000;
     text-align: justify;                                    /*left, right, center*/
     text-justify: inter-word;                               /*inter-character, auto, none*/
@@ -65,7 +64,7 @@
     text-indent: 10px;
     letter-spacing: 3px;
     word-spacing: 5px;
-    line-height: 25px;
+    line-height: 30px;
 
     font-style: normal;                                     /*italic, oblique*/
     font-weight: normal;                                    /*bold*/
@@ -79,20 +78,17 @@
     vertical-align: baseline;                               /*text-top, text-bottom, super, sub*/
 }
 
-#C {
-    border-style: solid;
-}
 #Ca {
     overflow-x: hidden;
 
     white-space: nowrap;                                    /*normal, pre, pre-line, pre-wrap*/
     text-overflow: clip;                                    /*ellipsis*/
 }
-p span {                                                    /*p > span, p + span, p ~ span*/
+#Ca span {
     writing-mode: vertical-rl;                              /*horizontal-tb, vertical-lr*/
 }
 #Cb {
-    word-break: break-all;                                  /*normal, keep-all*/
+    word-break: break-all;                                  /*normal*/
 }
 #Cc {
     word-wrap: break-word;                                  /*normal*/

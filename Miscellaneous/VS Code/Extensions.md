@@ -18,6 +18,7 @@
 * Auto Close Tag
 * Auto Rename Tag
 * HTML CSS Support
+* Tailwind CSS IntelliSense
 * ESLint
 * JavaScript (ES6) code snippets
 * ES7+ React/Redux/React-Native snippets

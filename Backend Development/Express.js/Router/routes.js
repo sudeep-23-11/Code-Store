@@ -2,11 +2,20 @@ const express = require('express');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.send('<h1>Home Page</h1>');
+router.get('/api', (req, res) => {
+    res.send('<h1>Get Request</h1>');
 })
-router.get('/about', (req, res) => {
-    res.send('<h1>About Page</h1>');
+router.post('/api', (req, res) => {
+    res.send('<h1>Post Request</h1>');
+})
+router.put('/api/:slug', (req, res) => {
+    res.send('<h1>Put Request</h1>');
+})
+router.patch('/api/:slug', (req, res) => {
+    res.send('<h1>Patch Request</h1>');
+})
+router.delete('/api/:slug', (req, res) => {
+    res.send('<h1>Delete Request</h1>');
 })
 
 module.exports = router;

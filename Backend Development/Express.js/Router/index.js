@@ -1,10 +1,10 @@
 //Router
 const express = require('express');
 const path = require('path');
-const router = require(path.join(__dirname, 'routes.js'));
 
 const port = process.env.PORT || 3000;
 const app = express();
+const router = require(path.join(__dirname, 'routes.js'));
 
 app.use('/router', router);
 

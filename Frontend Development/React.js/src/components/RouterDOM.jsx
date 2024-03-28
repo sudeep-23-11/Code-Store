@@ -23,7 +23,13 @@ export default function RouterDOM() {
                     <Link to="/about">About</Link>
                 </li>
                 <li>
-                    <Link to="/nested">Nested</Link>
+                    <Link to="/nested">Nested Contact</Link>
+                </li>
+                <li>
+                    <Link to="/nested/skills">Nested Skills</Link>
+                </li>
+                <li>
+                    <Link to="/nested/works">Nested Works</Link>
                 </li>
             </ul>
             <Routes>

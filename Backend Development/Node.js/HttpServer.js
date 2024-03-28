@@ -22,7 +22,7 @@ const server = http.createServer((req, res) => {
     {
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
-        res.end(JSON.stringify({name: 'sudeep'}));
+        res.end(JSON.stringify({name: 'JSON'}));
     }
     else
     res.statusCode = 404;

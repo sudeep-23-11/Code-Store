@@ -29,7 +29,6 @@
 #J div {
     height: 50%;
     width: 50%;
-    border-style: solid;
 
     transition-property: transform;
     transition-duration: 3s;
@@ -71,9 +70,6 @@
 }
 
 #L {
-    height: 500px;
-    width: 500px;
-    padding: 0px;
     background-color: #FF0000;
 
     display: flex;
@@ -84,9 +80,8 @@
     align-content: flex-start;                              /*flex-end, center, stretch, space-between, space-around, space-evenly*/
 }
 #L div {
-    height: 50px;
-    width: 50px;
-    margin: 10px;
+    height: 25%;
+    margin: 1.5%;
     background-color: #FFFFFF;
 
     order: 0;

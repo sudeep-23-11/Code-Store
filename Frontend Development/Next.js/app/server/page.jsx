@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ServerSide() {
+export default function server() {
 
     let func = async () => {
         const staticData = await fetch('https://example.com/resource', {

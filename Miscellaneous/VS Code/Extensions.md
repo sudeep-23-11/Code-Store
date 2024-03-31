@@ -9,7 +9,6 @@
 * Error Lens
 * GitLens
 * Code Runner
-* Tabnine AI Autocomplete
 * Genie AI
 * C/C++
 * Python
@@ -18,6 +17,7 @@
 * Auto Close Tag
 * Auto Rename Tag
 * HTML CSS Support
+* Bootstrap IntelliSense
 * Tailwind CSS IntelliSense
 * ESLint
 * JavaScript (ES6) code snippets

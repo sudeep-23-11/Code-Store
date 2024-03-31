@@ -2,7 +2,7 @@
 import React, {useState, useEffect} from 'react';
 import {useRouter} from 'next/navigation';
 
-export default function ClientSide() {
+export default function client() {
 
     let submit = (event) => {
         event.preventDefault();
@@ -15,10 +15,9 @@ export default function ClientSide() {
     const [text, setText] = useState('Enter');
     let click = () => {
         setText(text.toUpperCase());
-        // router.push('/nextpage');
+        // router.push('/server');
         // router.back();
-        // router.replace('/clientside');
-        // router.reload();
+        // router.replace('/server');
     }
     useEffect(() => {
         console.log(text);

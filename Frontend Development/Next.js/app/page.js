@@ -16,8 +16,8 @@ export default function Home() {
         <div className={styles.container}>
             <Image src='/workplace.png' alt='workplace loading' height={100} width={100} /><br />
 
-            <Link href="/clientside">Client Side</Link><br />
-            <Link href="/serverside">Server Side</Link>
+            <Link href="/client">Client</Link><br />
+            <Link href="/server">Server</Link>
 
             <Script src='./script.js' />
         </div>

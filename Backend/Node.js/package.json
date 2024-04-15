@@ -1,14 +1,11 @@
 {
-  "name": "mongoose",
+  "name": "node.js",
   "version": "1.0.0",
-  "description": "mongoose tutorial",
+  "description": "node.js tutorial",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "sudeep",
-  "license": "ISC",
-  "dependencies": {
-    "mongoose": "^8.0.2"
-  }
+  "license": "ISC"
 }

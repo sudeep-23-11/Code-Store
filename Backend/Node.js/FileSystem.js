@@ -1,5 +1,5 @@
 //FileSystem
-import fs from 'fs';
+const fs = require('fs');
 
 const d = 'Hello World ';
 

@@ -12,7 +12,6 @@ const updatedData = {
     y: "c"
 };
 
-//GetRequest
 axios.get('https://example.com/resource')
     .then(res => {
         console.log(res.data);
@@ -21,7 +20,6 @@ axios.get('https://example.com/resource')
         console.error(err);
     })
 
-//PostRequest
 axios.post('https://example.com/resource', data)
     .then(res => {
         console.log(res.data);
@@ -30,7 +28,6 @@ axios.post('https://example.com/resource', data)
         console.error(err);
     })
 
-//PutRequest
 axios.put('https://example.com/resource/id', replacedData)
     .then(res => {
         console.log(res.data);
@@ -39,7 +36,6 @@ axios.put('https://example.com/resource/id', replacedData)
         console.error(err);
     })
 
-//PatchRequest
 axios.patch('https://example.com/resource/id', updatedData)
     .then(res => {
         console.log(res.data);
@@ -48,7 +44,6 @@ axios.patch('https://example.com/resource/id', updatedData)
         console.error(err);
     })
 
-//DeleteRequest
 axios.delete('https://example.com/resource/id')
     .then(res => {
         

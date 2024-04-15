@@ -1,24 +1,22 @@
-Frontend Development/HTML/public
-Frontend Development/CSS/public
-Frontend Development/DOM/public
+Frontend/HTML/public
+Frontend/CSS/public
+Frontend/DOM/public
 
-Frontend Development/Bootstrap/node_modules
-Frontend Development/Tailwind CSS/node_modules
+Frontend/Bootstrap/node_modules
+Frontend/Tailwind CSS/node_modules
 
-Frontend Development/React.js/node_modules
-Frontend Development/React.js/public
-Frontend Development/React.js/src/styles
+Frontend/React.js/node_modules
+Frontend/React.js/public
+Frontend/React.js/src/styles
 
-Frontend Development/Next.js/node_modules
-Frontend Development/Next.js/public
-Frontend Development/Next.js/styles
-Frontend Development/Next.js/.next
+Frontend/Next.js/node_modules
+Frontend/Next.js/public
+Frontend/Next.js/styles
+Frontend/Next.js/.next
 
-Backend Development/Node.js/public
+Backend/Node.js/public
 
-Backend Development/Express.js/node_modules
-Backend Development/Express.js/public
+Backend/Express.js/node_modules
+Backend/Express.js/public
 
-Backend Development/REST API/node_modules
-
-Database/Mongoose/node_modules
+Backend/NPM/node_modules

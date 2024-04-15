@@ -1,8 +1,8 @@
 {
-  "name": "node.js",
+  "name": "javascript",
   "version": "1.0.0",
-  "description": "node.js tutorial",
-  "main": "index.js",
+  "description": "javascript tutorial",
+  "main": "General.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

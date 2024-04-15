@@ -1,8 +1,7 @@
-//HttpServer
-import http from 'http';
-import fs from 'fs';
+const http = require('http');
+const fs = require('fs');
 
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 const server = http.createServer((req, res) => {
     if(req.url === '/')
@@ -31,3 +30,8 @@ const server = http.createServer((req, res) => {
 server.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
 })
+
+// npm init
+// npm install
+// npm install -g nodemon
+// nodemon index.js

@@ -1,5 +1,5 @@
 //Path
-import path from 'path';
+const path = require('path');
 
 const p = 'C:\\mydir\\myfile.js';
 

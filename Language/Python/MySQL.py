@@ -1,3 +1,4 @@
+#MySQL
 import mysql.connector as msc
 
 cnx = msc.connect(user='root', password='sudeep23mysq', host='localhost', database='demo')

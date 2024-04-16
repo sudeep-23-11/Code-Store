@@ -1,22 +1,8 @@
-Frontend/HTML/public
-Frontend/CSS/public
-Frontend/DOM/public
+Web/*/node_modules
+Web/*/package-lock.json
+Web/*/package.json
 
-Frontend/Bootstrap/node_modules
-Frontend/Tailwind CSS/node_modules
-
-Frontend/React.js/node_modules
-Frontend/React.js/public
-Frontend/React.js/src/styles
-
-Frontend/Next.js/node_modules
-Frontend/Next.js/public
-Frontend/Next.js/styles
-Frontend/Next.js/.next
-
-Backend/Node.js/public
-
-Backend/Express.js/node_modules
-Backend/Express.js/public
-
-Backend/NPM/node_modules
+Web/*/public
+Web/JavaScript/DOM/public
+Web/*/*/styles
+Web/Next.js/.next

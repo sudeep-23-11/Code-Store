@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+    <!--Image-->
+    <img src="./public/workplace.png" alt="workplace loading" usemap="#workplace">
+    <map name="workplace">
+        <area shape="default" coords="" href="https://en.wikipedia.org/wiki/Workplace" alt="workplace loading">
+        <area shape="rect" coords="34, 44, 270, 350" href="https://en.wikipedia.org/wiki/Laptop" alt="laptop loading">
+        <area shape="circle" coords="337, 300, 44" href="https://en.wikipedia.org/wiki/Coffee" alt="coffee loading">
+    </map>
+    <picture>
+        <source media="(min-width: 992px)" srcset="./public/html.png">
+        <source media="(min-width: 768px)" srcset="./public/css.png">
+        <img src="./public/javascript.png" alt="frontend loading">
+    </picture>
+    <hr>
+
+    <!--Table-->
+    <table>
+        <caption>Dev</caption>
+        <colgroup>
+            <col span="2" style="background-color: #FF0000;">
+            <col span="1" style="background-color: #00FF00;">
+            <col span="1" style="background-color: #0000FF;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th colspan="2">Frontend</th>
+                <th>Backend</th>
+                <th>Database</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>HTML</td>
+                <td rowspan="2">React.js</td>
+                <td>Node.js</td>
+                <td>MySQL</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>Express.js</td>
+                <td>MongoDB</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>JavaScript</td>
+                <td>Next.js</td>
+                <td>Django</td>
+                <td>Oracle</td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr>
+
+    <!--List-->
+    <ul>
+        <li>React.js</li>
+        <li>Next.js</li>
+    </ul>
+    <ol type="1" start="1">                                     <!--A, a, I, i-->
+        <li>Node.js</li>
+        <li>Express.js</li>
+    </ol>
+    <dl>
+        <dt>MySQL</dt>
+        <dd>SQL</dd>
+        <dt>MongoDB</dt>
+        <dd>NoSQL</dd>
+    </dl>
+    <hr>
+
+    <!--Media-->
+    <audio controls autoplay muted>
+        <source src="./public/habibi.mp3" type="audio/mpeg">
+        <source src="./public/habibi.ogg" type="audio/ogg">
+        Unsupported Audio Format
+    </audio>
+    <video controls autoplay muted>
+        <source src="./public/habibi.mp4" type="video/mp4">
+        <source src="./public/habibi.webm" type="video/webm">
+        Unsupported Video Format
+    </video>
+</body>
+</html>

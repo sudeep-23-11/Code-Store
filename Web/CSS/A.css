@@ -1,0 +1,95 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;                                 /*content-box*/
+}
+
+@media only screen and (min-width: 768px) {                 /*max-width: 768px*/
+    body {
+        background-color: #FFFFFF;
+    }
+}
+@media only screen and (orientation: landscape) {           /*orientation: portrait*/
+    body {
+        background-color: #FFFFFF;
+    }
+}
+
+.xyz {
+    height: 250px;                                          /*auto*/
+    width: 250px;                                           /*auto*/
+    min-height: 50px;                                       /*auto*/
+    min-width: 50px;                                        /*auto*/
+    max-height: 500px;                                      /*auto*/
+    max-width: 500px;                                       /*auto*/
+
+    margin: 10px;                                           /*auto*/
+    padding: 5px;                                           /*auto*/
+
+    display: inline-block;                                  /*block, inline, none*/
+    visibility: visible;                                    /*hidden*/
+
+    border: solid;
+}
+
+#A {
+    background-color: #FF0000;                            /*transparent, currentColor*/
+    opacity: 0.5;
+    background-image: url(./public/github.png);
+    background-repeat: no-repeat;                           /*repeat, repeat-x, repeat-y, space, round*/
+    background-position: left top;                          /*right, bottom, center*/
+    background-size: 50% 50%;                               /*contain, cover, auto*/
+    background-origin: padding-box;                         /*border-box, content-box*/
+    background-clip: border-box;                            /*padding-box, content-box*/
+    background-attachment: scroll;                          /*fixed*/
+
+    border-style: solid;                                    /*dashed, dotted, double, groove, ridge, inset, outset, none*/
+    border-width: 5px;
+    border-color: #00FF00;
+    border-radius: 10px;
+    
+    outline-style: solid;                                   /*dashed, dotted, double, groove, ridge, inset, outset, none*/
+    outline-width: 5px;
+    outline-color: #0000FF;
+    outline-offset: 5px;
+}
+
+#B {
+    color: #FF0000;
+    text-align: justify;                                    /*left, right, center*/
+    text-justify: inter-word;                               /*inter-character, auto, none*/
+    text-decoration: underline;                             /*overline, line-through, none*/
+    text-transform: capitalize;                             /*uppercase, lowercase*/
+
+    text-indent: 10px;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    line-height: 30px;
+
+    font-style: normal;                                     /*italic, oblique*/
+    font-weight: normal;                                    /*bold*/
+    font-variant: normal;                                   /*small-caps*/
+    font-size: 20px;
+
+    text-shadow: 2px 2px 4px #00FF00;
+    box-shadow: 4px 4px 8px #0000FF;
+}
+#B img {
+    vertical-align: baseline;                               /*text-top, text-bottom, super, sub*/
+}
+
+#Ca {
+    overflow-x: hidden;
+
+    white-space: nowrap;                                    /*normal, pre, pre-line, pre-wrap*/
+    text-overflow: clip;                                    /*ellipsis*/
+}
+#Ca span {
+    writing-mode: vertical-rl;                              /*horizontal-tb, vertical-lr*/
+}
+#Cb {
+    word-break: break-all;                                  /*normal*/
+}
+#Cc {
+    word-wrap: break-word;                                  /*normal*/
+}

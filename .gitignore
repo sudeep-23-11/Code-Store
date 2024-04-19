@@ -1,8 +1,7 @@
 Web/*/node_modules
-Web/*/package-lock.json
-Web/*/package.json
-
 Web/*/public
-Web/JavaScript/DOM/public
-Web/*/*/styles
-Web/Next.js/.next
+
+Web/*/*/node_modules
+Web/*/*/public
+Web/*/*/.next
+Web/*/*/*/styles

@@ -1,6 +1,6 @@
 //RouterDOM
 import React from 'react';
-import {BrowserRouter as Router, Routes, Route, Link, Outlet} from "react-router-dom";
+import {BrowserRouter, Routes, Route, useParams, Link, NavLink, Navigate, Outlet} from "react-router-dom";
 
 const Home = () => <h1>Home Page</h1>;
 const About = () => <h1>About Page</h1>;
@@ -8,19 +8,23 @@ const Nested = () => <>
     <h1>Nested Page</h1>
     <Outlet />
 </>
+const Contact = () => <h1>Contact Page</h1>;
 const Skills = () => <h1>Skills Page</h1>;
 const Works = () => <h1>Works Page</h1>;
-const Contact = () => <h1>Contact Page</h1>;
+const Slug = () => <>
+    {console.log(useParams())}
+    <Navigate to="/about" />
+</>
 
 export default function RouterDOM() {
     return (
-        <Router>
+        <BrowserRouter>
             <ul>
                 <li>
                     <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <Link to="/about">About</Link>
+                    <NavLink to="/about" className={(isActive) => isActive ? "green" : "red"}>About</NavLink>
                 </li>
                 <li>
                     <Link to="/nested">Nested Contact</Link>
@@ -36,12 +40,13 @@ export default function RouterDOM() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path='/nested' element={<Nested />}>
+                    <Route index element={<Contact />}/>
                     <Route path="skills" element={<Skills />} />
                     <Route path="works" element={<Works />} />
-                    <Route index element={<Contact />}/>
                 </Route>
+                <Route path="/:slug" element={<Slug />} />
             </Routes>
-        </Router>
+        </BrowserRouter>
     )
 }
 

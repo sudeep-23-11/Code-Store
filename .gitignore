@@ -1,7 +1,7 @@
+Web/node_modules
+Web/public
+
 Web/*/node_modules
 Web/*/public
-
-Web/*/*/node_modules
-Web/*/*/public
-Web/*/*/.next
-Web/*/*/*/styles
+Web/*/.next
+Web/*/*/styles

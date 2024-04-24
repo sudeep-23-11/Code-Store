@@ -1,5 +1,5 @@
 export async function PUT(req, {params}) {
-    console.log(params.slug);
+    console.log(params);
     return Response.json({name: 'Put Request'});
 }
 export async function PATCH(req) {

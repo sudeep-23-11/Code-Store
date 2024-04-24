@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body onload="func1()" onunload="func1()">
+    <form id="A" onsubmit="func2()">
+        <input type="text"
+            onfocus="this.style.backgroundColor='#FFFF00'"
+            onchange="this.value=this.value.toUpperCase()">
+        <button type="submit">Submit</button>
+    </form>
+
+    <h5 id="B">HTML</h5>
+    <img class="C" src="../public/html.png">
+    <button type="button" onclick="func3()">Click 1</button>
+    <button id="D" type="button" disabled>Click 2</button>
+
+    <p class="E"
+        onmouseover="this.style.backgroundColor='#00FF00'"
+        onmouseout="this.style.backgroundColor='#FF0000'">
+        JavaScript
+    </p>
+    <p class="E"
+        onmousedown="this.style.backgroundColor='#0000FF'"
+        onmouseup="this.style.backgroundColor='#FF0000'">
+        TypeScript
+    </p>
+
+    <script src="./script.js"></script>
+</body>
+</html>

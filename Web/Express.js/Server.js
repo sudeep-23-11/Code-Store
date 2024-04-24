@@ -27,12 +27,13 @@ app.patch('/api/:slug', (req, res) => {
     console.log(req.protocol);
     console.log(req.hostname);
     console.log(req.originalUrl);
-    console.log(req.path);
     console.log(req.baseUrl);
+    console.log(req.path);
     console.log(req.body);
-    console.log(req.params.slug);
-    console.log(req.get('Authorization'));
     console.log(req.user);
+    console.log(req.headers);
+    console.log(req.get('Authorization'));
+    console.log(req.params);
 })
 app.delete('/api/:slug', (req, res) => {
     res.status(200);

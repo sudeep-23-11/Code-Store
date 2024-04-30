@@ -13,7 +13,11 @@ const updatedData = {
     y: "c"
 };
 
-axios.get('http://localhost:3000/api')
+axios.get('http://localhost:3000/api', {
+    headers: {
+        'Authorization': 'Bearer <token>'
+    }
+})
     .then(res => {
         console.log(res.data);
     })

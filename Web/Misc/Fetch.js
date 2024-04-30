@@ -12,7 +12,10 @@ const updatedData = {
 };
 
 fetch('http://localhost:3000/api', {
-    method: 'GET'
+    method: 'GET',
+    headers: {
+        'Authorization': 'Bearer <token>'
+    }
 })
     .then(res => res.json())
     .then(data => {
@@ -22,7 +25,7 @@ fetch('http://localhost:3000/api', {
 fetch('http://localhost:3000/api', {
     method: 'POST',
     headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
     },
     body: JSON.stringify(data)
 })
@@ -34,7 +37,7 @@ fetch('http://localhost:3000/api', {
 fetch('http://localhost:3000/api/69', {
     method: 'PUT',
     headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
     },
     body: JSON.stringify(replacedData)
 })
@@ -46,7 +49,7 @@ fetch('http://localhost:3000/api/69', {
 fetch('http://localhost:3000/api/69', {
     method: 'PATCH',
     headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
     },
     body: JSON.stringify(updatedData)
 })

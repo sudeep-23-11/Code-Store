@@ -20,16 +20,15 @@ const reset_password = async (req, res) => {
             from: '"Sudeep Kumar Srivastava" <sudeep@gmail.com>',
             to: 'aarush@gmail.com, aryan@gmail.com',
             subject: 'Password Reset',
-            text: `${link}`,
-            // html: `<h1>${link}</h1>`
+            html: `<h1>${link}</h1>`
         });
-        res.json({status: 'Success', message: 'Email successfully sent', link: link});
+        res.json({status: 'Success', message: 'Email successfully sent'});
     }
 }
 
 const reset_email = async (req, res) => {
     const {password, confirm_password} = req.body;
-    const {token} = req.params;
+    const {slug_token} = req.params;
 
     if(!password || !confirm_password)
     res.json({status: 'Failure', message: 'All fields required'});
@@ -38,7 +37,7 @@ const reset_email = async (req, res) => {
 
     else
     {
-        const {id} = await jsonwebtoken.verify(token, 'secret_key');
+        const {id} = await jsonwebtoken.verify(slug_token, 'secret_key');
         const hash_password = await bcrypt.hash(password, 10);
         await model.findByIdAndUpdate(id, {$set: {password: hash_password}});
         res.json({status: 'Success', message: 'Password successfully updated'});

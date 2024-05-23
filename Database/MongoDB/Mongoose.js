@@ -1,7 +1,7 @@
 //Mongoose
 import mongoose from 'mongoose'; 
 
-mongoose.connect('mongodb+srv://sudeep-23-11:sudeep23modb@cluster0.durvk9p.mongodb.net/demo');
+mongoose.connect('mongodb+srv://sudeep-23-11:sudeep23modb@cluster0.jbr7ldh.mongodb.net/demo');
 
 let schema = new mongoose.Schema({
     name: {

@@ -1,7 +1,7 @@
 * .findOne({exp}) ------------------------------------------------ find first document that matches exp
 * .find({exp}) --------------------------------------------------- find all documents that matches exp
 * .find({}) ------------------------------------------------------ find all doccuments
-* .findById(id) -------------------------------------------------- find document with _id=id
+* .countDocuments({exp}) ----------------------------------------- count all documents that matches exp
 *
 *
 * {f: {$eq: v}} -------------------------------------------------- f==v
@@ -21,7 +21,6 @@
 * {f: {$type: [dt1, dt2]}} --------------------------------------- datatype of field f is dt1, dt2
 *
 *
-* .count() ------------------------------------------------------- count documents
 * .sort({f: 1}) -------------------------------------------------- sort documents in ascending order according to field f
     * -1 --------------------------------------------------------- descending order
 * .limit(n) ------------------------------------------------------ limit documents to n

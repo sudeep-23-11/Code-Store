@@ -6,7 +6,6 @@
 * .updateMany({exp}, {$set: {f: nv}}) ---------------------------- update all documents that matches exp with f: nv
 * .findOneAndUpdate({exp}, {$set: {f: nv}}, {returnNewDocument: false}) - update first document that matches exp with f: nv and return pre updated document
     * true ------------------------------------------------------- post
-* .findByIdAndUpdate(id, {$set: {f: nv}}) ------------------------ update document with _id=id with f: nv
 *
 *
 * .replaceOne({exp}, {doc}) -------------------------------------- replace first document that matches exp with doc
@@ -18,13 +17,12 @@
 * .deleteMany({exp}) --------------------------------------------- delete all documents that match exp
 * .deleteMany({}) ------------------------------------------------ delete all documents
 * .findOneAndDelete({exp}) --------------------------------------- delete first document that matches exp and return deleted document
-* .findByIdAndDelete(id) ----------------------------------------- delete document with _id=id
 *
 *
 * show dbs ------------------------------------------------------- list databases
-* use dtb -------------------------------------------------------- start using database dtb
-* db ------------------------------------------------------------- show current database
-* db.dropDatabase() ---------------------------------------------- delete current database
+* use db --------------------------------------------------------- create and start using database db
+* db.dropDatabase() ---------------------------------------------- delete database db
+* db ------------------------------------------------------------- show database name
 *
 *
 * show collections ----------------------------------------------- list collections

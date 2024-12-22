@@ -1,0 +1,2 @@
+-record(person, {name, rank, percent}).
+-record(figure, {name, height=20, width=30}).

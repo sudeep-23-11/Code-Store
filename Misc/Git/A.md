@@ -27,6 +27,11 @@
 * git restore . -------------------- discard changes of all changed files
 *
 *
+* git mv _ _ ----------------------- move/rename file _ to _ and stage it
+* git rm _ ------------------------- remove file _ and stage it
+    * --cached --------------------- untrack file _
+*
+*
 * git commit -m _ ------------------ commit with message _
     * -a --------------------------- skip staging area
     * --amend ---------------------- modify last commit

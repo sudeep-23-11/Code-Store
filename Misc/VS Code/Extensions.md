@@ -24,3 +24,5 @@
 * ES7+ React/Redux/React-Native snippets
 * Live Server
 * Thunder Client
+* erlang
+* Docker

@@ -26,11 +26,11 @@ body() -> [
         #tablerow { cells=[
             #tablecell { text="React" },
             #tablecell { text="Next", rowspan=2 },
-            #tablecell { text="Node", align="center" }              % left, right
+            #tablecell { text="Node", align="center" }              %left, right
         ]},
         #tablerow { cells=[
             #tablecell { text="Redux" },
-            #tablecell { text="Express", valign="middle" }          % top, bottom
+            #tablecell { text="Express", valign="middle" }          %top, bottom
         ]}
     ]},
     #singlerow { cells=[

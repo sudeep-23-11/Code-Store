@@ -1,4 +1,4 @@
-% GenServer
+%GenServer
 -module(client).
 -export([start/0, stop/0, get/0, put/1, reqid/0]).
 

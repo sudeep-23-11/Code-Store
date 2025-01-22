@@ -32,7 +32,7 @@ d3 = {'name': 'shivam', 'iq': -30}
 co.insert_many([d1, d2, d3])
 co.update_many({'iq': {'$lt': 0}}, {'$set': {'iq': 30}})
 co.delete_many({'iq': {'$eq': 60}})
-res = co.find({})
+res = co.find()
 for i in res :
     print(i)
 client.close()

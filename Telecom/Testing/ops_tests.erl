@@ -1,4 +1,4 @@
-% Testing
+%Testing
 -module(ops_tests).
 -include_lib("eunit/include/eunit.hrl").
 

@@ -1,4 +1,4 @@
-% Mnesia
+%Mnesia
 -module(xMnesia).
 -include_lib("stdlib/include/qlc.hrl").
 -export([start/0, stop/0, transaction/0, dirty/0, activity/0, query/0]).
@@ -9,12 +9,12 @@ start() ->
     mnesia:create_schema([node()]),
     mnesia:start(),
     mnesia:create_table(person,
-        [{access_mode, read_write},                                         % read_only
-        {type, ordered_set},                                                % set, bag
+        [{access_mode, read_write},                                         %read_only
+        {type, ordered_set},                                                %set, bag
         {record_name, person},
         {attributes, [roll, name, percent]},
         {index, [name]},
-        {disc_copies, [node()]}]),                                          % ram_copies, disc_only_copies
+        {disc_copies, [node()]}]),                                          %ram_copies, disc_only_copies
     mnesia:add_table_index(person, percent),
     mnesia:schema(person).
 
@@ -64,12 +64,12 @@ dirty() ->
     end).
 
 activity() ->
-    mnesia:activity(transaction, fun() ->                                   % sync_transaction
+    mnesia:activity(transaction, fun() ->                                   %sync_transaction
         Data1=mnesia:index_read(person, "sudeep", name),
         Data2=mnesia:foldl(?F, [], person),
         io:format("~p ~p ~n ~p ~n", [mnesia:is_transaction(), Data1, Data2])
     end),
-    mnesia:activity(async_dirty, fun() ->                                   % sync_dirty
+    mnesia:activity(async_dirty, fun() ->                                   %sync_dirty
         Data1=mnesia:dirty_index_read(person, "aarush", name),
         Data2=mnesia:foldr(?F, [], person),
         io:format("~p ~p ~n ~p ~n", [mnesia:is_transaction(), Data1, Data2])

@@ -1,19 +1,19 @@
-% Supervisor
+%Supervisor
 -module(xSupervisor).
 -behaviour(supervisor).
 -export([init/1, start/0, child/0]).
 
 specs(Id, Func) -> #{id => Id,
     start => {ops, Func, [2, 3]},
-    restart => transient,                                                   % permanent, temporary
-    significant => false,                                                   % true
-    shutdown => 5000,                                                       % brutal_kill
-    type => worker,                                                         % supervisor
-    modules => [ops]}.                                                      % dynamic
+    restart => transient,                                                   %permanent, temporary
+    significant => false,                                                   %true
+    shutdown => 5000,                                                       %brutal_kill
+    type => worker,                                                         %supervisor
+    modules => [ops]}.                                                      %dynamic
 
 init(Args) ->
     {MaxR, MaxT}=Args,
-    SupFlags=#{strategy => one_for_one,                                     % one_for_all, rest_for_one, simple_one_for_one
+    SupFlags=#{strategy => one_for_one,                                     %one_for_all, rest_for_one, simple_one_for_one
         intensity => MaxR,
         period => MaxT},
     ChildSpec1=specs(child1, add_proc),

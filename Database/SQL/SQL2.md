@@ -1,5 +1,5 @@
 # Select
-* select * from T -------------------------- read all data 
+* select * from T -------------------------- read all data
     * X, Y --------------------------------- read data of X, Y
     * X as X' ------------------------------ X' is alias of X
     * distinct X --------------------------- distinct values of X
@@ -12,18 +12,18 @@
     * group by X --------------------------- make groups according to X
     * group by X having E ------------------ make groups according to X that matches E
 * select * from T where E ------------------ read data that match E
-    * not E -------------------------------- that do not match E 
-    * E1 and E2 ---------------------------- that match both E1 and E2 
+    * not E -------------------------------- that do not match E
+    * E1 and E2 ---------------------------- that match both E1 and E2
     * E1 or E2 ----------------------------- that match either E1 or E2
     * X is null ---------------------------- X is null
     * X is not null ------------------------ X is not null
     * X between x1 and x2 ------------------ X is in range [x1, x2]
     * X in (x1, x2) ------------------------ X is x1, x2
     * X like '_P%' ------------------------- X contains one character, then P, then zero or more characters
-* select T.X, T.Y, T'.X' from T inner join T' on T.Y=T'.Y' -- read matched data of T, T'
-    * left join --------------------------------------------- read all data of T, matched data of T'
-    * right join -------------------------------------------- read matched data of T, all data of T'
-* select T.X, T.Y, T'.X' from T cross join T' --------------- read cartesian product of T, T'
+* select T.X, T.Y, T'.X' from T inner join T' on T.Y=T'.Y' - read matched data of T, T'
+    * left join -------------------------------------------- read all data of T, matched data of T'
+    * right join ------------------------------------------- read matched data of T, all data of T'
+* select T.X, T.Y, T'.X' from T cross join T' -------------- read cartesian product of T, T'
 
 
 # Query Q

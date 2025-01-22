@@ -1,4 +1,4 @@
-% Record
+%Record
 -module(xRecord).
 -export([create/0]).
 -include("records.hrl").

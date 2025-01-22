@@ -1,4 +1,4 @@
-% Process
+%Process
 -module(xProcess).
 -export([proc/0, add_proc/0, subtract_proc/0, multiply_proc/0]).
 

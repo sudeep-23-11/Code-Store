@@ -7,8 +7,8 @@ body() -> [
 
     #textbox { text="Input", maxlength=10, size=20,
         disabled=false, readonly=false, placeholder="Enter",
-        id=txb, next=txa, type="text"   % email, tel, url, search, number, range, color
-                                        % month, week, date, datetime, datetime-local, time
+        id=txb, next=txa, type="text"   %email, tel, url, search, number, range, color
+                                        %month, week, date, datetime, datetime-local, time
     },
     #textarea { text="Text Area", rows=10, columns=20,
         disabled=false, readonly=false, placeholder="Enter",

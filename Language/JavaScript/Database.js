@@ -50,7 +50,7 @@ let mongodb_func = async () => {
     await model.insertMany([d1, d2, d3]);
     await model.updateMany({iq: {$lt: 0}}, {$set: {iq: 30}});
     await model.deleteMany({iq: {$eq: 60}});
-    const res = await model.find({});
+    const res = await model.find();
     for (let i=0;i<res.length;i++)
         console.log(res[i]);
     await mongoose.connection.close();

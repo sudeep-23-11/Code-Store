@@ -14,4 +14,4 @@
 
 
 # Select
-* select T.X, T.Y, T'.X' from T full join T' on T.Y=T'.Y' --- read all data of T, T'
+* select T.X, T.Y, T'.X' from T full join T' on T.Y=T'.Y' -- read all data of T, T'

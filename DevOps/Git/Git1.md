@@ -1,8 +1,8 @@
 # Theory
-* Types of Version Control Systems are Local, Centralized, Distributed
-* Three Stage Architecture of Git are Working directory, Staging area, Git directory
-* Types of Primary branches in Git are Main, Develop
-* Types of Supporting branches in Git are Feature, Release, Hotfix
+* Version Control Systems = Local, Centralized, Distributed
+* Three Stage Architecture = Working directory, Staging area, Git directory
+* Primary branches = Main, Develop
+* Supporting branches = Feature, Release, Hotfix
 
 
 # Stage changes of F

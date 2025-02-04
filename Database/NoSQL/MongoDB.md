@@ -53,3 +53,6 @@
 * .sort({X: -1}) --------------------------- sort in descending order according to X
 * .limit(N) -------------------------------- limit to N
 * .skip(N) --------------------------------- skip first N
+*
+*
+* .aggregate([{$match: {E}}, {$group: {_id: "$X", K: {$sum: "$Y"}}}, {$sort: {Z: 1}}]) - read all that match E, make groups according to X, summation of Y in K, sort in ascending order according to Z

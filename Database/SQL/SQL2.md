@@ -9,8 +9,8 @@
     * order by X desc ---------------------- sort data in descending order according to X
     * limit N ------------------------------ limit data to N
     * offset N ----------------------------- skip first N data
-    * group by X --------------------------- make groups according to X
-    * group by X having E ------------------ make groups according to X that matches E
+* select X, sum (Y) from T group by X ------ make groups according to X, summation of Y
+    * having E ----------------------------- that matches E
 * select * from T where E ------------------ read data that match E
     * not E -------------------------------- that do not match E
     * E1 and E2 ---------------------------- that match both E1 and E2

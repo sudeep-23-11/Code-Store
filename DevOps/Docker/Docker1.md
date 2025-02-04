@@ -26,7 +26,7 @@
 *
 * docker ps ------------------------ list running
     * -a --------------------------- list all
-* docker container prune ----------- delete all containers
+* docker container prune ----------- delete all
 * docker top C --------------------- list processes
 * docker port C -------------------- list port mappings
 * docker port C P ------------------ port P mapping

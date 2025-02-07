@@ -1,3 +1,4 @@
+# Theory
 * zookeeper nodes
     * odd in number
     * minimum = 3

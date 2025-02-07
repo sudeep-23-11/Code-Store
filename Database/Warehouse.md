@@ -1,3 +1,4 @@
+# Theory
 * ETL = Extract Transform Load
 
 * Star schema

@@ -10,4 +10,4 @@
 
 
 # Index I
-* alter table T drop index I --------------- drop
+* drop index I on T ------------------------ delete

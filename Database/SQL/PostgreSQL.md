@@ -10,7 +10,7 @@
 
 
 # Index I
-* drop index I ----------------------------- drop
+* drop index I ----------------------------- delete
 
 
 # Select

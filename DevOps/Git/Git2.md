@@ -25,10 +25,12 @@
     * -m --------------------------- rename
     * -M --------------------------- force rename
 * git branch ----------------------- list
+    * -a --------------------------- include remote
     * -v --------------------------- include last commit
     * --merged --------------------- list merged
     * --no-merged ------------------ list non-merged
-* git checkout B ------------------- switch
+* git switch B --------------------- switch
+    * -c --------------------------- create and switch
 * git merge B ---------------------- merge
 
 

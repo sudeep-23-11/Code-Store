@@ -28,7 +28,7 @@
 
 
 # Commit C
-* git checkout C ------------------- switch
+* git checkout C ------------------- create branch and switch
 * git reset C ---------------------- move Head
     * --soft ----------------------- preserve changes
     * --hard ----------------------- discard changes

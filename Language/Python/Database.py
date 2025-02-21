@@ -1,41 +1,56 @@
 #Database
-import mysql.connector as msc
-import pymongo as pm
+import pymysql
+import psycopg2
+import pymongo
 
-connection = msc.connect(
-    host='localhost',
-    user='root',
-    password='sudeep23mysq',
-    database='demo'
-)
-cursor = connection.cursor()
-cursor.execute('create table data (name varchar(255), iq varchar(255))')
-cursor.execute('insert into data (name, iq) values (%s, %s)', ('aarush', '90'))
-cursor.execute('insert into data (name, iq) values (%s, %s)', ('aryan', '60'))
-cursor.execute('insert into data (name, iq) values (%s, %s)', ('shivam', '-30'))
-cursor.execute('update data set iq=%s where iq<%s', ('30', '0'))
-cursor.execute('delete from data where iq=%s', ('60',))
-cursor.execute('select * from data')
-res = cursor.fetchall()
-for i in res :
-    print(i)
-connection.commit()
-cursor.close()
-connection.close()
+def sql() :
+    conn = pymysql.connect(
+        host = 'localhost',
+        port = 3306,
+        database = 'demo',
+        user = 'root',
+        password = '1234'
+    )
+    # conn = psycopg2.connect(
+    #     host = 'localhost',
+    #     port = 5432,
+    #     database = 'demo',
+    #     user = 'postgres',
+    #     password = '1234'
+    # )
+    cur = conn.cursor()
+    cur.execute('create table data (name varchar(255), iq varchar(255))')
+    data = [
+        ('aarush', '90'),
+        ('aryan', '60'),
+        ('shivam', '-30')
+    ]
+    cur.executemany('insert into data (name, iq) values (%s, %s)', data)
+    cur.execute('update data set iq=%s where iq<%s', ('30', '0'))
+    cur.execute('delete from data where iq=%s', ('60',))
+    cur.execute('select * from data')
+    print(cur.fetchall())
+    # print(cur.fetchone())
+    # print(cur.fetchmany(10))
+    conn.commit()
+    cur.close()
+    conn.close()
+sql()
 
-client = pm.MongoClient('mongodb+srv://sudeep-23-11:sudeep23modb@cluster0.jbr7ldh.mongodb.net')
-db = client['demo']
-co = db['data']
-d1 = {'name': 'aarush', 'iq': 90}
-d2 = {'name': 'aryan', 'iq': 60}
-d3 = {'name': 'shivam', 'iq': -30}
-co.insert_many([d1, d2, d3])
-co.update_many({'iq': {'$lt': 0}}, {'$set': {'iq': 30}})
-co.delete_many({'iq': {'$eq': 60}})
-res = co.find()
-for i in res :
-    print(i)
-client.close()
+def no_sql() :
+    conn = pymongo.MongoClient('mongodb+srv://sudeep:sudeep@cluster0.vcuxp.mongodb.net')
+    db = conn['demo']
+    co = db['data']
+    d1 = {'name': 'aarush', 'iq': 90}
+    d2 = {'name': 'aryan', 'iq': 60}
+    d3 = {'name': 'shivam', 'iq': -30}
+    co.insert_many([d1, d2, d3])
+    co.update_many({'iq': {'$lt': 0}}, {'$set': {'iq': 30}})
+    co.delete_many({'iq': {'$eq': 60}})
+    print(list(co.find()))
+    conn.close()
+no_sql()
 
-# pip install mysql-connector-python
+# pip install pymysql
+# pip install psycopg2
 # pip install pymongo

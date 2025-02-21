@@ -1,29 +1,43 @@
 //Database
-import mysql from 'mysql2/promise';
+import knex from 'knex';
 import mongoose from 'mongoose'; 
 
-let mysql_func = async () => {
-    const connection = await mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: 'sudeep23mysq',
-        database: 'demo'
+let sql = async () => {
+    const conn = await knex({
+        client: 'mysql2',
+        connection: {
+            host: 'localhost',
+            port: 3306,
+            database: 'demo',
+            user: 'root',
+            password: '1234'
+        }
     });
-    await connection.execute('create table data (name varchar(255), iq varchar(255))');
-    await connection.execute('insert into data (name, iq) values (?, ?)', ['aarush', 90]);
-    await connection.execute('insert into data (name, iq) values (?, ?)', ['aryan', 60]);
-    await connection.execute('insert into data (name, iq) values (?, ?)', ['shivam', -30]);
-    await connection.execute('update data set iq=? where iq<?', [30, 0]);
-    await connection.execute('delete from data where iq=?', [60]);
-    const [res] = await connection.execute('select * from data');
-    for (let i=0;i<res.length;i++)
-        console.log(res[i]);
-    await connection.end();
+    // const conn = await knex({
+    //     client: 'pg',
+    //     connection: {
+    //         host: 'localhost',
+    //         port: 5432,
+    //         database: 'demo',
+    //         user: 'postgres',
+    //         password: '1234'
+    //     }
+    // });
+    await conn.raw('create table data (name varchar(255), iq varchar(255))');
+    await conn.raw('insert into data (name, iq) values (?, ?)', ['aarush', 90]);
+    await conn.raw('insert into data (name, iq) values (?, ?)', ['aryan', 60]);
+    await conn.raw('insert into data (name, iq) values (?, ?)', ['shivam', -30]);
+    await conn.raw('update data set iq=? where iq<?', [30, 0]);
+    await conn.raw('delete from data where iq=?', [60]);
+    const res = await conn.raw('select * from data');
+    console.log(res[0]);
+    // console.log(res.rows);
+    await conn.destroy();
 }
-mysql_func();
+sql();
 
-let mongodb_func = async () => {
-    await mongoose.connect('mongodb+srv://sudeep-23-11:sudeep23modb@cluster0.jbr7ldh.mongodb.net/demo');
+let no_sql = async () => {
+    await mongoose.connect('mongodb+srv://sudeep:sudeep@cluster0.vcuxp.mongodb.net/demo');
     let schema = new mongoose.Schema({
         name: {
             type: String,
@@ -51,11 +65,12 @@ let mongodb_func = async () => {
     await model.updateMany({iq: {$lt: 0}}, {$set: {iq: 30}});
     await model.deleteMany({iq: {$eq: 60}});
     const res = await model.find();
-    for (let i=0;i<res.length;i++)
-        console.log(res[i]);
+    console.log(res);
     await mongoose.connection.close();
 }
-mongodb_func();
+no_sql();
 
+// npm install knex
 // npm install mysql2
+// npm install pg
 // npm install mongoose

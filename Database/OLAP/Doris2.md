@@ -9,7 +9,7 @@ partition by range (X) --------------------- range partitioning
 distributed by hash (Y) buckets B ---------- hash bucketing (B buckets)
 properties
 (
-    "replication_num" = "1"
+    "replication_num" = "R" ---------------- with R replications
 );
     * Z dz) unique key (X, Y) -------------- primary key model
     * Z dz sum) aggregate key (X, Y) ------- aggregate model

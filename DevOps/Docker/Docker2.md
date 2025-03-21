@@ -1,7 +1,7 @@
 # Network N
 * docker network create N ---------- create
-    * -d bridge ---------------------- having bridge driver
-    * -d host ------------------------ having host driver
+    * -d bridge -------------------- having bridge driver
+    * -d host ---------------------- having host driver
 * docker network rm N -------------- delete
 * docker network connect N C ------- connect container C
 * docker network disconnect N C ---- disconnect container C

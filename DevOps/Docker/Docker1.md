@@ -6,11 +6,11 @@
     * -e K=V ----------------------- set environment variable K=V
     * --restart no ----------------- will never restart
     * --restart always ------------- will always restart
-    * --restart on-failure:3 ------- will restart 3 times
+    * --restart on-failure:X ------- will restart X times
     * --restart unless-stopped ----- will always restart until maunally stopped 
     * --network N ------------------ connect to network N
-    * -m="Xg" ---------------------- allocate XGB memory
-    * --cpus="X" ------------------- allocate X cpus
+    * -m="Xg" ---------------------- with XGB memory
+    * --cpus="X" ------------------- with X cpus
 * docker rm C ---------------------- delete
 * docker start C ------------------- start
 * docker stop C -------------------- stop
@@ -44,7 +44,7 @@
 
 
 # Image I:Tag T
-* docker build P ------------------- create from dockerfile in path p
+* docker build P ------------------- create from dockerfile in path P
     * -t I:T ----------------------- with image I:tag T
 * docker commit C I:T -------------- create from container C
 * docker tag I1:T1 I2:T2 ----------- create from image I1:tag T1

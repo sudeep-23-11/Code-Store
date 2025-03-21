@@ -15,11 +15,13 @@
 
 * Partitioning
     * first layer of logical division
+    * table contains partitions
     * Range = value range of partitioning column
     * List = specific values of partitioning column
 
 * Bucketing
     * second layer of logical division
+    * partition contains buckets
     * Hash = hash value of bucketing column
     * Random = randomly
 

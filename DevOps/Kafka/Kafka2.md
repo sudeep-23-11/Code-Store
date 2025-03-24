@@ -3,7 +3,9 @@
     * --topic T --create ------------------- create
             * --partitions P --------------- with P partitions
             * --replication-factor R ------- with R replications
+            * --if-not-exists -------------- if it does not exists
         * --delete ------------------------- delete
+            * --if-exists ------------------ it it exists
         * --alter --partitions P ----------- update with P partitions
         * --describe ----------------------- details
     * --list ------------------------------- list
@@ -13,6 +15,8 @@
 * ./bin/kafka-console-producer.sh --bootstrap-server localhost:9092
     * --topic T ---------------------------- enter data
         * < F ------------------------------ take data from file F
+        * --property parse.key=true -------- include key
+        * --property key.separator=$'\t' --- use \t as key separator
 
 
 # Topic T (Consumer)
@@ -24,6 +28,13 @@
             * --offset earliest ------------ show from beginning
             * --offset N ------------------- show after N data
         * --group G ------------------------ having consumer group G
+        * --property print.key=true -------- include key
+            * .value=true ------------------ include value
+            * .partition=true -------------- include partition
+            * .offset=true ----------------- include offset
+            * .timestamp=true -------------- include timestamp
+        * --property key.separator=$'\t' --- use \t as key separator
+        * --property line.separator=$'\n' -- use \n as line separator
 
 
 # Consumer Group G

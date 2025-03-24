@@ -1,6 +1,14 @@
 # Theory
 * Broker = cluster node
-* Topic = storage entity
+
+* Topic
+    * storage entity
+    * key-value pairs
+    * Key
+        * optional
+        * if provided partition = hash(key)
+        * if not provided partition = random
+    * Value = actual message
 
 * Partition
     * logical division

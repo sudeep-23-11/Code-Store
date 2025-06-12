@@ -1,4 +1,20 @@
 # Theory
+* Doris node
+    * Frontend
+        * Follower
+            * query parsing
+            * leader election
+            * alter system add/drop follower 'sockaddr'
+        * Observer
+            * metadata management
+            * alter system add/drop observer 'sockaddr'
+        * show frontends
+    * Backend
+        * data storage
+        * query execution
+        * alter system add/drop backend 'sockaddr'
+        * show backends
+
 * Data model
     * Detail
         * Duplicate key
@@ -28,11 +44,8 @@
 * mysql queries
 * not avaliable = use, unique, check, primary key, foreign key, any, all
 
-
-# Partition P
-* show partitions from T ------------------- list
-* alter table T drop partition P ----------- delete
-* truncate table T partition P ------------- delete all data
-* alter table T rename partition P P' ------ rename to P'
-* delete from T partition P where E -------- delete data that match E
-* select * from T partition P -------------- read all data
+* ./fe/bin/start_fe.sh --daemon
+* ./fe/bin/start_fe.sh --helper master_sockaddr --daemon
+* ./fe/bin/stop_fe.sh
+* ./be/bin/start_be.sh --daemon
+* ./be/bin/stop_be.sh

@@ -1,34 +1,33 @@
 //Object
 let obj1={
-    app: "kotlin",
-    web: "java",
-    
+    web: "javascript",
+    Web: function() {return this.web},
+
     set setWeb(web) {this.web=web},
     get getWeb() {return this.web},
-    App: function() {return this.app}
-};
-obj1.iq=100;
-console.log(obj1.app, obj1["web"]);
-let {app, web, iq} = obj1;
-console.log(app, web, iq);
-delete obj1.iq;
-
-obj1.setWeb="javascript";
+}
+console.log(obj1["web"], obj1.Web());
+obj1.setWeb="typescript";
 console.log(obj1.getWeb);
-obj1.Web=function(n) {return this.web+" "+n}
-console.log(obj1.App(), obj1.Web(5));
-console.log(Object.values(obj1));
 
-function obj2(app, web)
+obj1["iq"]=100;
+obj1.Iq=function(n) {return this.iq*n}
+console.log(obj1["iq"], obj1.Iq(5));
+let {web, iq} = obj1;
+console.log(web, iq);
+console.log(Object.values(obj1));
+delete obj1["iq"];
+delete obj1.Iq;
+
+function obj2(web)
 {
-    this.app=app,
     this.web=web,
-    this.App=function() {return this.app}
+    this.Web=function() {return this.web}
 };
-obj2.prototype.iq=100;
-obj2.prototype.Web=function(n) {return this.web+" "+n}
-let t=new obj2("kotlin", "javascript");
-console.log(t.App(), t.Web(5));
+obj2.prototype["iq"]=100;
+obj2.prototype.Iq=function(n) {return this.iq*n}
+let t=new obj2("javascript");
+console.log(t.Web(), t.Iq(5));
 
 let obj3={
     Print: function(x, y) {return this.app+" "+this.web+" "+x+" "+y}

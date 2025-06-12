@@ -8,16 +8,14 @@ A.unshift(1);
 A.splice(2, 0, 3, 4);
 
 console.log(A.includes(3), A.indexOf(3), A.lastIndexOf(3));
-console.log(A.slice(1, 3));
+console.log(A.slice(1, 3), A.slice(-4, -2));
 
 console.log(A.toString(), A.join(' '));
 console.log(Array.from("sudeep"));
 
-let s=0;
-A.forEach((i) => s+=i)
-console.log(s);
+A.forEach((i) => console.log(i))
 console.log(A.map((i) => {return i*2}));
-console.log(A.flatMap((i) => {return i*2}));
+console.log(A.flatMap((i) => {return [i*2, i*3]}));
 console.log(A.filter((i) => {return i>3}));
 console.log(A.reduce((t, i) => {return t+=i}));
 console.log(A.reduceRight((t, i) => {return t+=i}));

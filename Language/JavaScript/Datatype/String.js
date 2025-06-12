@@ -6,7 +6,7 @@ console.log(x, y);
 let s="sudeep";
 console.log(s.length);
 
-console.log(s.includes("ee"), s.indexOf("ee"), s.lastIndexOf("ee"), s.search("ee"));
+console.log(s.includes("ee"), s.indexOf("ee"), s.lastIndexOf("ee"), s.search(/ee/));
 console.log(s.startsWith("su"), s.endsWith("su"));
 
 console.log(s.charAt(1), s.charCodeAt(1));

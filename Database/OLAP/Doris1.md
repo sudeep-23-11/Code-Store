@@ -30,13 +30,13 @@
         * aggregated data of non-key columns are inserted
 
 * Partitioning
-    * first layer of logical division
+    * logical division
     * table contains partitions
     * Range = value range of partitioning column
     * List = specific values of partitioning column
 
 * Bucketing
-    * second layer of logical division
+    * physical division as tablet
     * partition contains buckets
     * Hash = hash value of bucketing column
     * Random = randomly

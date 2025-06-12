@@ -13,6 +13,11 @@
 * Partition
     * logical division
     * topic contains partitions
+    * Leader
+    * Replicas
+        * Isr = replicas which are currently in sync
+        * Min.Isr = minimum insync replicas required
+
 * Segment
     * physical division as file
     * partition contains segments
@@ -20,6 +25,7 @@
 * Producer
     * publish to topic
     * send data to topic
+
 * Consumer
     * subscribe to topic
     * receive data from topic
@@ -30,6 +36,6 @@
     * entire topic is avaliable for consumers having different consumer groups
 
 * ./bin/zookeeper-server-start.sh config/zookeeper.properties
-* ./bin/zookeeper-server-stop.sh config/zookeeper.properties
+* ./bin/zookeeper-server-stop.sh
 * ./bin/kafka-server-start.sh config/server.properties
-* ./bin/kafka-server-stop.sh config/server.properties
+* ./bin/kafka-server-stop.sh

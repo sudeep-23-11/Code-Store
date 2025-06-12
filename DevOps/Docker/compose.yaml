@@ -1,4 +1,4 @@
-#Docker compose file
+#DockerComposeFile
 services:
   ngnix:
     build:

@@ -50,3 +50,6 @@
 * Funnel = combine FlowFiles of multiple connections into a single connection
 * Label = labelling
 * Controller Services = shared services
+
+* ./bin/nifi.sh start
+* ./bin/nifi.sh stop

@@ -1,4 +1,4 @@
-#Docker file
+#DockerFile
 FROM nginx:latest
 
 USER root

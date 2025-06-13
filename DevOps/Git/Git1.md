@@ -18,28 +18,30 @@
 
 # Commit changes of F
 * git commit F --------------------- commit changes
-    * -m M ------------------------- with message M
+    * -m M ------------------------- include message M
+    * -C I ------------------------- include message of commit of id I
     * -a --------------------------- skip staging area
     * --amend ---------------------- modify last commit
 * git log -------------------------- list
-    * -p --------------------------- details
-    * --stat ----------------------- changed files
-    * --since=D -------------------- since date D
+    * -p --------------------------- include details
+    * --stat ----------------------- include changed files
+    * -N --------------------------- last N commits
+    * --reverse -------------------- reverse list
 
 
 # Commit C
-* git checkout C ------------------- create branch and switch
-* git reset C ---------------------- move Head
+* git checkout C ------------------- head detached to C
+* git reset C ---------------------- head moved to C
     * --soft ----------------------- preserve changes
     * --hard ----------------------- discard changes
 
 
 # Stash
-* git stash ------------------------ stash changes
-    * save M ----------------------- with message M
-* git stash apply ------------------ apply latest stash
+* git stash ------------------------ stash
+    * save M ----------------------- include message M
+* git stash apply ------------------ apply
     * I ---------------------------- stash of id I
-* git stash drop ------------------- delete latest stash
+* git stash drop ------------------- delete
     * I ---------------------------- stash of id I
 * git stash list ------------------- list
 * git stash clear ------------------ delete all

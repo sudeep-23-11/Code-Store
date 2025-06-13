@@ -1,21 +1,11 @@
-# Remote Repository R
-* git clone R ---------------------- clone
-* git remote ----------------------- list
-    * -v --------------------------- include fetch and push
-* git remote add origin R ---------- add as origin
-* git remote show origin ----------- show origin
-* git remote rm origin ------------- remove origin
-
-
-# Push to and Pull from origin/B branch
-* git push origin B ---------------- push changes
-    * -u --------------------------- set as upstream branch
-    * --force ---------------------- force push
+# Tag T
+* git tag T ------------------------ create
+    * -a -m M ---------------------- include tagger, date, message M
+    * -f --------------------------- update
     * -d --------------------------- delete
-* git push ------------------------- to its upstream branch
-* git pull origin B ---------------- pull changes
-    * --force ---------------------- force pull
-* git pull ------------------------- from its upstream branch
+    * I ---------------------------- commit of id I
+* git tag -------------------------- list
+* git show T ----------------------- details
 
 
 # Branch B
@@ -25,19 +15,37 @@
     * -m --------------------------- rename
     * -M --------------------------- force rename
 * git branch ----------------------- list
-    * -a --------------------------- include remote
+    * -a --------------------------- include remote branches
     * -v --------------------------- include last commit
     * --merged --------------------- list merged
     * --no-merged ------------------ list non-merged
 * git switch B --------------------- switch
     * -c --------------------------- create and switch
-* git merge B ---------------------- merge
+* git merge B ---------------------- merge all commits
+* git rebase B --------------------- rebase to latest commit
 
 
-# Global
-* git config --global user.name N -- name is N
-* git config --global user.email E - email is E
-* git config --list ---------------- details
-* git config --global alias.X Y ---- X is alias of Y
-* git init ------------------------- initialize git repository
-* git status ----------------------- status of repository
+# Remote Repository R
+* git clone R ---------------------- clone
+* git remote ----------------------- list
+    * -v --------------------------- include fetch, push
+    * add origin R ----------------- add as origin
+    * show origin ------------------ show origin
+    * rm origin -------------------- remove origin
+
+
+# Remote Branch B
+* git push origin B ---------------- create and push
+    * -u --------------------------- set upstream branch
+    * -f --------------------------- force push
+    * -d --------------------------- delete
+* git push ------------------------- push to its upstream branch
+* git pull origin B ---------------- pull
+    * -f --------------------------- force pull
+* git pull ------------------------- pull from its upstream branch
+
+
+# Remote Tag T
+* git push origin T ---------------- push
+    * -f --------------------------- force push
+    * -d --------------------------- delete

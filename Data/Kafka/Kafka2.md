@@ -51,7 +51,6 @@
 
 # Reassignment
 * ./bin/kafka-reassign-partitions.sh --bootstrap-server localhost:9092
-    * --version ---------------------------- kafka version
     * --topics-to-move-json-file P --------- generate.json at path P
     * --broker-list 0,1,2 ------------------ borker list
     * --generate --------------------------- content of execute.json

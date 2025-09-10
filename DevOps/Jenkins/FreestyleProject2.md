@@ -5,6 +5,8 @@
         * Exclude = exclude
     * Apply pattern also on directories = include directories or not
     * Check parameter = check for boolean parameter, if true then delete workspace
+* Use secret text(s) or file(s) = binding between credentials and environment variables
+    * Bindings = Certificate, Git Username and Password, SSH User Private Key, Secret ZIP file, Secret file, Secret text, Username and password (conjoined), Username and password (separated)
 * Send files or execute commands over SSH before the build starts = do before starting the build on SSH servers
     * SSH Publishers = list of SSH servers
         * SSH Server = SSH server

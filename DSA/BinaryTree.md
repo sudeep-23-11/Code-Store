@@ -1,6 +1,5 @@
 # Check
 * Balanced Binary Tree
-* Same Tree
 * Subtree of Another Tree
 * Symmetric Tree
 * Verify Preorder Serialization of a Binary Tree
@@ -8,7 +7,6 @@
 # Find
 * Binary Tree (Left, Right) Side View
 * Binary Tree Maximum Path Sum
-* Binary Tree Paths
 * Count Complete Tree Nodes
 * Diameter of Binary Tree
 * Find Duplicate Subtrees
@@ -17,6 +15,7 @@
 * (Maximum, Minimum) Depth of Binary Tree
 * Maximum Width of Binary Tree
 * Path Sum (II, III)
+* Sum Root to Leaf Numbers
     * (Top, Bottom) View of a Binary Tree
 
 # Modify
@@ -24,6 +23,7 @@
     * Children Sum in a Binary Tree
 * Construct Binary Tree from (Preorder and Inorder, Inorder and Postorder) Traversal
 * Flatten Binary Tree to Linked List
+* Merge Two Binary Trees
 * Serialize and Deserialize Binary Tree
 
 # Traversal

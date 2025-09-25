@@ -1,13 +1,17 @@
 # Find
+* (3, 4, Two) Sum (Unsorted, Sorted) (One solution, Many solutions)
+* 3Sum Closest
+* 4Sum II
 * Find the Duplicate Number
 * Longest Consecutive Sequence
 * Majority Element (I, II)
 * Max Consecutive Ones
-* Maximum (Sum, Product) Subarray
+* Maximum (Sum, Product, Sum Circular) Subarray
 * Reverse Pairs (Count Inversions)
+* Shortest Unsorted Continuous Subarray
 * Single Number (II, III)
 * Subarray (Sum, Xor) Equals K (Longest, Count)
-* (Two, 3, 4) Sum (Unsorted, Sorted, One solution, Many solutions)
+* Trapping Rain Water
     * (Union, Intersection) of two sorted arrays
 
 # Matrix
@@ -16,6 +20,7 @@
 * Search a 2D Matrix
 * Set Matrix Zeroes
 * Spiral Matrix
+    * The Celebrity Problem
 
 # Modify
 * Merge Intervals

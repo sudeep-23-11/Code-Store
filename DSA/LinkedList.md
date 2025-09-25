@@ -1,6 +1,12 @@
 # Check
 * Palindrome Linked List
 
+# Doubly Linked List
+* Design Browser History
+* Flatten a Multilevel Doubly Linked List
+* (LFU, LRU) Cache
+    * Reverse a Doubly Linked List
+
 # Find
 * Intersection of Two Linked Lists
 * Linked List Components
@@ -11,11 +17,9 @@
 * Copy List with Random Pointer
 * Delete Node in a Linked List
 * Delete the Middle Node of a Linked List
-* Flatten a Multilevel Doubly Linked List
     * Flattening a Linked List
 * Insertion Sort List
-* Merge k Sorted Lists
-* Merge Two Sorted Lists
+* Merge (k, Two) Sorted Lists
 * Odd Even Linked List
 * Remove Duplicates from Sorted List II
 * Remove Nth Node From End of List

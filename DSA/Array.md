@@ -20,9 +20,9 @@
 # Matrix
 * Pascal's Triangle
 * Rotate Image
-* Search a 2D Matrix
+* Search a 2D Matrix II
 * Set Matrix Zeroes
-* Spiral Matrix
+* Spiral Matrix I
     * The Celebrity Problem
 
 # Modify

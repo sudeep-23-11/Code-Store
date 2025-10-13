@@ -21,7 +21,7 @@
 * Insertion Sort List
 * Merge (k, Two) Sorted Lists
 * Odd Even Linked List
-* Remove Duplicates from Sorted List II
+* Remove Duplicates from Sorted List (I, II)
 * Remove Nth Node From End of List
 * Reorder List
 * Reverse Linked List II

@@ -16,6 +16,7 @@
 * Maximum Product of Word Lengths
 * Minimum Window Substring
 * Multiply Strings
+* Nth Digit
 * Number of Substrings Containing All Three Characters
     * Palindrome by Front Insertion
 

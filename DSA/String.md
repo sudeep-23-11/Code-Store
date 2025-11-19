@@ -2,10 +2,17 @@
 * Repeated Substring Pattern
 * Word Pattern
 
+# Backtracking
+* Additive Number
+* Generate Parentheses
+* Palindrome Partitioning I
+* Permutation Sequence
+* Restore IP Addresses
+
 # Find
 * Count Binary Substrings
 * Find All Anagrams in a String
-* Find the Index of the First Occurrence in a String
+* Find the Index of the First Occurrence in a String = Knuth Morris Pratt
 * Longest Common Prefix
 * Longest Repeating Character Replacement
 * Longest Substring with At Least K Repeating Characters

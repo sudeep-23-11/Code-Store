@@ -4,6 +4,11 @@
 * Symmetric Tree
 * Verify Preorder Serialization of a Binary Tree
 
+# Check BST
+* Search in a Binary Search Tree
+* Two Sum IV - Input is a BST
+* Validate Binary Search Tree
+
 # Find
 * Binary Tree (Left, Right) Side View
 * Binary Tree Maximum Path Sum
@@ -18,6 +23,15 @@
 * Sum Root to Leaf Numbers
     * (Top, Bottom) View of a Binary Tree
 
+# Find BST
+    * (Ceil, Floor) in BST
+* Find Mode in Binary Search Tree
+    * Inorder (Successor, Predecessor) in BST
+* Kth (Largest, Smallest) Element in a BST
+    * Largest BST in a Binary Tree
+* Lowest Common Ancestor of a Binary Search Tree
+* Range Sum of BST
+
 # Modify
 * Add One Row to Tree
     * Children Sum in a Binary Tree
@@ -26,6 +40,15 @@
 * Merge Two Binary Trees
 * Serialize and Deserialize Binary Tree
 
+# Modify BST
+* Construct Binary Search Tree from Preorder Traversal
+* Convert Sorted (Array, List) to Binary Search Tree
+* Delete Node in a BST
+* Increasing Order Search Tree
+* Insert into a Binary Search Tree
+* Recover Binary Search Tree
+* Trim a Binary Search Tree
+
 # Traversal
 * Binary Tree (Level, Zigzag Level) Order Traversal
 * Binary Tree (Pre, In, Post) order Traversal
@@ -33,16 +56,3 @@
     * Stack (Pre, In, Post) order Traversal
     * Tree Boundary Traversal
 * Vertical Order Traversal of a Binary Tree
-
-# Types
-* Full Binary Tree - 0 or 2 children only
-* Complete Binary Tree - all levels are completely filled except last level, nodes
-of last level are as left as possible
-* Perfect Binary Tree - all leaf nodes are on same level
-* Balanced Binary Tree - mod(height difference between left and right subtrees for
-every node) <= 1, height = log(total no. of nodes)
-* Degenerate Binary Tree - skewed tree
-* Binary Search Tree - left subtree nodes < root node < right subtree nodes, both
-subtrees are BST, inorder traversal is sorted, searching time = log(total no. of nodes)
-* AVL Tree - Binary Search Tree, Balanced Binary Tree
-* Red-Black Tree - Binary Search Tree, extra bit on every node for storing Node color red or black

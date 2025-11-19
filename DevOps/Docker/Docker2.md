@@ -1,3 +1,18 @@
+# Image I:Tag T
+* docker build P ------------------- create from dockerfile in path P
+    * -t I:T ----------------------- with image I:tag T
+* docker commit C I:T -------------- create from container C
+* docker tag I1:T1 I2:T2 ----------- create from image I1:tag T1
+* docker rmi I:T ------------------- delete
+* docker images -------------------- list all
+* docker image prune --------------- delete unnamed
+    * -a --------------------------- delete all
+* docker history I:T --------------- history
+* docker search S ------------------ search text S in registry
+* docker pull I:T ------------------ pull from registry
+* docker push I:T ------------------ push to registry
+
+
 # Network N
 * docker network create N ---------- create
     * -d bridge -------------------- having bridge driver
@@ -40,8 +55,3 @@
 * docker compose images S ---------- list images
 * docker compose pull S ------------ pull from registry
 * docker compose push S ------------ push to registry
-
-
-# System
-* docker system prune -------------- delete everything with unnamed images
-    * -a --------------------------- with all images

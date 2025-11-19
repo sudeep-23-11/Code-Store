@@ -10,7 +10,7 @@
 # Find
 * Intersection of Two Linked Lists
 * Linked List Components
-* Linked List Cycle II
+* Linked List Cycle II = Floyd Tortoise and Hare
 
 # Modify
 * Add Two Numbers II

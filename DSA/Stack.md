@@ -8,9 +8,9 @@
 * Largest Rectangle in Histogram
 * Longest Absolute File Path
 * Maximal Rectangle
-* (Next Greater, Previous Smaller) Element II
+* Next Greater Element II
 * Online Stock Span
-* Sum of Subarray (Maximums, Minimums)
+* Sum of Subarray (Minimums, Ranges)
 
 # Modify
 * Asteroid Collision
@@ -25,4 +25,4 @@
 # Queue
 * Dota2 Senate
 * Implement Stack using Queues
-* Sliding Window (Maximum, Minimum)
+* Sliding Window Maximum

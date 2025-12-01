@@ -5,6 +5,7 @@
 * Combination Sum (I, II, III)
 * Non-decreasing Subsequences
 * Permutations (I, II)
+* Subsets (I, II)
 
 # Find
 * (3, 4, Two) Sum (Unsorted, Sorted) (One solution, Many solutions)
@@ -20,13 +21,15 @@
 * Max Consecutive Ones III
 * Maximum Points You Can Obtain from Cards
 * Maximum (Sum, Product, Sum Circular) Subarray = Kadane
+* Product of Array Except Self
 * Range Sum Query - Immutable
 * Shortest Unsorted Continuous Subarray
 * Single Number (II, III)
 * Subarray (Sum (Positive, Non-Positive), Xor) Equals K (Longest, Count Number of)
     * Subarrays with K Different Integers
-* Trapping Rain Water
+* Trapping Rain Water I
     * (Union, Intersection) of two sorted arrays
+* Wiggle Subsequence
 
 # Matrix
 * Pascal's Triangle I
@@ -34,15 +37,16 @@
 * Rotate Image
 * Search a 2D Matrix II
 * Set Matrix Zeroes
-* Spiral Matrix I
+* Spiral Matrix (I, II)
     * The Celebrity Problem
 
 # Modify
-* Merge Intervals (Insert Interval)
+* Insert Interval
+* (Merge, Non-overlapping) Intervals
 * Merge Sorted Array
 * Next Permutation
 * Rearrange Array Elements by Sign
 * Remove Duplicates from Sorted Array (I, II)
-* Remove Element (Move Zeroes)
-* Rotate Array
+* Remove Element
+* Rotate (Array, Function)
 * Sort Colors = Dutch National Flag

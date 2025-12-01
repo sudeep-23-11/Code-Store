@@ -1,5 +1,6 @@
 # Check
 * Repeated Substring Pattern
+* Valid Parenthesis String
 * Word Pattern
 
 # Backtracking
@@ -14,6 +15,7 @@
 * Find All Anagrams in a String
 * Find the Index of the First Occurrence in a String = Knuth Morris Pratt
 * Longest Common Prefix
+* Longest Palindromic Substring
 * Longest Repeating Character Replacement
 * Longest Substring with At Least K Repeating Characters
     * Longest Substring with At Most K Distinct Characters

@@ -27,7 +27,7 @@
 * Rotting Oranges
 * Shortest Path in Binary Matrix
 * Surrounded Regions
-* Word (Ladder II, Search)
+* Word (Ladder II, Search I)
 
 # Union Find
 * Accounts Merge

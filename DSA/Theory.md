@@ -1,3 +1,12 @@
+# Dynamic Programming
+* Memoization
+    * Top down = go to base case
+    * Recursion
+* Tabulation
+    * Bottom up = come from base case
+    * Iteration
+* Space Optimized Tabulation
+
 # Graph
 * Node, Edge
 * (Directed, Undirected, Weighted) Edge

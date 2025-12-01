@@ -4,7 +4,7 @@
 # Doubly Linked List
 * Design Browser History
 * Flatten a Multilevel Doubly Linked List
-* (LFU, LRU) Cache
+* LRU Cache
     * Reverse a Doubly Linked List
 
 # Find

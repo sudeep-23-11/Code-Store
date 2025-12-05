@@ -1,60 +1,39 @@
 //ClassAndObject
-import java.util.Scanner;
-class rectangle
-{
-    private double len, bre;
+class Data {
+    public int id;
+    public static double amt=12.34;
 
-    public static int count=0;
+    public Data() {
+        this.id=0;
+    }
+    public Data(int id) {
+        this.id=id;
+    }
+    public Data(Data d) {
+        this.id=d.id;
+    }
 
-    public void setdata(double l, double b)
-    {
-        len=l;
-        bre=b;
+    public int getId() {
+        return this.id;
     }
-    public void getdata()
-    {
-        Scanner Sc=new Scanner(System.in);
-        len=Sc.nextDouble();
-        bre=Sc.nextDouble();
-        Sc.close();
+    public void setId(int id) {
+        this.id=id;
     }
-    public void displaydata()
-    {
-        count++;
-        System.out.println(count+" : "+len+" "+bre);
-    }
-    public void area()
-    {
-        double area;
-        area=len*bre;
-        System.out.println(area);
-    }
-    public void peri()
-    {
-        double peri;
-        peri=(len+bre)*2;
-        System.out.println(peri);
-    }
-    public static void resetcount()
-    {
-        count=0;
+    public static double getAmt() {
+        return amt;
     }
 }
-public class ClassAndObject
-{
-    public static void main(String[] args)
-    {
-        rectangle r1=new rectangle();
-        rectangle r2=new rectangle();
-        r1.setdata(22.44, 33.66);
-        r1.displaydata();
-        r1.area();
-        r1.peri();
-        r2.getdata();
-        r2.displaydata();
-        r2.area();
-        r2.peri();
-        System.out.println(rectangle.count);
-        rectangle.resetcount();
+
+public class ClassAndObject {
+    public static void main(String[] args) {
+        Data obj1=new Data();
+        obj1.setId(56);
+        System.out.println(obj1.id+" "+obj1.getId());
+
+        Data obj2=new Data(78);
+        Data obj3=new Data(obj2);
+        System.out.println(obj2.id+" "+obj3.getId());
+
+        System.out.println(Data.amt+" "+Data.getAmt());
     }
 }

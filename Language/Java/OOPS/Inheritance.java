@@ -1,88 +1,45 @@
 //Inheritance
-class Parent
-{
-    protected double i, j;
-
-    protected double sum()
-    {
-        double s;
-        s=i+j;
-        return s;
-    }
-    protected double diff()
-    {
-        double d;
-        if(i>=j)
-        d=i-j;
-        else
-        d=j-i;
-        return d;
+import data.*;
+final class C3 extends C1 {
+    public void mainX() {
+        setX(5);
+        System.out.println(x);
     }
 
-    public Parent(double x, double y)
-    {
-        i=x;
-        j=y;
+    public C3(int k) {
+        super(k);
+        System.out.println(k*3);
     }
-    public void display()
-    {
-        System.out.println("This function is adding and subtracting two numbers");
-        System.out.println(i+" "+j);
+    public double a=4.6;
+    public void display() {
+        super.display();
+        System.out.println(super.a+" "+a);
     }
-    public void AS()
-    {
-        System.out.println(sum()+" "+diff());
+
+    public final char ch = 'x';
+    public final void print() {
+        // ch='y';
+        System.out.println(ch);
     }
 }
-class Child extends Parent
-{
-    private double k, l;
+// class C4 extends C3 {
+//     public void print() {}
+// }
 
-    protected double pro()
-    {
-        double p;
-        p=k*l;
-        return p;
-    }
-    protected double quo()
-    {
-        double q;
-        if(k>=l)
-        q=k/l;
-        else
-        q=l/k;
-        return q;
-    }
+public class Inheritance {
+    public static void main(String[] args) {
+        C1 obj1=new C1(10);
+        C2 obj2=new C2();
+        C3 obj3=new C3(10);
 
-    public Child(double x, double y)
-    {
-        super(x, y);
-        k=x;
-        l=y;
-    }
-    public void display()
-    {
-        System.out.println("This function is adding, subtracting, multiplying and dividing two numbers");
-        System.out.println(k+" "+l);
-    }
-    public void ASMD()
-    {
-        System.out.println(sum()+" "+diff());
-        System.out.println(pro()+" "+quo());
-    }
-}
-public class Inheritance
-{
-    public static void main(String[] args)
-    {
-        Parent p=new Parent(22.44, 33.66);
-        Child c=new Child(22.44, 33.66);
-        Parent ptr=new Child(22.44, 33.66);
-        p.display();
-        p.AS();
-        c.display();
-        c.ASMD();
-        ptr.display();
-        ptr.AS();
+        obj3.mainX();
+        obj2.mainY();
+        obj3.mainZ();
+
+        obj2.sum('x');
+        obj2.sum(2, 3);
+        obj2.sum(2.3, 4.6);
+        obj1.display();
+        obj3.display();
     }
 }

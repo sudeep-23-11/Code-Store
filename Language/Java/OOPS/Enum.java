@@ -20,7 +20,7 @@ public class Enum {
         Level h=Level.valueOf("high");
         System.out.println(l.getVal()+" "+m.name()+" "+h);
 
-        for (Level x:Level.values())
+        for (Level x: Level.values())
         System.out.print(x+" ");
         System.out.println();
     }

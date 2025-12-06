@@ -1,36 +1,53 @@
-# Theory
-* ETL = Extract Transform Load
-
-* Star schema
-    * Fact table
-        * single table
+# Schema
+* Star
+    * fact table
+        * single
         * quantitative data
-        * e.g. product ID
-    * Dimension table
-        * multiple tables
+    * dimension table
+        * multiple
         * qualitative data
-        * e.g. product details
+    * denormalized data
+* Snowflake
+    * fact table
+    * dimension table
+    * subdimension table
+    * normalized data
 
-* Snowflake schema
-    * Sub-dimension table = e.g. location details
-    * normalization
-
-* OLTP database
+# Database
+* OLTP
     * Online Transaction Processing
     * current data
-    * data generated from transactions
     * real time operations
-
-* OLAP database
+    * for transaction processing
+    * normalized data
+* OLAP
     * Online Analytical Processing
     * historical data
-    * data used for analysis and decision making
     * periodically batch operations
-
-* SQL database
-    * data in row-column in table
+    * for analysis and reporting
+    * denormalized data
+* SQL
+    * relational
+    * table
+    * row (column)
     * fixed schema
-
-* NoSQL database
-    * data in document (key-value pairs) in collection
+    * vertical scaling
+* NoSQL
+    * non-relational
+    * collection
+    * document (key-value pair)
     * variable schema
+    * horizontal scaling
+
+# Order of Execution
+* from
+* on
+* (inner, left, right, full) join
+* where
+* group by
+* having
+* select
+* distinct
+* union, intersect, except
+* order by
+* limit, offset

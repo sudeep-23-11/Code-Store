@@ -7,7 +7,6 @@ class AgeException extends Exception {
 
 public class ExeceptionHandling {
     public static void checkAge(int age) throws AgeException {
-        
         if (age<0)
         throw new AgeException("negative age not allowed");
         else if (age<18)

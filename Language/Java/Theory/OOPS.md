@@ -46,10 +46,17 @@
     * Multilevel = A -> B -> C
     * Hierarchical = A -> B, C
     * Multiple = A, B -> C
-    * Hybrid = A -> B, C -> D
+    * Hybrid
+        * A -> B, C -> D
+        * diamond problem
+        * virtual inheritance
 * Access Modifiers
-    * public = class, package, subclass of other package, other package
-    * protected = class, package, subclass of other package
+    * public
+        * class, package, subclass of other package, other package
+        * class, subclass of program, program
+    * protected
+        * class, package, subclass of other package
+        * class, subclass of program
     * default = class, package
     * private = class
 * Visibility Modes
@@ -65,6 +72,11 @@
         * value can be name hidden in child
     * method = cannot be overriden in child
     * class = cannot be inherited
+* friend
+    * private, protected access from outside of class 
+    * external function
+    * other class
+    * other class method
 
 # Polymorphism
 * one thing behaves in many different forms
@@ -82,12 +94,14 @@
         * parent and child
         * same method name, signature
         * different implementation
+        * virtual = can be overriden in child
 
 # Abstraction
 * showing only essential details and hiding unnecessary complexity
 * abstract method
     * no method definition
     * overriden in child
+    * pure virtual = 0
 * abstract class
     * no object
     * instance field, constructor

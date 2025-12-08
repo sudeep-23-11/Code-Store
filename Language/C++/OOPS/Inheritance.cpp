@@ -1,115 +1,98 @@
 //Inheritance
 #include<iostream>
 using namespace std;
-class Parent
-{
+class C1 {
     protected:
-        float i, j;
-
-        float sum()
-        {
-            float s;
-            s=i+j;
-            return s;
+        int x;
+        void setX(int x) {
+            this->x=x;
         }
-        float diff()
-        {
-            float d;
-            if(i>=j)
-            d=i-j;
-            else
-            d=j-i;
-            return d;
-        }
-
-    public:
-        Parent(float x, float y)
-        {
-            i=x;
-            j=y;
-        }
-        virtual void display1()
-        {
-            cout<<"This function is adding and subtracting two numbers"<<endl;
-            cout<<i<<" "<<j<<endl;
-        }
-        void display2()
-        {
-            cout<<"This function is adding and subtracting two numbers"<<endl;
-            cout<<i<<" "<<j<<endl;
-        }
-        void AS()
-        {
-            cout<<sum()<<" "<<diff()<<endl;
-        }
-};
-class Child : public Parent
-{
+    
     private:
-        float k, l;
-
-    protected:
-        float pro()
-        {
-            float p;
-            p=k*l;
-            return p;
-        }
-        float quo()
-        {
-            float q;
-            if(k>=l)
-            q=k/l;
-            else
-            q=l/k;
-            return q;
+        int y;
+        void setY(int y) {
+            this->y=y;
         }
 
     public:
-        Child(float x, float y) : Parent(x, y)
-        {
-            k=x;
-            l=y;
-        }
-        void display1()
-        {
-            cout<<"This function is adding, subtracting, multiplying and dividing two numbers"<<endl;
-            cout<<k<<" "<<l<<endl;
-        }
-        void display2()
-        {
-            cout<<"This function is adding, subtracting, multiplying and dividing two numbers"<<endl;
-            cout<<k<<" "<<l<<endl;
-        }
-        void ASMD()
-        {
-            cout<<sum()<<" "<<diff()<<endl;
-            cout<<pro()<<" "<<quo()<<endl;
+        void mainY() {
+            setY(2);
+            cout<<y<<endl;
         }
 
-        friend void reset(Child c)
-        {
-            c.i=0.0;
-            c.j=0.0;
-            c.k=0.0;
-            c.l=0.0;
-            cout<<c.i<<" "<<c.j<<" "<<c.k<<" "<<c.l<<endl;
+        C1(int k) {
+            cout<<(k*2)<<endl;
+        }
+        double a=2.3;
+        virtual void display() {
+            cout<<a<<endl;
         }
 };
+class C2 {
+    public:
+        string s;
+
+    public:
+        void sum(char ch) {
+            cout<<ch<<endl;
+        }
+        void sum(int x, int y) {
+            cout<<(x+y)<<endl;
+        }
+        void sum(double x, double y) {
+            cout<<(x+y)<<endl;
+        }
+
+        C2() {}
+        C2(string s) {
+            this->s=s;
+        }
+        C2 operator +(C2 obj) {
+            C2 res;
+            res.s=this->s+obj.s;
+            return res;
+        }
+        C2 operator =(C2 obj) {
+            this->s=obj.s;
+            return *this;
+        }
+};
+class C3: public C1 {
+    public:
+        void mainX() {
+            setX(3);
+            cout<<x<<endl;
+        }
+
+        C3(int k): C1(k) {
+            cout<<(k*3)<<endl;
+        }
+        double a=4.6;
+        void display() {
+            C1::display();
+            cout<<C1::a<<" "<<a<<endl;
+        }
+};
+
 int main()
 {
-    Parent p(22.44, 33.66);
-    Child c(22.44, 33.66);
-    Parent *ptr=&c;
-    p.display1();
-    p.display2();
-    p.AS();
-    c.display1();
-    c.display2();
-    c.ASMD();
-    ptr->display1();
-    ptr->display2();
-    ptr->AS();
-    reset(c);
+    C1 obj1(10);
+    C2 obj2;
+    C3 obj3(10);
+
+    obj3.mainX();
+    obj3.mainY();
+
+    obj2.sum('x');
+    obj2.sum(2, 3);
+    obj2.sum(2.3, 4.6);
+    obj1.display();
+    obj3.display();
+
+    C2 obj4("abc");
+    C2 obj5("xyz");
+    C2 obj6;
+    obj6=obj4+obj5;
+    cout<<obj6.s<<endl;
     return 0;
 }

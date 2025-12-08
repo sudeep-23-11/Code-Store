@@ -40,4 +40,6 @@
     * catch = handles exception
     * finally = executes in all cases
 * throw = throw manual exception
-* throws = tells that method can throw exception
+* throws
+    * noexcept (false)
+    * method can throw exception

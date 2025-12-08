@@ -1,60 +1,44 @@
 //ClassAndObject
 #include<iostream>
 using namespace std;
-class rectangle
-{
-    private:
-        float len, bre;
-
+class Data {
     public:
-        static int count;
+        int id;
+        static double amt;
 
-        void setdata(float l, float b)
-        {
-            len=l;
-            bre=b;
+        Data() {
+        this->id=0;
         }
-        void getdata()
-        {
-            cin>>len>>bre;
+        Data(int id) {
+            this->id=id;
         }
-        void displaydata()
-        {
-            count++;
-            cout<<count<<" : "<<len<<" "<<bre<<endl;
+        Data(Data &d) {
+            this->id=d.id;
         }
-        void area()
-        {
-            float area;
-            area=len*bre;
-            cout<<area<<endl;
+        ~Data() {}
+
+        int getId() {
+            return this->id;
         }
-        void peri();
-        static void resetcount()
-        {
-            count=0;
+        void setId(int id) {
+            this->id=id;
+        }
+        static double getAmt() {
+            return amt;
         }
 };
-int rectangle::count=0;
-void rectangle::peri()
-{
-    float peri;
-    peri=(len+bre)*2;
-    cout<<peri<<endl;
-}
+double Data::amt=12.34;
+
 int main()
 {
-    rectangle r1, r2;
-    rectangle *ptr=&r2;
-    r1.setdata(22.44, 33.66);
-    r1.displaydata();
-    r1.area();
-    r1.peri();
-    ptr->getdata();
-    ptr->displaydata();
-    ptr->area();
-    ptr->peri();
-    cout<<rectangle::count<<endl;
-    rectangle::resetcount();
+    Data obj1;
+    obj1.setId(56);
+    cout<<obj1.id<<" "<<obj1.getId()<<endl;
+
+    Data obj2(78);
+    Data obj3(obj2);
+    cout<<obj2.id<<" "<<obj3.getId()<<endl;
+
+    cout<<Data::amt<<" "<<Data::getAmt()<<endl;
     return 0;
 }

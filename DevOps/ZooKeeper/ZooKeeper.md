@@ -12,7 +12,6 @@
 * stat N --------------------------- details
 * sync N --------------------------- sync data between leader and followers
 
-
 # Connection
 * connect -------------------------- connect
 * close ---------------------------- disconnect

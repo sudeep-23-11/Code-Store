@@ -45,7 +45,6 @@
     * Directory = path of workspace
 * Display Name = name in jenkins UI
 
-
 # Source Code Management = Git
 * Repositories = list of github repos
     * Repository URL = url
@@ -53,7 +52,6 @@
     * Name = id
 * Branches to build = list of github branches
     * Branch Specifier = branch
-
 
 # Triggers
 * Build after other projects are built = starts build after others

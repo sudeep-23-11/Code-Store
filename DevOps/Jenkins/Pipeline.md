@@ -7,13 +7,11 @@
 * This project is parameterized
 * Throttle builds
 
-
 # Triggers
 * Build after other projects are built
 * Build periodically
 * GitHub hook trigger for GITScm polling
 * Poll SCM
-
 
 # Pipeline
 * Definition = pipeline script should be manual or from SCM
@@ -27,7 +25,6 @@
         * Script Path = path of jenkinsfile on SCM
         * Lightweight checkout = checkout only jenkinsfile or complete clone from SCM
 * Pipeline Syntax = syntax of pipeline script
-
 
 # Advanced
 * Quiet period

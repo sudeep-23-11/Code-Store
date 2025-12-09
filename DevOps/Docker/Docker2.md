@@ -12,7 +12,6 @@
 * docker pull I:T ------------------ pull from registry
 * docker push I:T ------------------ push to registry
 
-
 # Network N
 * docker network create N ---------- create
     * -d bridge -------------------- having bridge driver
@@ -23,7 +22,6 @@
 * docker network ls ---------------- list all
 * docker network prune ------------- delete all
 * docker network inspect N --------- details
-
 
 # Containers of Service S
 * docker compose ls ---------------- list runnning compose projects
@@ -40,8 +38,6 @@
 * docker compose wait S ------------ wait till termination
 * docker compose pause S ----------- pause
 * docker compose unpause S --------- resume
-*
-*
 * docker compose ps S -------------- list running
     * -a --------------------------- list all
 * docker compose top S ------------- list processes

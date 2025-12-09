@@ -10,6 +10,7 @@ pipeline {
     //         customWorkspace "/var/lib/jenkins"
     //     } 
     // }
+
     options {
         buildDiscarder (logRotator (numToKeepStr: "3"))
         disableConcurrentBuilds (abortPrevious: false)      //true
@@ -18,19 +19,23 @@ pipeline {
         timeout (time: 5, unit: "MINUTES")
         timestamps ()
     }
+
     environment {
         f = "false"
         id = "100"
         name = "sudeep"
     }
+
     tools {
         maven "maven"                                       //jdk, gradle
     }
+
     parameters {
         booleanParam (name: "Boolean", description: "Boolean", defaultValue: false)
         choice (name: "Choice", description: "Choice", choices: ["html", "css", "javascript"])
         password (name: "Password", description: "Password", defaultValue: "typescript")
     }
+
     triggers {
         cron ("* * * * *")
         pollSCM ("* * * * *")
@@ -39,12 +44,14 @@ pipeline {
             threshold: hudson.model.Result.SUCCESS          //UNSTABLE, FAILURE, ABORTED
         )
     }
+
     stages {
         stage ("A") {
             // agent
             // options
             // environment
             // tools
+
             when {
                 not {
                     environment (name: "true", value: "${env.f}")
@@ -64,6 +71,7 @@ pipeline {
                     triggeredBy "SCMTrigger"                //TimerTrigger, BuildUpstreamCause
                 }
             }
+
             steps {
                 git (branch: "main", credentialsId: "odp-github-repo", url: "https://github.com/1xtel/ODP.git")
                 dir ("Jenkins/configs") {
@@ -72,6 +80,7 @@ pipeline {
             }
             // post
         }
+
         stage ("B") {
             stages {
                 stage ("B.a") {
@@ -82,6 +91,7 @@ pipeline {
                 }
             }
         }
+
         stage ("C") {
             parallel {
                 stage ("C.a") {
@@ -93,9 +103,12 @@ pipeline {
             }
         }
     }
+
     post {
         success {
-            sleep (time: 5, unit: "SECONDS")                //unsuccessful, failure, unstable, aborted, always, changed, fixed, regression, cleanup
+            sleep (time: 5, unit: "SECONDS")                //unsuccessful, failure, unstable, aborted
+                                                            //always, changed, fixed, regression, cleanup
+
             script {
                 def user = input (id: "Input", message: "Input", ok: "Button", parameters: [
                     string (name: "String", description: "String", defaultValue: "python"),

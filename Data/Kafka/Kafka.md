@@ -1,4 +1,4 @@
-# Topic T (Topic)
+# Topic T
 * ./bin/kafka-topics.sh --bootstrap-server localhost:9092
     * --topic T --create ------------------- create
             * --partitions P --------------- with P partitions
@@ -10,16 +10,14 @@
         * --describe ----------------------- details
     * --list ------------------------------- list
 
-
-# Topic T (Producer)
+# Producer of Topic T
 * ./bin/kafka-console-producer.sh --bootstrap-server localhost:9092
     * --topic T ---------------------------- enter data
         * < F ------------------------------ take data from file F
         * --property parse.key=true -------- include key
         * --property key.separator=$'\t' --- use \t as key separator
 
-
-# Topic T (Consumer)
+# Consumer of Topic T
 * ./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092
     * --topic T ---------------------------- show from end
         * --from-beginning ----------------- show from beginning
@@ -36,7 +34,6 @@
         * --property key.separator=$'\t' --- use \t as key separator
         * --property line.separator=$'\n' -- use \n as line separator
 
-
 # Consumer Group G
 * ./bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092
     * --group G --delete ------------------- delete
@@ -47,7 +44,6 @@
     * --list ------------------------------- list
         * --type --------------------------- include type
         * --state -------------------------- include state
-
 
 # Reassignment
 * ./bin/kafka-reassign-partitions.sh --bootstrap-server localhost:9092

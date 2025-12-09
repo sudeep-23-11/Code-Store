@@ -1,10 +1,10 @@
 # Dynamic Programming
 * Memoization
-    * Top down = go to base case
-    * Recursion
+    * top down = go to base case
+    * recursion
 * Tabulation
-    * Bottom up = come from base case
-    * Iteration
+    * bottom up = come from base case
+    * iteration
 * Space Optimized Tabulation
 
 # Graph
@@ -68,6 +68,27 @@
 * AVL Tree
     * Binary Search Tree
     * Balanced Binary Tree
-* Red-Black Tree
+* Red Black Tree
     * Binary Search Tree
-    * extra bit on every node for storing Node color red or black
+    * extra bit on every node for storing node color red or black
+
+# Time Complexity
+* Array = O(N)
+* Stack, Queue, Deque
+    * search = O(N)
+    * insert, delete = O(1)
+* Priority Queue
+    * search = O(N)
+    * insert, delete = O(log N)
+* Hash Table (Unordered Set, Unordered Map)
+    * average = O(1)
+    * worst = O(N)
+* Linked List, Binary Tree = O(N)
+* Binary Search Tree, AVL Tree = O(log N)
+* Red Black Tree (Set, Map) = O(log N)
+* Binary Search, Merge Sort = O(log N)
+* DFS, BFS = O(E+V)
+* Dijkstra = O((E+V) log V)
+* Bellman Ford = O(EV)
+* Prim = O(E log V)
+* Kruskal = O(E log E)

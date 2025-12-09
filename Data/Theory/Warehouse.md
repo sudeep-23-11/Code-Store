@@ -1,16 +1,24 @@
+# Data
+* Qualitative
+    * Nominal
+    * Ordinal
+* Quantitative
+    * Discrete
+    * Continuous
+
 # Schema
 * Star
-    * fact table
+    * Fact table
         * single
         * quantitative data
-    * dimension table
+    * Dimension table
         * multiple
         * qualitative data
     * denormalized data
 * Snowflake
-    * fact table
-    * dimension table
-    * subdimension table
+    * Fact table
+    * Dimension table
+    * Sub-dimension table
     * normalized data
 
 # Database
@@ -28,26 +36,12 @@
     * denormalized data
 * SQL
     * relational
-    * table
-    * row (column)
+    * table contain rows, columns
     * fixed schema
     * vertical scaling
 * NoSQL
     * non-relational
-    * collection
-    * document (key-value pair)
+    * collection contain documents
+    * document contain key-value pairs
     * variable schema
     * horizontal scaling
-
-# Order of Execution
-* from
-* on
-* (inner, left, right, full) join
-* where
-* group by
-* having
-* select
-* distinct
-* union, intersect, except
-* order by
-* limit, offset

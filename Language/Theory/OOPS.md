@@ -2,22 +2,18 @@
 * Field
     * member variable
     * property
-    * static
-        * class variable
-        * only one
-        * shared all by all objects
 * Method
     * member function
     * behavior
-    * static
-        * class function
-        * only one
-        * shared all by all objects
+* static
+    * class (variable, function)
+    * only one per class
+    * shared all by all objects
 * Constructor
     * called at object creation
     * no return type
     * class name
-    * default = no parameters
+    * default = no parameter
     * parameterized = parameters
     * copy = object parameter
 * Destructor

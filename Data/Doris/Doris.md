@@ -22,18 +22,14 @@
         * ("replication_num" = "R" --------- with R replicas);
 * alter table T rename T' ------------------ rename to T'
 
-
 # Column X
 * alter table T rename column X X' --------- rename to X'
-
 
 # Index I
 * create index I on T (X) ------------------ create for column X
 
-
 # Select
 * select T.X, T.Y, T'.X' from T full join T' on T.Y=T'.Y' -- read all data of T, T'
-
 
 # Partition P
 * show partitions from T ------------------- list
@@ -42,3 +38,6 @@
 * alter table T rename partition P P' ------ rename to P'
 * delete from T partition P where E -------- delete data that match E
 * select * from T partition P -------------- read all data
+
+# MySQL Non-avaliability
+* use, unique, check, primary key, foreign key, any, all

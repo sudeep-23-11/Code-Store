@@ -1,5 +1,5 @@
 # Theory
-* package of
+* package
     * application code
     * libraries, dependencies
     * runtine environment, configurations
@@ -13,9 +13,12 @@
     * provide hypervisor layer having linux kernel
 * Image
     * docker artifact
-    * tags = versions
+    * Tag = Version
 * Container = running instance of docker image
 
+# System
+* docker system prune -------------- delete everything with unnamed images
+    * -a --------------------------- with all images
 
 # Container C
 * docker create I:T ---------------- create from image I:tag T
@@ -41,8 +44,6 @@
 * docker wait C -------------------- wait till termination
 * docker pause C ------------------- pause
 * docker unpause C ----------------- resume
-*
-*
 * docker ps ------------------------ list running
     * -a --------------------------- list all
 * docker container prune ----------- delete all
@@ -60,8 +61,3 @@
     * -w P ------------------------- working directory at path P
     * -e K=V ----------------------- set environment variable K=V
     * -it -------------------------- enable interactive mode
-
-
-# System
-* docker system prune -------------- delete everything with unnamed images
-    * -a --------------------------- with all images

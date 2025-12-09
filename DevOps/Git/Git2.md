@@ -7,7 +7,6 @@
 * git tag -------------------------- list
 * git show T ----------------------- details
 
-
 # Branch B
 * git branch B --------------------- create
     * -d --------------------------- delete merged
@@ -24,7 +23,6 @@
 * git merge B ---------------------- merge all commits
 * git rebase B --------------------- rebase to latest commit
 
-
 # Remote Repository R
 * git clone R ---------------------- clone
 * git remote ----------------------- list
@@ -33,6 +31,10 @@
     * show origin ------------------ show origin
     * rm origin -------------------- remove origin
 
+# Remote Tag T
+* git push origin T ---------------- push
+    * -f --------------------------- force push
+    * -d --------------------------- delete
 
 # Remote Branch B
 * git push origin B ---------------- create and push
@@ -44,8 +46,11 @@
     * -f --------------------------- force pull
 * git pull ------------------------- pull from its upstream branch
 
+# LFS
+* git lfs install ------------------ initialize repository as git lfs
+* git lfs track *.E ---------------- track files having extension E as lfs
 
-# Remote Tag T
-* git push origin T ---------------- push
-    * -f --------------------------- force push
-    * -d --------------------------- delete
+# Workspace
+* .gitignore ----------------------- not track its content
+* .gitattributes ------------------- track its content as lfs
+* .git ----------------------------- metadata of repository

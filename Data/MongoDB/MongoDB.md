@@ -3,7 +3,6 @@
 * use D ------------------------------------ create and connect
 * D.dropDatabase() ------------------------- delete
 
-
 # Collection C
 * show collections ------------------------- list
 * D.createCollection(C) -------------------- create
@@ -11,7 +10,6 @@
 * D.C.renameCollection(C') ----------------- rename to C'
 * D.C.distinct(X) -------------------------- distinct values of X
 * D.C.countDocuments({E}) ------------------ count all that match E
-
 
 # Document D
 * .insertOne({D}) -------------------------- insert one
@@ -40,19 +38,13 @@
     * {X: {$nin: [x1, x2]}} ---------------- X is not x1, x2
     * {X: {$type: [dx1, dx2]}} ------------- datatype of X is dx1, dx2
 * .find() ---------------------------------- read all
-*
-*
 * .findOneAndUpdate({E}, {$set: {X: x, Y: y}}, {returnNewDocument: false}) - update first with X=x, Y=y that match E, return pre updated
     * {returnNewDocument: true} -------------------------------------------- return post updated
 * .findOneAndReplace({E}, {D'}, {returnNewDocument: false}) ---------------- replace first with D' that match E, return pre replaced
     * {returnNewDocument: true} -------------------------------------------- return post replaced
 * .findOneAndDelete({E}) --------------------------------------------------- delete first that match E, return deleted document
-*
-*
 * .sort({X: 1}) ---------------------------- sort in ascending order according to X
 * .sort({X: -1}) --------------------------- sort in descending order according to X
 * .limit(N) -------------------------------- limit to N
 * .skip(N) --------------------------------- skip first N
-*
-*
 * .aggregate([{$match: {E}}, {$group: {_id: "$X", K: {$sum: "$Y"}}}, {$sort: {Z: 1}}]) - read all that match E, make groups according to X, summation of Y in K, sort in ascending order according to Z

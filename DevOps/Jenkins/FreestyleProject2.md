@@ -21,7 +21,6 @@
     * SSH Publishers
 * Add timestamps to the Console Output = timestamp in logs of Console Output
 
-
 # Build Steps
 * Execute shell = linux
     * Command = commands to execute
@@ -30,7 +29,6 @@
     * Goals = commands to execute
 * Send files or execute commands over SSH = do during the build on SSH servers
     * SSH Publishers
-
 
 # Post-build Actions
 * Archive the artifacts = show artifacts in jenkins UI

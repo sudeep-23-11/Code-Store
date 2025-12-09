@@ -2,7 +2,6 @@
 * Display Name
 * Description
 
-
 # Branch Sources
 * Git = github repo
     * Project Repository = url
@@ -49,16 +48,13 @@
         * Repositories
         * Branches to build
 
-
 # Build Configuration
 * Mode = by Jenkinsfile
     * Script Path = path of jenkinsfile on SCM
 
-
 # Scan Multibranch Pipeline Triggers
 * Periodically if not otherwise run = checks for changes in SCM after regular intervals, if present starts build
     * Interval = time interval
-
 
 # Orphaned Item Strategy
 * Abort builds = abort builds of deleted items

@@ -1,21 +1,21 @@
 #Abstraction
-from abc import ABC
-from abc import abstractmethod
-
-class Parent(ABC) :
+from abc import ABC, abstractmethod
+class C1(ABC) :
   @abstractmethod
-  def receivedata(self) :
+  def print(self) :
     pass
-  @abstractmethod
-  def senddata(self) :
-    pass
+class C2(C1) :
+  def print(self) :
+    print("Hello ML")
+class C3(C1) :
+  def print(self) :
+    print("Hello DL")
+class C4(C2, C3) :
+  pass
+class C5(C3, C2) :
+  pass
 
-class Child(Parent) :
-  def receivedata(self) :
-    self._data=int(input())
-  def senddata(self) :
-    return self._data
-
-c=Child()
-c.receivedata()
-print(c.senddata())
+obj1=C4()
+obj1.print()
+obj2=C5()
+obj2.print()

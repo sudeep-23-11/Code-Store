@@ -49,12 +49,13 @@ class C2 {
         }
         C2 operator +(C2 obj) {
             C2 res;
-            res.s=this->s+obj.s;
+            res.s=this->s+" "+obj.s;
             return res;
         }
-        C2 operator =(C2 obj) {
-            this->s=obj.s;
-            return *this;
+        C2 operator -(C2 obj) {
+            C2 res;
+            res.s=obj.s+" "+this->s;
+            return res;
         }
 };
 class C3: public C1 {
@@ -93,6 +94,8 @@ int main()
     C2 obj5("xyz");
     C2 obj6;
     obj6=obj4+obj5;
+    cout<<obj6.s<<endl;
+    obj6=obj4-obj5;
     cout<<obj6.s<<endl;
     return 0;
 }

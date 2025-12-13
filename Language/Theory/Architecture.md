@@ -35,7 +35,10 @@
     * Run Time = unchecked
     * Error
 * try = covers code block of exception
-* catch = handles exception
+* catch
+    * except
+    * handles exception
+* else = executes when no exception occurred
 * finally = executes in all cases
 * throw = throw manual exception
 * throws

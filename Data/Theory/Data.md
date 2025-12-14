@@ -1,4 +1,4 @@
-# Data
+# Type
 * Qualitative
     * Nominal
     * Ordinal

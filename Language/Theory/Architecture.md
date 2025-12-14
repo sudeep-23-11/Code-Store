@@ -30,10 +30,15 @@
 * Garbage Collector = frees up unused heap space
 
 # Exception
-* Types
-    * Compile Time = checked
-    * Run Time = unchecked
-    * Error
+* Checked
+    * checked at compile time
+    * must be handled
+* Unchecked
+    * not checked at compile time
+    * can be handled
+* Error
+    * serious problem
+    * cannot be handled
 * try = covers code block of exception
 * catch
     * except

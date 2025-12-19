@@ -5,10 +5,11 @@
 # Attribute
 * column
 * Degree = no. of attributes
-* Prime = part of any candidate key
-* Non-prime = not part of any candidate key
+* Type
+    * Prime = part of any candidate key
+    * Non-prime = not part of any candidate key
 
-# Key
+# Key Type
 * Super = uniquely identifies tuple
 * Candidate = super key having no unnecessary attribute
 * Primary = choosen candidate key
@@ -41,13 +42,13 @@
     * Semi=trivial
         * combination of trivial and non-trivial
         * AB->BC
-* Armstrong Axioms
+* Armstrong Axiom
     * Reflexivity = X->X
     * Augmentation = X->Y => XZ->YZ
     * Transitivity = X->Y, Y->Z => X->Z
     * Additivity = X->Y, X->Z => X->YZ
     * Decomposition = X->YZ => X->Y, X->Z
-* Anomalies
+* Anomaly
     * Updation = same data in multiple rows, must update all
     * Insertion = cannot insert some data until all attributes are avaliable 
     * Deletion = deleting row will delete all attributes
@@ -55,7 +56,7 @@
     * reduce redundancy
     * avoid anomalies
     * keep data consistent
-* Normal Forms
+* Normal Form
     * 1NF = every attribute is atomic
     * 2NF
         * 1NF with no partial dependency
@@ -80,14 +81,14 @@
     * single attribute on RHS = X->YZ => X->Y, X->Z
     * no extraneous attribute on LHS = XY->Z, X->Y => X->Z, X->Y
     * no redundant FD
-* Dependency Preserving Decomposition = F⁺=(F1UF2)
+* Dependency Preserving Decomposition = F⁺=(F1UF2)⁺
 
 # MVD
 * X->->Y
     * Multivalued Dependency
     * rows having same values of X can have same or different values of Y
-* Fagin Axioms
-    * Armstrong Axioms of FD
+* Fagin Axiom
+    * Armstrong Axiom of FD
     * Complementation = X->->Y => X->->R-(XUY)
     * Replication = X->Y => X->->Y
 * 4NF = BCNF with determinant as super key for all MVDs

@@ -1,20 +1,17 @@
 # Theory
-* Version Control System
-    * Local
-    * Centralized
-    * Distributed
+* VCS
+    * Version Control System 
+    * Type
+        * Local
+        * Centralized
+        * Distributed
 * Architecture
     * Working directory
     * Staging area
     * Git directory
-* Branch
-    * Primary
-        * Main
-        * Develop
-    * Supporting
-        * Feature
-        * Release
-        * Hotfix
+* Branch Type
+    * Primary = Main, Develop
+    * Supporting = Feature, Release, Hotfix
 
 # Global
 * git config --global user.name N -- name is N

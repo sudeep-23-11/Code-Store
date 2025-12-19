@@ -2,12 +2,13 @@
 * no. = odd
 * minimum = 3
 * common = 5
-* Leader = write operation
-* Follower
-    * read operation
-    * leader election
+* Type
+    * Leader = write operation
+    * Follower
+        * read operation
+        * leader election
 
-# Z Node
+# Z Node Type
 * Persistent
     * deletion = manual
     * children nodes

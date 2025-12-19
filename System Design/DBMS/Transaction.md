@@ -1,4 +1,4 @@
-# ACID Properties
+# ACID Property
 * Atomicity = transaction must execute completely or not at all
 * Consistency = database must follow all constraints after transaction
 * Isolation = transactions should not interfere with each other

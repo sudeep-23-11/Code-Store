@@ -1,13 +1,14 @@
 # Processor
 * Scheduling
-    * Run once = run only once at that moment
-    * Timer driven = run at regular intervals
-    * Cron driven = run at a particular time
+    * Type
+        * Run once = run only once at that moment
+        * Timer driven = run at regular intervals
+        * Cron driven = run at a particular time
     * Concurrent tasks = threads
-* Properties
+* Property
     * create new flowfiles
     * modify content, attributes of existing flowfiles
-* Relationships
+* Relationship
     * possible results of flowfile processing
     * can automatically terminate, retry
 
@@ -23,8 +24,9 @@
 * output = Processor, Funnel, Output Port
 * Back Pressure
     * maximum capacity
-    * Object Threshold = maximum number of flowfiles
-    * Size Threshold = maximum total size of flowfiles
+    * Type
+        * Object Threshold = maximum number of flowfiles
+        * Size Threshold = maximum total size of flowfiles
 * FlowFile Expiration = maximum lifetime of flowfile
 * Funnel = combine flowfiles of multiple connections into one
 
@@ -34,12 +36,15 @@
     * Penalize
         * processor will not stop
         * processor will process other flowfiles
-        * Penalty Duration = time duration in which flowfile is not processed
+        * Penalty Duration
+            * time duration in which flowfile is not processed
+            * doubled after very subsequent retry attempt
     * Yield
         * processor will stop
         * processor will hold other flowfiles
-        * Yield Duration = time duration in which processor is stopped
-    * Penalty, Duration will get doubled after very subsequent retry attempt
+        * Yield Duration
+            * time duration in which processor is stopped
+            * doubled after very subsequent retry attempt
 * Retry Maximum Back Off Period = maximum time duration between two successive retry attempts
 
 # Process Group

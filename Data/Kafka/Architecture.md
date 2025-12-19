@@ -3,21 +3,22 @@
 
 # Topic
 * storage entity
-* key-value pairs
-    * key
+* Key-Value pairs
+    * Key
         * present = partitioning on hash(key)
         * absent = random partitioning
-    * value = actual message
+    * Value = actual message
 
 # Partition
 * logical division of topic
 * Replica
-    * copy of partition per broker
+    * copy of same partition across multiple brokers
     * no. of brokers >= no. of replicas
-    * Leader = read, write data
-    * Follower
-        * fetch data from leader
-        * leader election 
+    * Type
+        * Leader = read, write data
+        * Follower
+            * fetch data from leader
+            * leader election 
     * Isr
         * in sync with leader
         * leader election 

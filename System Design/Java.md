@@ -28,24 +28,3 @@
     * converts frequently used bytecode to machine code
     * fast execution
 * Garbage Collector = frees up unused heap space
-
-# Exception
-* Checked
-    * checked at compile time
-    * must be handled
-* Unchecked
-    * not checked at compile time
-    * can be handled
-* Error
-    * serious problem
-    * cannot be handled
-* try = covers code block of exception
-* catch
-    * except
-    * handles exception
-* else = executes when no exception occurred
-* finally = executes in all cases
-* throw = throw manual exception
-* throws
-    * noexcept (false)
-    * method can throw exception

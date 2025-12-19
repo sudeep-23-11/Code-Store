@@ -1,12 +1,13 @@
 # Node
 * Frontend
-    * Follower
-        * query parsing
-        * leader election
-        * alter system (add, drop) follower 'sockaddr'
-    * Observer
-        * metadata
-        * alter system (add, drop) observer 'sockaddr'
+    * Type
+        * Follower
+            * query parsing
+            * leader election
+            * alter system (add, drop) follower 'sockaddr'
+        * Observer
+            * metadata
+            * alter system (add, drop) observer 'sockaddr'
     * show frontends
 * Backend
     * data storage
@@ -30,14 +31,16 @@
 
 # Partition
 * logical division of table
-* Range = value range of partitioning column
-* List = specific values of partitioning column
+* Type
+    * Range = value range of partitioning column
+    * List = specific values of partitioning column
 
 # Bucket
 * tablet
 * physical division of partition
-* Hash = bucketing on hash(bucketing column)
-* Random = random bucketing
+* Type
+    * Hash = bucketing on hash(bucketing column)
+    * Random = random bucketing
 
 # Lifecycle Command
 * ./fe/bin/start_fe.sh --daemon

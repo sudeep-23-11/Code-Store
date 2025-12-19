@@ -1,10 +1,6 @@
-# Type
-* Qualitative
-    * Nominal
-    * Ordinal
-* Quantitative
-    * Discrete
-    * Continuous
+# Data Type
+* Qualitative = Nominal, Ordinal
+* Quantitative = Discrete, Continuous
 
 # Schema
 * Star
@@ -21,7 +17,20 @@
     * Sub-dimension table
     * normalized data
 
-# Database
+# Database Type
+* SQL
+    * relational
+    * table contain rows, columns
+    * fixed schema
+    * nested data = foreign key in other table
+    * vertical scaling
+* NoSQL
+    * non-relational
+    * collection contain documents
+    * document contain key-value pairs
+    * variable schema
+    * nested data = nested document
+    * horizontal scaling
 * OLTP
     * Online Transaction Processing
     * current data
@@ -34,14 +43,3 @@
     * periodically batch operations
     * for analysis and reporting
     * denormalized data
-* SQL
-    * relational
-    * table contain rows, columns
-    * fixed schema
-    * vertical scaling
-* NoSQL
-    * non-relational
-    * collection contain documents
-    * document contain key-value pairs
-    * variable schema
-    * horizontal scaling

@@ -53,7 +53,7 @@
     * tuples of R that satisfy condition C
 * Projection
     * πA(R)
-    * only A attributes of R
+    * A attributes of R
 * Natural Join
     * R⋈S
     * πA(σC(RXS))
@@ -68,3 +68,33 @@
     * Lossy Join
         * R is proper subset of R1⋈R2
         * common attributes of R1 and R2 is neither super key of R1 nor R2
+
+# Tuple Relational Calculus
+* {t|P(t)}
+    * set of tuples that satisfy some predicate
+    * t = Tuple variable
+    * P(t) = Predicate condition
+* Logical Operator
+    * Conjunction
+        * P∧Q
+        * predicate P AND predicate Q
+    * Disjunction
+        * P∨Q
+        * predicate P OR predicate Q
+    * Negation
+        * ¬P
+        * NOT predicate P
+* Quantifier
+    * Existential
+        * ∃t∈R(P)
+        * some tuple in relation R satisfy predicate P
+    * Universal
+        * ∀t∈R(P)
+        * all tuples in relation R satisfy predicate P
+* Tuple Variable Type
+    * Free
+        * quantifier not present
+        * {t| t∈R (P(t))}
+    * Bound
+        * quantifier present
+        * {t| ∃t∈R (P(t))}, {t| ∀t∈R (P(t))}

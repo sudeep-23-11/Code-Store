@@ -61,10 +61,16 @@
         * globally distributed network of cache servers
         * deliver content from locations closer to users
 * Eviction Policy
-    * LRU = Least Recently Used
-    * LFU = Least Frequently Used
-    * FIFO = First In First Out
-    * Random
+    * FIFO
+        * First In First Out
+        * evict data that entered cache first
+    * LRU
+        * Least Recently Used
+        * evict data that was least recently used in past
+    * LFU
+        * Least Frequently Used
+        * evict data that was used least no. of times in past
+    * Random = evict random
 
 # Consistency
 * correctness of data across reads and writes
@@ -75,3 +81,6 @@
     * Causal = all nodes must follow ordering of related events
     * Read your Writes = client read its lastest write
     * Monotonic = order of read write is always same for one client
+* CAP Theorem
+    * distributed systems can have at most two of these properties
+    * consistency, availability, partition tolerance

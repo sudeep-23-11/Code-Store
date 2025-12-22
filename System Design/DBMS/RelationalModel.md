@@ -30,8 +30,8 @@
 * X->Y
     * Functional Dependency
     * rows having same values of X will have same values of Y
-    * Determinant = X
-    * Dependent = Y
+    * X = Determinant
+    * Y = Dependent
 * Triviality
     * Trivial
         * Y is subset of X

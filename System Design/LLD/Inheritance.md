@@ -1,9 +1,3 @@
-# Encapsulation
-* wrapping data and methods into a single unit known as class
-* private field
-* public getter method = get value of field
-* public setter method = set value of field
-
 # Inheritance
 * one class acquires fields and methods of another class
 * Parent class
@@ -50,3 +44,39 @@
     * external function
     * other class
     * other class method
+
+# Polymorphism
+* one thing behaves in many different forms
+* Type
+    * Compile Time
+        * static
+        * early binding
+        * method overloading
+            * same method name
+            * different method signature
+        * operator overloading
+    * Run Time
+        * dynamic
+        * late binding
+        * method overriding
+            * parent and child
+            * same method name, signature
+            * different implementation
+            * virtual = can be overriden in child
+
+# Abstraction
+* showing essential details and hiding unnecessary complexity
+* abstract method
+    * no method definition
+    * overriden in child
+    * pure virtual = 0
+* abstract class
+    * no object
+    * instance field, constructor
+    * (normal, abstract) method
+    * class can inherit one abstract class
+* interface
+    * no object
+    * static final field
+    * (default, abstract) method
+    * class can inherit multiple interfaces

@@ -52,6 +52,20 @@
 # Caching
 * storing frequently accessed data
 * Type
+    * CPU
+        * Type
+            * L1
+                * per core
+                * smallest size
+                * fastest speed
+            * L2
+                * per core or shared by cores
+                * moderate size
+                * moderate speed
+            * L3
+                * shared by all cores
+                * largest size
+                * slowest speed
     * Client Side
     * Application Server
     * Database

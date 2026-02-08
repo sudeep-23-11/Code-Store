@@ -14,8 +14,8 @@
 * Adjacency (Matrix, List)
 * (Depth, Breadth) First Search
 * Connected Components
+    * connected within each component
     * undirected
-    * for every component, each node is reachable from all other component nodes
 * (Cyclic, Acyclic) Graph
     * directed = DFS, Kahn
     * undirected = DFS, BFS
@@ -42,8 +42,8 @@
     * connected acyclic
     * directed = node has only one parent
 * Strongly Connected Components
+    * connected within each component
     * directed
-    * for every component, each node is reachable from all other component nodes
     * Kosaraju
 * Bridge, Articulation Point
     * Bridge = edge whose removal results in multiple components
@@ -86,9 +86,11 @@
 * Linked List, Binary Tree = O(N)
 * Binary Search Tree, AVL Tree = O(log N)
 * Red Black Tree (Set, Map) = O(log N)
-* Binary Search, Merge Sort = O(log N)
-* DFS, BFS = O(E+V)
+* Binary Search = O(log N)
+* DFS, BFS = O(E+V), E <= V2
 * Dijkstra = O((E+V) log V)
 * Bellman Ford = O(EV)
+* Floyd Warshall = O(V3)
 * Prim = O(E log V)
 * Kruskal = O(E log E)
+* Disjoint Set = O(α(N)), α(N) <= 4

@@ -18,7 +18,7 @@
     * (Infix to Postfix, Infix to Prefix) Conversion
     * (Postfix to Infix, Prefix to Infix) Conversion
     * (Postfix to Prefix, Prefix to Postfix) Conversion
-* (Max, Min) Stack
+* Min Stack
 * Remove Duplicate Letters
 * Remove K Digits
 

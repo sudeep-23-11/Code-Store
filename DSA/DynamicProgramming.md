@@ -12,7 +12,7 @@
 * Burst Balloons
     * Evaluate Boolean Expression to True
     * Matrix Chain Multiplication
-    * Minimum Cost to Cut the Stick
+* Minimum Cost to Cut a Stick
 * Palindrome Partitioning II
 * Partition Array for Maximum Sum
 * Unique Binary Search Trees I
@@ -27,8 +27,9 @@
 * Distinct Subsequences (I, II)
 * Edit Distance
 * Interleaving String
-* Longest (Common (Print), Palindromic) Subsequence
-    * Longest Common Substring (Print)
+* (Print) Longest Common Subsequence
+* Longest Palindromic Subsequence
+    * (Print) Longest Common Substring
 * Minimum Insertion Steps to Make a String Palindrome
 * Shortest Common Supersequence
 * Wildcard Matching
@@ -43,11 +44,10 @@
 * House Robber (II, III)
 * Jump Game II
 * Largest Divisible Subset
-* Longest (Bitonic, Increasing (I, Print)) Subsequence
+    * Longest Bitonic Subsequence
 * Longest String Chain
-* Number of Longest Increasing Subsequence
+* (Number of, Print) Longest Increasing Subsequence I
 * Partition Equal Subset Sum
     * Partition Set Into Two Subsets to Minimize Sum Difference
-* Perfect Squares
     * Rod Cutting Problem
 * Target Sum

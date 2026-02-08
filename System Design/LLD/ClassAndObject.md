@@ -26,3 +26,9 @@
 * private field
 * public getter method = get value of field
 * public setter method = set value of field
+
+# Composition
+* one class contain object of another class
+* has a relationship
+* run time relationship
+* loosely coupled classes

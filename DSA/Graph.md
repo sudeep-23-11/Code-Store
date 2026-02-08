@@ -1,10 +1,10 @@
 # Shortest Path
 * Cheapest Flights Within K Stops
+    * Connecting Cities With Minimum Cost
 * Evaluate Division
 * Find the City With the Smallest Number of Neighbors at a Threshold Distance
 * Number of Ways to Arrive at Destination
-* Path with Maximum Probability
-* Path With Minimum Effort
+* Path with (Maximum Probability, Minimum Effort)
     * Print Shortest Path
 
 # Topological Sort

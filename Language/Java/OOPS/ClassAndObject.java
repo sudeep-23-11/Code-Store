@@ -23,6 +23,23 @@ class Data {
         return amt;
     }
 }
+class Service {
+    public Data obj;
+
+    public Service() {
+        this.obj=new Data();
+    }
+    public Service(int k) {
+        this.obj=new Data(k);
+    }
+
+    public int getId() {
+        return this.obj.getId();
+    }
+    public void setId(int id) {
+        this.obj.setId(id);
+    }
+}
 
 public class ClassAndObject {
     public static void main(String[] args) {
@@ -35,5 +52,10 @@ public class ClassAndObject {
         System.out.println(obj2.id+" "+obj3.getId());
 
         System.out.println(Data.amt+" "+Data.getAmt());
+
+        Service obj4=new Service();
+        obj4.setId(56);
+        Service obj5=new Service(78);
+        System.out.println(obj4.getId()+" "+obj5.getId());
     }
 }

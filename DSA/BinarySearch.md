@@ -4,7 +4,6 @@
 * Find Minimum in Rotated Sorted Array II
     * Find Nth root of M
 * Find Peak Element
-* Find Right Interval
 * Heaters
     * Implement (Lower, Upper) Bound
 * Kth Missing Positive Number

@@ -1,5 +1,8 @@
 # Inheritance
-* one class acquires fields and methods of another class
+* one class acquire fields and methods of another class
+* is a relationship
+* compile time relationship
+* tightly coupled classes
 * Parent class
     * base
     * super

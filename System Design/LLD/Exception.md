@@ -2,9 +2,11 @@
 * Checked
     * checked at compile time
     * must be handled
+    * IO, SQL, ClassNotFound, FileNotFound
 * Unchecked
     * not checked at compile time
     * can be handled
+    * NullPointer, Arithmetic, ArrayIndexOutOfBounds, StringIndexOutOfBounds
 * Error
     * serious problem
     * cannot be handled

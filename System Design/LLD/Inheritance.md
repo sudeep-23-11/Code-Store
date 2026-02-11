@@ -77,9 +77,9 @@
     * no object
     * instance field, constructor
     * (normal, abstract) method
-    * class can inherit one abstract class
+    * class can extend one abstract class
 * interface
     * no object
     * static final field
     * (default, abstract) method
-    * class can inherit multiple interfaces
+    * class can implement multiple interfaces

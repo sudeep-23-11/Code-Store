@@ -1,3 +1,8 @@
+# Array
+* continuous memory location
+* fixed size container of primitive
+* acs = O(1), sr-in-del = O(N)
+
 # Dynamic Programming
 * Memoization
     * top down = go to base case
@@ -12,7 +17,7 @@
 * (Directed, Undirected, Weighted) Edge
 * (Degree, Indegree, Outdegree) of Node
 * Adjacency (Matrix, List)
-* (Depth, Breadth) First Search
+* (Depth, Breadth) First Search = O(E+V), E <= V2
 * Connected Components
     * connected within each component
     * undirected
@@ -24,16 +29,25 @@
     * for every u -> v, u appears before v in ordering
     * DFS, Kahn
 * Shortest Path
-    * Single Source = Dijkstra = no negative weight edge
-    * (Single Source = Bellman Ford, All Pairs = Floyd Warshall)
+    * Single Source
+        * Dijkstra
+            * no negative weight edge
+            * O((E+V) logV)
+        * Bellman Ford
+            * directed = no negative weight cycle
+            * undirected = no negative weight edge
+            * O(EV)
+    * All Pairs = Floyd Warshall
         * directed = no negative weight cycle
         * undirected = no negative weight edge
+        * O(V3)
 * Minimum Spanning Tree
     * undirected weighted
     * N nodes, N-1 edges
     * each node is reachable from all other nodes
     * sum of edge weights is minimum
-    * Prim, Kruskal
+    * Prim = O(E logV)
+    * Kruskal = O(E logE)
 * Disjoint Set
     * find parent = check whether two nodes are connected or not
     * union by (rank, size) = connect two nodes
@@ -44,14 +58,28 @@
 * Strongly Connected Components
     * connected within each component
     * directed
-    * Kosaraju
+    * Kosaraju = O(α(N)), α(N) <= 4
 * Bridge, Articulation Point
     * Bridge = edge whose removal results in multiple components
     * Articulation Point = node whose removal results in multiple components
     * Tarjan
 
+# Linked List
+* discrete memory location
+* Linked List
+    * value, next pointer
+    * O(N)
+* Doubly Linked List
+    * value, next pointer, prev pointer
+    * acs-sr = O(N), in-del = O(1)
+
 # Tree
-* Full Binary Tree = 0 or 2 children only
+* Binary Tree
+    * no. of children <= 2
+    * value, left pointer, right pointer
+    * O(N)
+* Full Binary Tree
+    * no. of children = 0, 2
 * Complete Binary Tree
     * all levels are completely filled except last level
     * nodes of last level are as left as possible
@@ -64,33 +92,10 @@
     * left subtree nodes < root node < right subtree nodes
     * both subtrees are BST
     * inorder traversal is sorted
-    * searching time = log(total no. of nodes)
+    * O(logN)
 * AVL Tree
     * Binary Search Tree
     * Balanced Binary Tree
 * Red Black Tree
     * Binary Search Tree
     * extra bit on every node for storing node color red or black
-
-# Time Complexity
-* Array = O(N)
-* Stack, Queue, Deque
-    * search = O(N)
-    * insert, delete = O(1)
-* Priority Queue
-    * search = O(N)
-    * insert, delete = O(log N)
-* Hash Table (Unordered Set, Unordered Map)
-    * average = O(1)
-    * worst = O(N)
-* Linked List, Binary Tree = O(N)
-* Binary Search Tree, AVL Tree = O(log N)
-* Red Black Tree (Set, Map) = O(log N)
-* Binary Search = O(log N)
-* DFS, BFS = O(E+V), E <= V2
-* Dijkstra = O((E+V) log V)
-* Bellman Ford = O(EV)
-* Floyd Warshall = O(V3)
-* Prim = O(E log V)
-* Kruskal = O(E log E)
-* Disjoint Set = O(α(N)), α(N) <= 4
